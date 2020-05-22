@@ -18,4 +18,12 @@ jobs:
       - name: Passed ✅
         if: ${{ success() }}
         run: |
-          c
+          curl --request POST \
+          --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} \
+          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+          --header 'content-type: application/json' \
+          --data '{
+            "context": "tests",
+            "state": "success",
+            "description": "passed ✅",
+            "target_url": "https
