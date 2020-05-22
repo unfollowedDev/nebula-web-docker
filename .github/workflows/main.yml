@@ -1,0 +1,21 @@
+name: 'CI'
+
+on: [pull_request]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: tests
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.19.0'
+      - run: yarn install
+      - run: yarn test
+      - run: yarn lint
+
+      - name: Passed ✅
+        if: ${{ success() }}
+        run: |
+          c
