@@ -9,4 +9,16 @@ Test Net: [testnet.teloscan.io](https://testnet.teloscan.io/) [![Netlify Status]
 ![License](https://img.shields.io/github/license/telosnetwork/teloscan?style=for-the-badge)
 
 ## About
-Teloscan is the official Telos EVM block explorer. Explore accounts, transactions, and blocks. View and interact with verified c
+Teloscan is the official Telos EVM block explorer. Explore accounts, transactions, and blocks. View and interact with verified contract ABIs. Connect MetaMask wallet to stake TLOS for sTLOS.
+
+## Recent Contributions
+
+![Alt](https://repobeats.axiom.co/api/embed/fbc67fae1abc36c6eff5d717f3840280afd1a109.svg "Repobeats analytics image")
+
+## Install the dependencies
+
+Install yarn package manager
+Follow the installation instructions at [classic.yarnpkg.com](https://classic.yarnpkg.com/en/)
+
+
+Add Vue 
