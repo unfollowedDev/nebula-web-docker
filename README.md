@@ -37,4 +37,26 @@ From within the ui-template folder:
 yarn
 ```
 
-## Start the app in development mode (hot-code reloading, error reporting, etc.
+## Start the app in development mode (hot-code reloading, error reporting, etc.)
+```bash
+yarn dev
+```
+
+## Lint the files
+```bash
+yarn lint
+```
+
+## Build the app for production
+```bash
+yarn build
+```
+
+## Documentation
+Testing - [Teloscan Unit Testing](./docs/Testing.md)
+
+Telos - [docs.telos.net](https://docs.telos.net)
+
+Quasar - [quasar.dev](https://quasar.dev/)
+
+Quasar Configuration - [quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js)
