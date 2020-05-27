@@ -22,4 +22,14 @@ const TESTNET = {
     HYPERION_ENDPOINT: 'https://testnet.telos.net',
     NETWORK_EXPLORER: 'https://explorer-test.telos.net',
     TELOS_API_ENDPOINT: 'https://api-dev.telos.net/v1', //'http://localhost:9999/v1', //for local instance of api
-    VERI
+    VERIFIED_CONTRACTS_BUCKET: 'verified-evm-contracts-testnet',
+    STAKED_TLOS_CONTRACT_ADDRESS: '0xa9991E4daA44922D00a78B6D986cDf628d46C4DD',
+    TELOS_ESCROW_CONTRACT_ADDRESS: '0x7E9cF9fBc881652B05BB8F26298fFAB538163b6f',
+};
+
+const MAINNET = {
+    ...sharedEnv,
+    APP_NAME: 'Teloscan',
+    NETWORK_HOST: 'mainnet.telos.net',
+    NETWORK_CHAIN_ID:
+      '4667b205c6838ef70ff7988f6e8257
