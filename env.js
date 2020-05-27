@@ -32,4 +32,10 @@ const MAINNET = {
     APP_NAME: 'Teloscan',
     NETWORK_HOST: 'mainnet.telos.net',
     NETWORK_CHAIN_ID:
-      '4667b205c6838ef70ff7988f6e8257
+      '4667b205c6838ef70ff7988f6e8257e8be0e1284a2f59699054a018f743b1d11',
+    NETWORK_EVM_RPC: 'https://mainnet.telos.net/evm',
+    NETWORK_EVM_ENDPOINT: 'https://mainnet.telos.net',
+    NETWORK_EVM_CHAIN_ID: 40,
+    HYPERION_ENDPOINT: 'https://mainnet.telos.net',
+    NETWORK_EXPLORER: 'https://explorer.telos.net',
+    TELOS_API_ENDPOINT: 'https://api.telos.net/v1', //'http://localhost:9999/v1', //for l
