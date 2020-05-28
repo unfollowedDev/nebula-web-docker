@@ -1,4 +1,16 @@
 {
   "name": "telos-template",
   "version": "1.4.3",
-  "description": "Teloscan block explor
+  "description": "Teloscan block explorer",
+  "productName": "Teloscan",
+  "author": "Jesse Schulman <jesse@caleos.io>",
+  "private": true,
+  "scripts": {
+    "dev": "quasar dev",
+    "build": "quasar build",
+    "lint": "eslint --ext .js,.vue ./",
+    "test": "jest",
+    "nuke": "rm -rf node_modules && yarn cache clean && yarn install"
+  },
+  "dependencies": {
+    "@eosrio/hyperion-stream-client": "^0.4.0-
