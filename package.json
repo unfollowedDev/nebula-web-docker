@@ -13,4 +13,18 @@
     "nuke": "rm -rf node_modules && yarn cache clean && yarn install"
   },
   "dependencies": {
-    "@eosrio/hyperion-stream-client": "^0.4.0-
+    "@eosrio/hyperion-stream-client": "^0.4.0-beta.5",
+    "@ethereumjs/tx": "^3.5.0",
+    "@metamask/detect-provider": "^2.0.0",
+    "@quasar/extras": "^1.0.0",
+    "@telosnetwork/telosevm-js": "^0.2.6",
+    "axios": "^0.21.2",
+    "axios-time": "^1.0.0",
+    "babel-loader": "^8.1.0",
+    "big.js": "^6.2.1",
+    "bn.js": "^5.2.0",
+    "core-js": "^3.6.5",
+    "dotenv": "^8.2.0",
+    "eosjs": "^21.0.3",
+    "eosjs-ecc": "^4.0.7",
+    "e
