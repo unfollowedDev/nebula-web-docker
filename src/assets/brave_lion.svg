@@ -7,4 +7,10 @@
         <linearGradient x1="0%" y1="50.7055163%" x2="100%" y2="50.7055163%" id="linearGradient-1">
             <stop stop-color="#FF5500" offset="0%"></stop>
             <stop stop-color="#FF5500" offset="40.9877232%"></stop>
-    
+            <stop stop-color="#FF2000" offset="58.1981215%"></stop>
+            <stop stop-color="#FF2000" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="2.1484375%" y1="50.7055163%" x2="100%" y2="50.7055163%" id="linearGradient-2">
+            <stop stop-color="#FF452A" offset="0%"></stop>
+            <stop stop-color="#FF2000" offset="100%"></stop>
+        </linearGrad
