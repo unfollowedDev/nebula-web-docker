@@ -22,4 +22,9 @@
 <stop stop-color="#AE73FA"/>
 <stop offset="1" stop-color="#AE73FA" stop-opacity="0"/>
 </linearGradient>
-<linearGradient id="paint1_linear" x1="57.6815" y1="15.
+<linearGradient id="paint1_linear" x1="57.6815" y1="15.3327" x2="40.3467" y2="15.3327" gradientUnits="userSpaceOnUse">
+<stop stop-color="#AE73FA"/>
+<stop offset="1" stop-color="#AE73FA" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
