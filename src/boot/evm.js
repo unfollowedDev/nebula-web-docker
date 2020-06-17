@@ -11,4 +11,11 @@ const evm = new TelosEvmApi({
     chainId: parseInt(process.env.NETWORK_EVM_CHAIN_ID),
     ethPrivateKeys: [],
     telosContract: process.env.NETWORK_EVM_CONTRACT,
-    te
+    telosPrivateKeys: [],
+    fetch,
+});
+
+// This is kinda bad, but if you try to store a web3 provider in the store, it has a call stack size exception,
+//    and if you freeze the provider before putting in the store so the call stack error goes away, you break
+//    the provider. so, this is a workaround until some better solution is needed and/or available
+const pr
