@@ -48,4 +48,8 @@ contractManager.init();
 export default boot(({ app, store }) => {
     store.$providerManager = app.config.globalProperties.$providerManager = new ProviderManager();
     store.$evm = app.config.globalProperties.$evm = evm;
-  
+    store.$evmEndpoint = app.config.globalProperties.$evmEndpoint = hyperion;
+    store.$contractManager = app.config.globalProperties.$contractManager = markRaw(contractManager);
+});
+
+export { evm };
