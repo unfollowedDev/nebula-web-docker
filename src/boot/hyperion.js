@@ -5,4 +5,9 @@ const hyperion = axios.create({
     baseURL: process.env.HYPERION_ENDPOINT,
 });
 
-export 
+export default boot(({ app, store }) => {
+    app.config.globalProperties.$hyperion = hyperion;
+    store.$hyperion = hyperion;
+});
+
+export { hyperion };
