@@ -15,4 +15,12 @@ export default boot(async({ app, store }) => {
         ],
     };
 
-    const auth
+    const authenticators = [
+        new Anchor([chain], { appName: process.env.APP_NAME }),
+        new Wombat([chain], { appName: process.env.APP_NAME }),
+    ];
+
+    const ual = new UAL([chain], 'ual', authenticators);
+    store['$ual'] = ual;
+    app.config.globalProperties.$ual = ual;
+});
