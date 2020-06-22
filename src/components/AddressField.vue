@@ -54,4 +54,12 @@ export default {
             }
             if (this.name) {
                 return this.truncate > 0 && this.name.length > this.truncate ?
-      
+                    `${this.name.slice(0, this.truncate)}...` :
+                    `${this.name}`;
+            }
+
+            if (this.contract && this.contract.getName()) {
+                const name = this.contract.getName();
+                if(name[0] === '0' && name[1] === 'x'){
+                    return this.truncate > 0 ? `${this.address.slice(0, this.truncate)}...` : this.address;
+                }
