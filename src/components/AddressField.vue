@@ -40,4 +40,18 @@ export default {
     }),
     watch: {
         address () {
-   
+            this.loadContract();
+        },
+    },
+    async mounted() {
+        await this.loadContract();
+    },
+    methods: {
+        ...mapActions('evm', ['getContract']),
+        getDisplay() {
+            if(!this.address){
+                return;
+            }
+            if (this.name) {
+                return this.truncate > 0 && this.name.length > this.truncate ?
+      
