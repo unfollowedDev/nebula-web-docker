@@ -21,4 +21,23 @@ export default {
         copy: {
             type: Boolean,
             default: false,
-     
+        },
+        highlight: {
+            type: Boolean,
+            default: false,
+        },
+        truncate: {
+            type: Number,
+            default: 18,
+        },
+        isContractTrx: {
+            type: Boolean,
+            default: false,
+        },
+    },
+    data: () => ({
+        contract: null,
+    }),
+    watch: {
+        address () {
+   
