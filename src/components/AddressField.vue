@@ -81,4 +81,18 @@ export default {
             }
 
             // TODO: check if this is a contract, account lookup via telosevm-js?
-            // TODO: if this is linked to a Telos account, displa
+            // TODO: if this is linked to a Telos account, display the Telos account name and link it to bloks
+            //   for now if we ask for a contract, we'll get one back and it'll be labeled as undefined
+            let contract = await this.getContract({ address: this.address });
+            if (contract) {
+                this.contract = contract;
+            }
+        },
+
+    },
+};
+</script>
+
+<template>
+<div class="c-address-field">
+    <
