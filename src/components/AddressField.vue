@@ -63,3 +63,12 @@ export default {
                 if(name[0] === '0' && name[1] === 'x'){
                     return this.truncate > 0 ? `${this.address.slice(0, this.truncate)}...` : this.address;
                 }
+                return this.truncate > 0 && name.length > this.truncate ?
+                    `${name.slice(0, this.truncate)}...` :
+                    `${name}`;
+            }
+            if (!this.address) {
+                return '';
+            }
+            // This formats the address for us and handles zero padding we get from log events
+            const address = ethers.utils.getAd
