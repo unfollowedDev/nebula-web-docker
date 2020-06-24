@@ -106,4 +106,15 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.c-addres
+.c-address-field {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+a.highlighted {
+    color: #bb9200;
+}
+body.body--dark a.highlighted {
+    color: $warning;
+}
+</style>
