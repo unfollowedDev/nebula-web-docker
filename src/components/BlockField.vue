@@ -11,4 +11,7 @@ export default {
 </script>
 
 <template>
-<RouterLink :key="$route.path" :to="`/block/${
+<RouterLink :key="$route.path" :to="`/block/${this.block}`">
+    {{ block }}
+</RouterLink>
+</template>
