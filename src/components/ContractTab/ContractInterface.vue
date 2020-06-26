@@ -54,3 +54,13 @@ export default {
                     <FunctionInterface
                         :abi="func"
                         :contract="contract"
+                        :group="write ? 'write' : 'read'"
+                        :run-label="write ? 'Write' : 'Query'"
+                    />
+                </div>
+            </q-card>
+
+        </q-expansion-item>
+    </q-list>
+</div>
+</template>
