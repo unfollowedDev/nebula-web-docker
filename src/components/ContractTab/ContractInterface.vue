@@ -41,4 +41,16 @@ export default {
 </script>
 
 <template>
-<div class=
+<div class="q-pa-md">
+    <q-list>
+        <q-expansion-item
+            v-for="func in (write ? functions.write : functions.read)"
+            :key="func.name"
+            :label="func.name"
+            class="shadow-2 q-mb-md"
+        >
+            <q-card>
+                <div class="q-pa-md">
+                    <FunctionInterface
+                        :abi="func"
+                        :contract="contract"
