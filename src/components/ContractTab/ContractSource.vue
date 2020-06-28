@@ -14,4 +14,18 @@ export default {
     name: 'ContractSource',
     components: {
         JsonViewer,
-  
+    },
+    data() {
+        return {
+            tab:'sources',
+            contracts: [],
+            json: [],
+        };
+    },
+    async mounted() {
+        let sources;
+        try{
+            const checkSumAddress = toChecksumAddress(this.$route.params.address);
+            sources =
+        (await axios.get(
+            `https://${process.env.V
