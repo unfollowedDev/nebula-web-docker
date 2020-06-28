@@ -40,4 +40,15 @@ export default {
             for (let file of files){
                 if (this.isContract(file.name)){
                     file.content =
-            hljs.highlight(file.content, { la
+            hljs.highlight(file.content, { language: 'solidity' }).value;
+                    this.contracts.unshift(file);
+                }else{
+                    if (this.isJson(file.name)){
+                        file.content = JSON.parse(file.content);
+                    }
+                    this.json.push(file);
+                }
+            }
+        },
+        isContract(fileName){
+            let ext = fileName.
