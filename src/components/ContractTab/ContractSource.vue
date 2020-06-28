@@ -28,4 +28,16 @@ export default {
             const checkSumAddress = toChecksumAddress(this.$route.params.address);
             sources =
         (await axios.get(
-            `https://${process.env.V
+            `https://${process.env.VERIFIED_CONTRACTS_BUCKET}.s3.amazonaws.com/${checkSumAddress}/source.json`)
+        ).data.files;
+        }catch(e){
+            console.log(e);
+        }
+        this.sortFiles(sources);
+    },
+    methods: {
+        sortFiles(files){
+            for (let file of files){
+                if (this.isContract(file.name)){
+                    file.content =
+            hljs.highlight(file.content, { la
