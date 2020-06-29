@@ -51,4 +51,20 @@ export default {
             }
         },
         isContract(fileName){
-            let ext = fileName.
+            let ext = fileName.split('.').pop();
+            return ext === 'sol';
+        },
+        isJson(fileName){
+            let ext = fileName.split('.').pop();
+            return ext === 'json';
+        },
+    },
+};
+</script>
+
+<template>
+<div class="contract-source">
+    <div v-for="(item, index) in json" :key="`viewer-${index}`">
+        <p class="file-label">{{ item.name }}</p>
+        <JsonViewer
+        
