@@ -77,4 +77,17 @@ export default {
     </div>
     <div v-for="(item, index) in contracts" :key="`contract-${index}`">
         <p class="file-label">{{ item.name }}</p>
-        <pre class="source-container q-pa-md" v-html="item.content"
+        <pre class="source-container q-pa-md" v-html="item.content"></pre>
+    </div>
+</div>
+</template>
+
+<style lang='sass'>
+.contract-source
+  margin-top: 1rem
+
+.source-container
+  max-height: 20rem
+  overflow-y: auto
+  margin-bottom: 2rem
+</style>
