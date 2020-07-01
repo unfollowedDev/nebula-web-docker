@@ -24,4 +24,17 @@ export default {
         abi() {
             const { abi } = this.contract;
 
-            if (
+            if (!Array.isArray(abi)) {
+                return '';
+            }
+
+            return JSON.stringify(this.contract.abi);
+        },
+        codeSeleted() {
+            return this.source === true;
+        },
+        readSelected() {
+            return this.source === false && this.write === false;
+        },
+        writeSelected() {
+            return this.source === false && this.w
