@@ -37,4 +37,25 @@ export default {
             return this.source === false && this.write === false;
         },
         writeSelected() {
-            return this.source === false && this.w
+            return this.source === false && this.write === true;
+        },
+    },
+};
+</script>
+
+<template>
+<div class="contract-tab">
+    <CopyButton
+        v-if="abi"
+        :text="abi"
+        :accompanying-text="$t('components.contract_tab.copy_abi_to_clipboard')"
+        class="q-mb-md"
+    />
+    <br>
+
+    <q-btn-group>
+        <q-btn
+            :outline="codeSeleted"
+            :label="$t('components.contract_tab.code')"
+            push
+  
