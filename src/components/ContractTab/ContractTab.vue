@@ -70,4 +70,21 @@ export default {
             :outline="writeSelected"
             :label="$t('components.contract_tab.write')"
             push
-            @click
+            @click="source = false; write = true"
+        />
+    </q-btn-group>
+
+    <ContractSource v-if="source" />
+    <ContractInterface
+        v-else
+        :write="write"
+    />
+</div>
+</template>
+
+<style lang='sass'>
+.contract-tab
+    margin-left: 2rem
+    margin-right: 2rem
+    padding-top: 1rem
+</style>
