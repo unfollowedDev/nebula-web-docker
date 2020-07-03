@@ -58,4 +58,16 @@ export default {
             :outline="codeSeleted"
             :label="$t('components.contract_tab.code')"
             push
-  
+            @click="source = true"
+        />
+        <q-btn
+            :outline="readSelected"
+            :label="$t('components.contract_tab.read')"
+            push
+            @click="source = false; write = false"
+        />
+        <q-btn
+            :outline="writeSelected"
+            :label="$t('components.contract_tab.write')"
+            push
+            @click
