@@ -50,4 +50,19 @@ export default {
             label: '8 - BTC',
             value: 8,
         }, {
-            label
+            label: '0 - Wei',
+            value: 0,
+        }, {
+            label: '',
+            value: 'custom',
+        }];
+
+        return {
+            loading: false,
+            errorMessage: '',
+            decimalOptions,
+            result: null,
+            hash: null,
+            enterAmount: false,
+            amountInput: 0,
+            amoun
