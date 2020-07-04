@@ -65,4 +65,19 @@ export default {
             hash: null,
             enterAmount: false,
             amountInput: 0,
-            amoun
+            amountParam: null,
+            amountDecimals: 0,
+            selectDecimals: decimalOptions[0],
+            customDecimals: 0,
+            value: '0',
+            inputModels: [],
+            params: [],
+            valueParam: {
+                'name': 'value',
+                'type': 'amount',
+                'internalType': 'amount',
+            },
+        };
+    },
+    async created() {
+        // initialization of the transl
