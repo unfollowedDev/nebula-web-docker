@@ -32,4 +32,22 @@ export default {
         },
         abi: {
             type: Object,
-            default: 
+            default: null,
+        },
+        runLabel: {
+            type: String,
+            default: null,
+        },
+    },
+    data : () => {
+        const decimalOptions = [{
+            label: '18 - TLOS/ETH/etc..',
+            value: 18,
+        }, {
+            label: '9 - Gwei',
+            value: 9,
+        }, {
+            label: '8 - BTC',
+            value: 8,
+        }, {
+            label
