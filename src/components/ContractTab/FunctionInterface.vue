@@ -14,4 +14,22 @@ import {
     parameterTypeIsBoolean,
     parameterTypeIsSignedIntArray,
     parameterTypeIsUnsignedIntArray,
-} from 'compone
+} from 'components/ContractTab/function-interface-utils';
+
+import TransactionField from 'components/TransactionField';
+
+
+export default {
+    name: 'FunctionInterface',
+    components: {
+        ...asyncInputComponents,
+        TransactionField,
+    },
+    props: {
+        contract: {
+            type: Object,
+            default: null,
+        },
+        abi: {
+            type: Object,
+            default: 
