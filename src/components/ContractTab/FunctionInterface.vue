@@ -80,4 +80,17 @@ export default {
         };
     },
     async created() {
-        // initialization of the transl
+        // initialization of the translated texts
+        this.decimalOptions[4].label = this.$t('components.contract_tab.custom');
+    },
+    computed: {
+        ...mapGetters('login', [
+            'address',
+            'isLoggedIn',
+            'isNative',
+            'nativeAccount',
+        ]),
+        inputComponents() {
+            if (!Array.isArray(this.abi?.inputs)) {
+                return [];
+          
