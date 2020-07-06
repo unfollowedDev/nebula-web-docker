@@ -122,4 +122,16 @@ export default {
                     label,
                     size,
                     modelValue: this.inputModels[index] ?? defaultModelValue,
-          
+                    name: label.toLowerCase(),
+                };
+            };
+
+            const handleModelValueChange = (type, index, value) => {
+                this.inputModels[index] = value;
+
+                if (!inputIsComplex(type)) {
+                    this.params[index] = value;
+                }
+            };
+            const handleValueParsed = (type, index, value) => {
+                i
