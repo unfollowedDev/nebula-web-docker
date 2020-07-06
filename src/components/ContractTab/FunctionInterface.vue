@@ -111,4 +111,15 @@ export default {
 
                 if (parameterTypeIsUnsignedIntArray(type)) {
                     extras['uint-size'] = getIntSize();
-           
+                } else if (parameterTypeIsSignedIntArray(type)) {
+                    extras['int-size'] = getIntSize();
+                }
+
+                const defaultModelValue = parameterTypeIsBoolean(type) ? null : '';
+
+                return {
+                    ...extras,
+                    label,
+                    size,
+                    modelValue: this.inputModels[index] ?? defaultModelValue,
+          
