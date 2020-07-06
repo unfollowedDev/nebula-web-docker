@@ -101,4 +101,14 @@ export default {
 
                 // represents integer bits (e.g. uint256) for int types, or array length for array types
                 let size = undefined;
-                if (parameterIsArrayType(ty
+                if (parameterIsArrayType(type)) {
+                    size = getExpectedArrayLengthFromParameterType(type);
+                } else if (parameterIsIntegerType(type)) {
+                    size = getIntegerBits(type);
+                }
+
+                const getIntSize = () => type.match(/\d+(?=\[)/)[0];
+
+                if (parameterTypeIsUnsignedIntArray(type)) {
+                    extras['uint-size'] = getIntSize();
+           
