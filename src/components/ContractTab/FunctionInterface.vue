@@ -93,4 +93,12 @@ export default {
         inputComponents() {
             if (!Array.isArray(this.abi?.inputs)) {
                 return [];
-          
+            }
+
+            const getExtraBindingsForType = ({ type, name }, index) => {
+                const label = `${name ? name : `Param ${index + 1}`}`;
+                const extras = {};
+
+                // represents integer bits (e.g. uint256) for int types, or array length for array types
+                let size = undefined;
+                if (parameterIsArrayType(ty
