@@ -134,4 +134,13 @@ export default {
                 }
             };
             const handleValueParsed = (type, index, value) => {
-                i
+                if (inputIsComplex(type)) {
+                    this.params[index] = value;
+                }
+            };
+
+            return this.abi.inputs.map((input, index) => ({
+                bindings: getExtraBindingsForType(input, index),
+                is: getComponentForInputType(input.type),
+                inputType: input.type,
+                handleModelValueChange: (type, index, value) 
