@@ -143,4 +143,12 @@ export default {
                 bindings: getExtraBindingsForType(input, index),
                 is: getComponentForInputType(input.type),
                 inputType: input.type,
-                handleModelValueChange: (type, index, value) 
+                handleModelValueChange: (type, index, value) => handleModelValueChange(type, index, value),
+                handleValueParsed:      (type, index, value) => handleValueParsed(type, index, value),
+            }));
+        },
+        enableRun() {
+            return this.isLoggedIn || this.abi.stateMutability === 'view';
+        },
+        missingInputs() {
+            if (this.abi.inputs.length !== this.params.length
