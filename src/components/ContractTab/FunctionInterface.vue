@@ -192,4 +192,17 @@ export default {
             this.loading = true;
 
             try {
-        
+                const opts = {};
+                if (this.abi.stateMutability === 'payable') {
+                    opts.value = this.value;
+                }
+
+                if (this.abi.stateMutability === 'view') {
+                    return await this.runRead();
+                }
+
+                if (this.isNative) {
+                    return await this.runNative(opts);
+                }
+
+                return
