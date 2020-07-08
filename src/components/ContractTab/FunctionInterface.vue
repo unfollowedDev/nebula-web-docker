@@ -151,4 +151,19 @@ export default {
             return this.isLoggedIn || this.abi.stateMutability === 'view';
         },
         missingInputs() {
-            if (this.abi.inputs.length !== this.params.length
+            if (this.abi.inputs.length !== this.params.length) {
+                return true;
+            }
+
+            for (let i = 0; i < this.abi.inputs.length; i++) {
+                if (['', null, undefined].includes(this.params[i])) {
+                    return true;
+                }
+            }
+
+            return false;
+        },
+    },
+    methods: {
+        showAmountDialog(param) {
+            this.amountParam = p
