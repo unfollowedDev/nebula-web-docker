@@ -166,4 +166,14 @@ export default {
     },
     methods: {
         showAmountDialog(param) {
-            this.amountParam = p
+            this.amountParam = param;
+            this.amountDecimals = 18;
+            this.enterAmount = true;
+        },
+        updateDecimals() {
+            this.amountDecimals = this.selectDecimals.value === 'custom' ?
+                this.customDecimals :
+                this.selectDecimals.value;
+        },
+        setAmount() {
+            const integerAmount = ethers.utils.parseUnits(this.amountInput + '', this.amo
