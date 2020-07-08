@@ -176,4 +176,20 @@ export default {
                 this.selectDecimals.value;
         },
         setAmount() {
-            const integerAmount = ethers.utils.parseUnits(this.amountInput + '', this.amo
+            const integerAmount = ethers.utils.parseUnits(this.amountInput + '', this.amountDecimals).toString();
+            if (this.amountParam === 'value') {
+                this.value = integerAmount;
+            } else {
+                this.params[this.amountParam] = integerAmount;
+            }
+
+            this.clearAmount();
+        },
+        clearAmount() {
+            this.amountInput = 0;
+        },
+        async run() {
+            this.loading = true;
+
+            try {
+        
