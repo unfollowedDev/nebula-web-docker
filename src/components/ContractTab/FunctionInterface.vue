@@ -205,4 +205,16 @@ export default {
                     return await this.runNative(opts);
                 }
 
-                return
+                return await this.runEVM(opts);
+            } catch (e) {
+                this.result = e.message;
+            }
+
+            this.endLoading();
+        },
+        getFunctionAbi() {
+            return `${this.abi.name}(${this.abi.inputs.map(i => i.type).join(',')})`;
+        },
+        async getEthersFunction(provider) {
+            const contractInstance = await this.contract.getContractInstance(provider);
+            retu
