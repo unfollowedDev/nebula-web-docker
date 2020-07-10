@@ -239,4 +239,13 @@ export default {
             const gasLimit = await gasEstimater(...this.params, Object.assign({ from: this.address }, opts));
             const unsignedTrx = await func(...this.params, opts);
             const nonce = parseInt(await this.$evm.telos.getNonce(this.address), 16);
-            const gasPrice = BigNumber.from(`0x${await this.$evm.te
+            const gasPrice = BigNumber.from(`0x${await this.$evm.telos.getGasPrice()}`);
+            unsignedTrx.nonce = nonce;
+            unsignedTrx.gasLimit = gasLimit;
+            unsignedTrx.gasPrice = gasPrice;
+
+            // DO NOT INCLUDE CHAINID, EIP155 is only for replay attacks and you cannot replay a Telos native signed trx
+            // this can however break stuff that trys to decode this trx
+            //unsignedTrx.chainId = this.$evm.chainId;
+
+            i
