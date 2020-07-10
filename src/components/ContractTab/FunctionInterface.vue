@@ -235,4 +235,8 @@ export default {
         async runNative(opts) {
             const contractInstance = await this.contract.getContractInstance();
             const func = contractInstance.populateTransaction[this.getFunctionAbi()];
-            const gasEstimater = contra
+            const gasEstimater = contractInstance.estimateGas[this.getFunctionAbi()];
+            const gasLimit = await gasEstimater(...this.params, Object.assign({ from: this.address }, opts));
+            const unsignedTrx = await func(...this.params, opts);
+            const nonce = parseInt(await this.$evm.telos.getNonce(this.address), 16);
+            const gasPrice = BigNumber.from(`0x${await this.$evm.te
