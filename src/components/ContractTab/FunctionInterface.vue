@@ -227,4 +227,12 @@ export default {
                         this.errorMessage = null;
                     })
                     .catch((msg) => {
-           
+                        this.errorMessage = msg;
+                    })
+                    .finally(() => this.endLoading()),
+                );
+        },
+        async runNative(opts) {
+            const contractInstance = await this.contract.getContractInstance();
+            const func = contractInstance.populateTransaction[this.getFunctionAbi()];
+            const gasEstimater = contra
