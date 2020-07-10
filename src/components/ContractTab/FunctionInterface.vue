@@ -217,4 +217,14 @@ export default {
         },
         async getEthersFunction(provider) {
             const contractInstance = await this.contract.getContractInstance(provider);
-            retu
+            return contractInstance[this.getFunctionAbi()];
+        },
+        runRead() {
+            return this.getEthersFunction()
+                .then(func => func(...this.params)
+                    .then((response) => {
+                        this.result = response;
+                        this.errorMessage = null;
+                    })
+                    .catch((msg) => {
+           
