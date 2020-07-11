@@ -248,4 +248,16 @@ export default {
             // this can however break stuff that trys to decode this trx
             //unsignedTrx.chainId = this.$evm.chainId;
 
-            i
+            if (opts.value) {
+                unsignedTrx.value = opts.value;
+            }
+
+            const raw = ethers.utils.serializeTransaction(unsignedTrx);
+
+            let user = this.$providerManager.getProvider();
+            await user.signTransaction(
+                {
+                    actions: [{
+                        account: 'eosio.evm',
+                        name: 'raw',
+                    
