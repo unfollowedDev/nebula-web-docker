@@ -280,4 +280,12 @@ export default {
                 },
             );
 
-            // This doesn't produce the right hash... but would be nice to use ether
+            // This doesn't produce the right hash... but would be nice to use ethers here instead of ethereumjs/tx
+            //  maybe just need to have signed transaction with an empty signature?
+            //  What is etherumjs/tx doing differently?
+            //this.hash = ethers.utils.keccak256(raw);
+
+            const trxBuffer = Buffer.from(raw.replace(/^0x/, ''), 'hex');
+
+            const tx = Transaction.fromSerializedTx(trxBuffer, {
+                commo
