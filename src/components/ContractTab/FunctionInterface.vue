@@ -269,4 +269,15 @@ export default {
                         data: {
                             ram_payer: 'eosio.evm',
                             tx: raw.replace(/^0x/, ''),
-                         
+                            estimate_gas: false,
+                            sender: this.address.replace(/^0x/, '').toLowerCase(),
+                        },
+                    }],
+                },
+                {
+                    blocksBehind: 3,
+                    expireSeconds: 30,
+                },
+            );
+
+            // This doesn't produce the right hash... but would be nice to use ether
