@@ -260,4 +260,13 @@ export default {
                     actions: [{
                         account: 'eosio.evm',
                         name: 'raw',
-                    
+                        authorization: [
+                            {
+                                actor: this.nativeAccount,
+                                permission: 'active',
+                            },
+                        ],
+                        data: {
+                            ram_payer: 'eosio.evm',
+                            tx: raw.replace(/^0x/, ''),
+                         
