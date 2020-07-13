@@ -324,4 +324,15 @@ export default {
                     v-model.number="customDecimals"
                     type="number"
                     :label="$t('components.contract_tab.custom_decimals')"
-                    @change="updateDeci
+                    @change="updateDecimals"
+                />
+                <q-input
+                    v-model="amountInput"
+                    :label="$t('components.contract_tab.amount')"
+                    type="number"
+                />
+                <q-card-actions align="right">
+                    <q-btn
+                        v-close-popup
+                        flat="flat"
+                        :label="$t('global.ok'
