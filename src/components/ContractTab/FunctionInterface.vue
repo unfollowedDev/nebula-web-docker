@@ -299,4 +299,21 @@ export default {
 
             const result = await func(...this.params, opts);
             this.hash = result.hash;
-            th
+            this.endLoading();
+        },
+        endLoading() {
+            this.loading = false;
+        },
+    },
+};
+</script>
+
+<template>
+<div>
+    <q-dialog v-model="enterAmount">
+        <q-card class="amount-dialog">
+            <div class="q-pa-md">
+                <p>{{ $t('components.contract_tab.enter_amount') }}</p>
+                <q-select
+                    v-model="selectDecimals"
+                    :o
