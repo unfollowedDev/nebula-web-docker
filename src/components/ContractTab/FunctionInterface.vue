@@ -316,4 +316,12 @@ export default {
                 <p>{{ $t('components.contract_tab.enter_amount') }}</p>
                 <q-select
                     v-model="selectDecimals"
-                    :o
+                    :options="decimalOptions"
+                    @input="updateDecimals"
+                />
+                <q-input
+                    v-if="selectDecimals.value === 'custom'"
+                    v-model.number="customDecimals"
+                    type="number"
+                    :label="$t('components.contract_tab.custom_decimals')"
+                    @change="updateDeci
