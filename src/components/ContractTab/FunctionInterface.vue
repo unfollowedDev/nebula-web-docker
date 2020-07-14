@@ -346,4 +346,18 @@ export default {
                         color="primary"
                         @click="clearAmount"
                     />
-         
+                </q-card-actions>
+            </div>
+        </q-card>
+    </q-dialog>
+    <div v-if="abi.stateMutability === 'payable'" class="q-pb-md">
+        <unsigned-int-input
+            v-model="value"
+            :label="$t('components.contract_tab.value')"
+            name="value"
+            size="256"
+            required="true"
+        >
+            <template #append>
+                <q-icon
+                  
