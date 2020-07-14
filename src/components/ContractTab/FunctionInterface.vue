@@ -374,4 +374,15 @@ export default {
             v-if="component.is"
             :key="index"
             v-bind="component.bindings"
-   
+            required="true"
+            class="q-pb-lg"
+            @valueParsed="component.handleValueParsed(component.inputType, index, $event)"
+            @update:modelValue="component.handleModelValueChange(component.inputType, index, $event)"
+        />
+    </template>
+
+    <q-btn
+        v-if="enableRun"
+        :loading="loading"
+        :label="runLabel"
+        :disabled="missin
