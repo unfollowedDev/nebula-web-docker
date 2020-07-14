@@ -335,4 +335,15 @@ export default {
                     <q-btn
                         v-close-popup
                         flat="flat"
-                        :label="$t('global.ok'
+                        :label="$t('global.ok')"
+                        color="primary"
+                        @click="setAmount"
+                    />
+                    <q-btn
+                        v-close-popup
+                        flat="flat"
+                        :label="$t('global.cancel')"
+                        color="primary"
+                        @click="clearAmount"
+                    />
+         
