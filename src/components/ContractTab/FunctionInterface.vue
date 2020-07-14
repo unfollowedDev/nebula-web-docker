@@ -360,4 +360,18 @@ export default {
         >
             <template #append>
                 <q-icon
-                  
+                    class="cursor-pointer"
+                    name="pin"
+                    @click="showAmountDialog('value')"
+                />
+            </template>
+        </unsigned-int-input>
+    </div>
+
+    <template v-for="(component, index) in inputComponents">
+        <component
+            :is="component.is"
+            v-if="component.is"
+            :key="index"
+            v-bind="component.bindings"
+   
