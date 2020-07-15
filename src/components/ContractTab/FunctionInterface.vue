@@ -396,4 +396,16 @@ export default {
     </p>
     <div v-if="result" class="output-container">
         {{ $t('components.contract_tab.result') }} ({{ abi?.outputs.length > 0 ? abi.outputs[0].type : '' }}):
-        <router-link v-if="abi?.outpu
+        <router-link v-if="abi?.outputs?.[0]?.type === 'address'" :to="`/address/${result}`" >{{ result }}</router-link>
+        <template v-else>{{ result }}</template>
+    </div>
+    <div v-if="hash" class="output-container">
+        {{ $t('components.contract_tab.view_transaction') }}
+        <TransactionField :transaction-hash="hash" />
+    </div>
+</div>
+</template>
+
+<style lang="scss">
+
+</
