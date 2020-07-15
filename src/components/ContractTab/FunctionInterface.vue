@@ -385,4 +385,15 @@ export default {
         v-if="enableRun"
         :loading="loading"
         :label="runLabel"
-        :disabled="missin
+        :disabled="missingInputs"
+        class="run-button q-mb-md"
+        color="secondary"
+        icon="send"
+        @click="run"
+    />
+    <p class="text-negative output-container">
+        {{ errorMessage }}
+    </p>
+    <div v-if="result" class="output-container">
+        {{ $t('components.contract_tab.result') }} ({{ abi?.outputs.length > 0 ? abi.outputs[0].type : '' }}):
+        <router-link v-if="abi?.outpu
