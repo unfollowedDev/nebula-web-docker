@@ -15,4 +15,20 @@ export default {
         },
         description: {
             type: String,
-            defa
+            default: '',
+        },
+        accompanyingText: {
+            type: String,
+            default: '',
+        },
+    },
+    data: () => ({
+        iconClass: icons.copy,
+        hint: '',
+    }),
+    computed: {
+        containerClasses() {
+            const extraClass = this.accompanyingText ? 'c-copy-button--block' : '';
+            return `c-copy-button ${extraClass}`;
+        },
+        iconClasses() {
