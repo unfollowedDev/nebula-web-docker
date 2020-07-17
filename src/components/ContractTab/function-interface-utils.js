@@ -563,3 +563,79 @@ function parseBytesArrayString(str, expectedLength) {
         const actualLength = bytesArray.length;
 
         if (actualLength !== expectedLength) {
+            return undefined;
+        }
+    }
+
+    return bytesArray;
+}
+
+/**
+ * Given a string, returns an array of string iff it is a valid JSON representation of a string array.
+ * Returns undefined if string is valid but has the wrong number of elements in the case of fixed-size arrays
+ *
+ * @param str - JSON string representation of a string array, e.g. '["neato", "wow", "interesting \"quote\""]'
+ * @param expectedLength
+ * @returns {string[]|undefined}
+ */
+function parseStringArrayString(str, expectedLength) {
+    let parsedArrayOfStrings;
+
+    try {
+        parsedArrayOfStrings = JSON.parse(str);
+    } catch {
+        return undefined;
+    }
+
+    const valueIsArrayOfStrings = Array.isArray(parsedArrayOfStrings) &&
+        parsedArrayOfStrings.every(val => typeof val === 'string');
+
+    if (!valueIsArrayOfStrings) {
+        return undefined;
+    }
+
+    if (Number.isInteger(expectedLength)) {
+        const actualLength = parsedArrayOfStrings.length;
+
+        if (actualLength !== expectedLength) {
+            return undefined;
+        }
+    }
+
+    return parsedArrayOfStrings;
+}
+
+
+export {
+    parameterIsArrayType,
+    parameterIsIntegerType,
+    getExpectedArrayLengthFromParameterType,
+    getIntegerBits,
+    inputIsComplex,
+    asyncInputComponents,
+    getComponentForInputType,
+    integerSizeValidator,
+
+    parameterTypeIsAddress,
+    parameterTypeIsAddressArray,
+    parameterTypeIsBoolean,
+    parameterTypeIsBooleanArray,
+    parameterTypeIsBytes,
+    parameterTypeIsSignedInt,
+    parameterTypeIsSignedIntArray,
+    parameterTypeIsString,
+    parameterTypeIsStringArray,
+    parameterTypeIsUnsignedInt,
+    parameterTypeIsUnsignedIntArray,
+
+    parseAddressArrayString,
+    parseAddressString,
+    parseBooleanArrayString,
+    parseBooleanString,
+    parseBytesArrayString,
+    parseSignedIntArrayString,
+    parseSignedIntString,
+    parseStringArrayString,
+    parseUintArrayString,
+    parseUintString,
+};
