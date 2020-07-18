@@ -71,4 +71,24 @@ export default {
     @click.stop="handleClick"
     @keydown.space.enter="handleClick"
 >
-    <q-to
+    <q-tooltip
+        :offset="[0,0]"
+        anchor="center end"
+        self="center left"
+    >
+        {{ hint }}
+    </q-tooltip>
+
+    {{ accompanyingText }}
+
+    <q-icon :class="iconClasses" />
+</div>
+</template>
+
+<style lang="scss">
+.c-copy-button {
+    display: inline-flex;
+    justify-content: center;
+    margin-top: -2px;
+    align-items: center;
+ 
