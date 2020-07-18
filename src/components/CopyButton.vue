@@ -44,4 +44,13 @@ export default {
     methods: {
         handleClick() {
             copyToClipboard(this.text).then(() => {
-                this.iconClass = i
+                this.iconClass = icons.success;
+                this.hint = this.$t('components.copied');
+                setTimeout(() => {
+                    this.iconClass = icons.copy;
+                    this.hint = this.defaultHint;
+                }, 1500);
+            }).catch((err) => {
+                console.error(`Failed to copy to clipboard: ${err}`);
+                this.$q.notify({
+                  
