@@ -53,4 +53,22 @@ export default {
             }).catch((err) => {
                 console.error(`Failed to copy to clipboard: ${err}`);
                 this.$q.notify({
-                  
+                    type: 'negative',
+                    message: this.$t('components.copy_to_clipboard_failed'),
+                });
+            });
+        },
+    },
+};
+</script>
+
+<template>
+<div
+    :class="containerClasses"
+    :aria-label="hint"
+    aria-role="button"
+    tabindex="0"
+    @click.stop="handleClick"
+    @keydown.space.enter="handleClick"
+>
+    <q-to
