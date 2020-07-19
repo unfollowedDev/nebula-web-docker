@@ -17,4 +17,16 @@ export default {
             default: true,
         },
         // a value of true or false will force the component to display plain-english age or date stamp respectively;
-        // the default value of null will allow the component to toggle its
+        // the default value of null will allow the component to toggle itself via user clicks.
+        // having a value defined for this prop will disable user click interaction
+        forceShowAge: {
+            type: Boolean,
+            default: null,
+        },
+    },
+    data: () => ({
+        showAge: false,
+    }),
+    computed: {
+        friendlyDate ()  {
+            const showAge = this.forceShowAge === true || (this.forceShowAge === null && this.showAge)
