@@ -29,4 +29,19 @@ export default {
     }),
     computed: {
         friendlyDate ()  {
-            const showAge = this.forceShowAge === true || (this.forceShowAge === null && this.showAge)
+            const showAge = this.forceShowAge === true || (this.forceShowAge === null && this.showAge);
+
+            if (showAge) {
+                return moment.unix(this.epoch).fromNow();
+            }
+
+            const offset = getFormattedUtcOffset(new Date(this.epoch));
+            return `${moment.unix(this.epoch).format('MMM D, YYYY HH:mm:ss')} (UTC ${offset})`;
+        },
+    },
+    created() {
+        this.showAge = this.defaultToAge;
+    },
+    methods: {
+        toggleDisplay() {
+            this.showAge = !thi
