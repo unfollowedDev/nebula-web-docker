@@ -91,4 +91,11 @@ export default {
     justify-content: center;
     margin-top: -2px;
     align-items: center;
- 
+    cursor: pointer;
+
+    &--block {
+        display: flex;
+        width: max-content;
+    }
+}
+</style>
