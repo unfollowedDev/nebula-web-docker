@@ -25,4 +25,6 @@ body.body--light .c-footer {
 .c-footer {
     margin: 8px auto 24px;
     padding: 0 16px;
-    max-width: 1200
+    max-width: 1200px;
+}
+</style>
