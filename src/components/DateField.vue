@@ -44,4 +44,21 @@ export default {
     },
     methods: {
         toggleDisplay() {
-            this.showAge = !thi
+            this.showAge = !this.showAge;
+        },
+    },
+};
+</script>
+
+<template>
+<div
+    :class="{
+        'c-date-field': true,
+        'c-date-field--clickable': forceShowAge === null,
+    }"
+    @click="toggleDisplay"
+>
+    {{ friendlyDate }}
+    <template v-if="forceShowAge === null">
+        <q-icon class="fas fa-info-circle q-mr-xs" />
+        <q-tooltip>{{ $t('components.click_to
