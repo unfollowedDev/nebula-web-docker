@@ -61,4 +61,21 @@ export default {
     {{ friendlyDate }}
     <template v-if="forceShowAge === null">
         <q-icon class="fas fa-info-circle q-mr-xs" />
-        <q-tooltip>{{ $t('components.click_to
+        <q-tooltip>{{ $t('components.click_to_change_format') }}</q-tooltip>
+    </template>
+</div>
+</template>
+
+<style lang="scss">
+.c-date-field {
+    max-width: max-content;
+    display: inline-flex;
+    gap: 4px;
+    justify-content: flex-start;
+    align-items: center;
+
+    &--clickable {
+        cursor: pointer;
+    }
+}
+</style>
