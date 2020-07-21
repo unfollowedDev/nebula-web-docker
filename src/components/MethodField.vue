@@ -72,3 +72,17 @@ export default {
             {{trx.input_data.length > 10 && shortenSignature ? `${trx.input_data.slice(0,10)}` : trx.input_data}}
         </span>
         <q-tooltip v-if="shortenSignature &amp;&amp; !expand">
+            {{ $t('components.click_to_expand') }}
+        </q-tooltip>
+        <span
+            v-if="shortenSignature && expand"
+            class="word-break"
+            anchor="center middle"
+            self="center middle"
+            v-on:click="toggle()"
+        >
+            {{ trx.input_data }}
+        </span>
+    </span>
+</div>
+</template>
