@@ -22,4 +22,14 @@ export default {
 <template>
 <div class="transaction-field-container">
     <router-link :key="$route.path" :to="`/tx/${this.transactionHash}`">
-        {{ transactionHash && transactionHash.slic
+        {{ transactionHash && transactionHash.slice(0,20) }}...
+    </router-link>
+    <CopyButton v-if="copy" :text="transactionHash" accompanying-text="" />
+</div>
+</template>
+
+<style lang="sass">
+.transaction-field-container
+    display: inline-flex
+    align-items: center
+</style>
