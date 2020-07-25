@@ -40,4 +40,20 @@ export default {
         // TODO: Add icon column and render it
         const columns = [
             {
-                na
+                name: 'hash',
+                label: '',
+                align: 'left',
+            },
+            {
+                name: 'date',
+                label: '',
+                align: 'left',
+            },
+            {
+                name: 'from',
+                label: '',
+                align: 'left',
+            },
+            {
+                name: 'to',
+                label: ''
