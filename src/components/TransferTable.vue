@@ -24,4 +24,20 @@ export default {
             required: true,
         },
         tokenType: {
-            type: Stri
+            type: String,
+            required: true,
+        },
+        address: {
+            type: String,
+            required: true,
+        },
+        initialPageSize: {
+            type: Number,
+            required: true,
+        },
+    },
+    data() {
+        // TODO: Add icon column and render it
+        const columns = [
+            {
+                na
