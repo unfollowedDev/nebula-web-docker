@@ -75,4 +75,19 @@ export default {
             rows: [],
             columns,
             transfers: [],
-            pageSize
+            pageSize: this.initialPageSize,
+            total: null,
+            loading: false,
+            expectedTopicLength: 0,
+            pagination: {
+                sortBy: 'date',
+                descending: true,
+                page: 1,
+                rowsPerPage: 10,
+                rowsNumber: 0,
+            },
+            showDateAge: true,
+            tokenList: {},
+        };
+    },
+    async
