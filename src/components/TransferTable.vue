@@ -90,4 +90,11 @@ export default {
             tokenList: {},
         };
     },
-    async
+    async created() {
+        // initialization of the translated texts
+        this.columns[0].label = this.$t('components.tx_hash');
+        this.columns[1].label = this.$t('components.date');
+        this.columns[2].label = this.$t('components.from');
+        this.columns[3].label = this.$t('components.to');
+        this.columns[4].label = this.$t('components.value');
+        this.columns[
