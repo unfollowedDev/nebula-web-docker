@@ -56,4 +56,23 @@ export default {
             },
             {
                 name: 'to',
-                label: ''
+                label: '',
+                align: 'left',
+            },
+            {
+                name: 'value',
+                label: '',
+                align: 'left',
+            }, {
+                name: 'token',
+                label: '',
+                align: 'left',
+            },
+        ];
+
+
+        return {
+            rows: [],
+            columns,
+            transfers: [],
+            pageSize
