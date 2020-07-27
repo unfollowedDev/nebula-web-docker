@@ -97,4 +97,18 @@ export default {
         this.columns[2].label = this.$t('components.from');
         this.columns[3].label = this.$t('components.to');
         this.columns[4].label = this.$t('components.value');
-        this.columns[
+        this.columns[5].label = this.$t('components.token');
+    },
+    mounted() {
+        switch (this.tokenType) {
+        case 'erc20':
+            this.expectedTopicLength = 3;
+            break;
+        case 'erc721':
+            this.expectedTopicLength = 4;
+            break;
+        case 'erc1155':
+            this.expectedTopicLength = 4;
+            break;
+        default:
+         
