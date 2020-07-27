@@ -111,4 +111,17 @@ export default {
             this.expectedTopicLength = 4;
             break;
         default:
-         
+            throw new Error(this.$t('components.unsupported_token_type', { tokenType: this.tokenType }));
+        }
+
+        this.onRequest({
+            pagination: this.pagination,
+        });
+    },
+    methods: {
+        async onRequest(props) {
+            this.loading = true;
+
+            const { page, rowsPerPage, sortBy, descending } = props.pagination;
+
+  
