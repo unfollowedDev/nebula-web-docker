@@ -144,4 +144,12 @@ export default {
 
                         if (!TRANSFER_SIGNATURES.includes(log.topics[0].substr(0, 10).toLowerCase())) {
                             continue;
-     
+                        }
+
+                        const address = `0x${log.address.substring(log.address.length - 40)}`;
+                        let from, to;
+                        if(this.tokenType === 'erc1155'){
+                            from = getTopicHash(log.topics[2]);
+                            to = getTopicHash(log.topics[3]);
+                        } else {
+  
