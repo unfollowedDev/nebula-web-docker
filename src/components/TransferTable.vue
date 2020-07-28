@@ -135,4 +135,13 @@ export default {
             this.pagination.descending = descending;
 
             let newTransfers = [];
-  
+            for (const transaction of result.data.transactions) {
+                try {
+                    for (const log of transaction.logs) {
+                        if (this.expectedTopicLength !== log.topics.length) {
+                            continue;
+                        }
+
+                        if (!TRANSFER_SIGNATURES.includes(log.topics[0].substr(0, 10).toLowerCase())) {
+                            continue;
+     
