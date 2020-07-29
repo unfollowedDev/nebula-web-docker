@@ -152,4 +152,10 @@ export default {
                             from = getTopicHash(log.topics[2]);
                             to = getTopicHash(log.topics[3]);
                         } else {
-  
+                            from = getTopicHash(log.topics[1]);
+                            to = getTopicHash(log.topics[2]);
+                        }
+                        if (
+                            to.toLowerCase() !== this.address.toLowerCase() &&
+                            from.toLowerCase() !== this.address.toLowerCase()
+                 
