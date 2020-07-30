@@ -158,4 +158,15 @@ export default {
                         if (
                             to.toLowerCase() !== this.address.toLowerCase() &&
                             from.toLowerCase() !== this.address.toLowerCase()
-                 
+                        ) {
+                            continue;
+                        }
+
+                        const contract = await this.$contractManager.getContract(
+                            ethers.utils.getAddress(address),
+                            this.tokenType,
+                        );
+
+                        const token = contract.token;
+                        let valueDisplay;
+                       
