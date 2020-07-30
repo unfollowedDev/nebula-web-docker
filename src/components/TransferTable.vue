@@ -169,4 +169,11 @@ export default {
 
                         const token = contract.token;
                         let valueDisplay;
-                       
+                        if (this.tokenType === 'erc20') {
+                            if (token && typeof token.decimals === 'number') {
+                                valueDisplay = formatWei(log.data, token.decimals);
+                            } else {
+                                valueDisplay = this.$t('components.unknown_precision');
+                            }
+                        } else {
+         
