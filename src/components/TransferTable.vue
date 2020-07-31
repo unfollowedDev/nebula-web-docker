@@ -182,4 +182,14 @@ export default {
                             if(tokenId.length > 15){
                                 tokenId = tokenId.substr(0, 15) + '...';
                             }
-                            valueDisplay = this.$t('compone
+                            valueDisplay = this.$t('components.token_id', { tokenId });
+                        }
+
+                        const transfer = {
+                            hash: transaction.hash,
+                            epoch: transaction.epoch,
+                            valueDisplay,
+                            address,
+                            from,
+                            to,
+                            ...contract,
