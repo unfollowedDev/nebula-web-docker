@@ -176,4 +176,10 @@ export default {
                                 valueDisplay = this.$t('components.unknown_precision');
                             }
                         } else {
-         
+                            let tokenId = (this.tokenType === 'erc1155') ?
+                                BigNumber.from(log.data.substr(0, TOKEN_ID_TRUNCATE_LENGTH)).toString() :
+                                BigNumber.from(log.topics[3]).toString();
+                            if(tokenId.length > 15){
+                                tokenId = tokenId.substr(0, 15) + '...';
+                            }
+                            valueDisplay = this.$t('compone
