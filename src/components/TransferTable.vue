@@ -204,4 +204,18 @@ export default {
                     );
                     // notify the user
                     this.$q.notify({
-                        m
+                        message: this.$t('components.failed_to_parse_transaction', { message: e.message }),
+                        type: 'negative',
+                    });
+                }
+            }
+
+            this.transfers.splice(
+                0,
+                this.transfers.length,
+                ...newTransfers,
+            );
+
+            this.rows = this.transfers;
+            this.loading = false;
+   
