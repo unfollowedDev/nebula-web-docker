@@ -193,3 +193,15 @@ export default {
                             from,
                             to,
                             ...contract,
+                        };
+
+                        newTransfers.push(transfer);
+                    }
+
+                } catch (e) {
+                    console.error(
+                        `Failed to parse data for transaction, error was: ${e.message}`,
+                    );
+                    // notify the user
+                    this.$q.notify({
+                        m
