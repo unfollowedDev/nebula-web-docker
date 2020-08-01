@@ -227,4 +227,13 @@ export default {
                 return row.token.logoURI;
             } else {
                 return DEFAULT_TOKEN_LOGO;
-           
+            }
+        },
+        getPath(props) {
+            const { page, rowsPerPage, descending } = props.pagination;
+            let path = `/v2/evm/get_transactions?limit=${
+                rowsPerPage === 0 ? 10 : rowsPerPage
+            }`;
+            let signature = TRANSFER_EVENT_ERC20_SIGNATURE;
+            if(this.tokenType === 'erc1155'){
+                signature = TRANSFER_EVENT_ERC1155_SIGNATURE
