@@ -218,4 +218,13 @@ export default {
 
             this.rows = this.transfers;
             this.loading = false;
-   
+        },
+        getIcon(row) {
+            if (row.token && row.token.logoURI) {
+                if (row.token.logoURI.startsWith('ipfs://')) {
+                    return row.token.logoURI.replace(/ipfs:\/\//, 'https://ipfs.io/ipfs/');
+                }
+                return row.token.logoURI;
+            } else {
+                return DEFAULT_TOKEN_LOGO;
+           
