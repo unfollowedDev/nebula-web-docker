@@ -255,3 +255,18 @@ export default {
 <q-table
     v-model:pagination="pagination"
     :rows="rows"
+    :row-key="row => row.hash"
+    :columns="columns"
+    :loading="loading"
+    :rows-per-page-options="[10, 20, 50]"
+    flat
+    @request="onRequest"
+>
+    <template v-slot:header="props">
+        <q-tr :props="props">
+            <q-th
+                v-for="col in props.cols"
+                :key="col.name"
+                :props="props"
+            >
+        
