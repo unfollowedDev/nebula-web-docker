@@ -236,4 +236,22 @@ export default {
             }`;
             let signature = TRANSFER_EVENT_ERC20_SIGNATURE;
             if(this.tokenType === 'erc1155'){
-                signature = TRANSFER_EVENT_ERC1155_SIGNATURE
+                signature = TRANSFER_EVENT_ERC1155_SIGNATURE;
+            }
+            path += `&log_topics=${signature},${this.address}`;
+            path += `&skip=${(page - 1) * rowsPerPage}`;
+            path += `&sort=${descending ? 'desc' : 'asc'}`;
+
+            return path;
+        },
+        toggleDateFormat() {
+            this.showDateAge = !this.showDateAge;
+        },
+    },
+};
+</script>
+
+<template>
+<q-table
+    v-model:pagination="pagination"
+    :rows="rows"
