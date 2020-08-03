@@ -269,4 +269,13 @@ export default {
                 :key="col.name"
                 :props="props"
             >
-        
+                <div class="u-flex--center-y">
+                    {{ col.label }}
+
+                    <q-icon
+                        v-if="col.name==='date'"
+                        class="info-icon"
+                        name="fas fa-info-circle"
+                        @click="toggleDateFormat"
+                    >
+                        <q-tooltip anchor="bottom middle" self="bottom mid
