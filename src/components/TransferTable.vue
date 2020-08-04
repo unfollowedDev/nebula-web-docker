@@ -278,4 +278,17 @@ export default {
                         name="fas fa-info-circle"
                         @click="toggleDateFormat"
                     >
-                        <q-tooltip anchor="bottom middle" self="bottom mid
+                        <q-tooltip anchor="bottom middle" self="bottom middle">
+                            {{ $t('components.click_to_change_format') }}
+                        </q-tooltip>
+                    </q-icon>
+                </div>
+
+            </q-th>
+        </q-tr>
+    </template>
+
+    <template v-slot:body="props">
+        <q-tr :props="props">
+            <q-td key="hash" :props="props">
+                <TransactionField :transaction-hash=
