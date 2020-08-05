@@ -308,4 +308,23 @@ export default {
             <q-td key="token" :props="props">
                 <q-img v-if="tokenType==='erc20'" class="coin-icon" :src="getIcon(props.row)"/>
                 <AddressField
-                   
+                    class="token-name"
+                    :address="props.row.address"
+                    :name="props.row.name"
+                    :truncate="15"
+                />
+            </q-td>
+        </q-tr>
+    </template>
+</q-table>
+</template>
+
+<style lang='sass' scoped>
+.coin-icon
+  width: 20px
+  margin-right: .25rem
+  vertical-align: middle
+
+.token-name
+  vertical-align: middle
+  display: inli
