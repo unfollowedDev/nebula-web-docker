@@ -300,4 +300,12 @@ export default {
                 <AddressField :address="props.row.from"/>
             </q-td>
             <q-td key="to" :props="props">
-          
+                <AddressField :address="props.row.to"/>
+            </q-td>
+            <q-td key="value" :props="props">
+                {{ props.row.valueDisplay }}
+            </q-td>
+            <q-td key="token" :props="props">
+                <q-img v-if="tokenType==='erc20'" class="coin-icon" :src="getIcon(props.row)"/>
+                <AddressField
+                   
