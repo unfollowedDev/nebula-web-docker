@@ -291,4 +291,13 @@ export default {
     <template v-slot:body="props">
         <q-tr :props="props">
             <q-td key="hash" :props="props">
-                <TransactionField :transaction-hash=
+                <TransactionField :transaction-hash="props.row.hash"/>
+            </q-td>
+            <q-td key="date" :props="props">
+                <DateField :epoch="props.row.epoch" :force-show-age="showDateAge" />
+            </q-td>
+            <q-td key="from" :props="props">
+                <AddressField :address="props.row.from"/>
+            </q-td>
+            <q-td key="to" :props="props">
+          
