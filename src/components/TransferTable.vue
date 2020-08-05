@@ -327,4 +327,5 @@ export default {
 
 .token-name
   vertical-align: middle
-  display: inli
+  display: inline-block
+</style>
