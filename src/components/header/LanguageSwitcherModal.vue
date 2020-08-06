@@ -32,4 +32,20 @@ export default {
         }));
     },
     watch: {
-        'select
+        'selectedLanguage.code'(newCode, oldCode) {
+            if (newCode !== oldCode) {
+                this.changeLanguage();
+            }
+        },
+    },
+    methods: {
+        changeLanguage() {
+            this.$setLocale(this.selectedLanguage.code);
+        },
+    },
+};
+</script>
+
+<template>
+<q-dialog :model-value="show" @hide="() => $emit('hide')">
+    <q-card rounded class="c-language-sw
