@@ -60,4 +60,22 @@ export default {
                 option-value="code"
                 option-label="name"
                 color="secondary"
-            
+                class="q-mb-lg"
+            />
+
+            <q-card-actions align="right">
+                <q-btn
+                    v-close-popup
+                    flat
+                    :label="$t('global.cancel')"
+                />
+            </q-card-actions>
+        </q-card-section>
+    </q-card>
+</q-dialog>
+</template>
+
+<style lang="scss">
+.c-language-switcher {
+    &__card {
+   
