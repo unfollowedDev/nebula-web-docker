@@ -48,4 +48,16 @@ export default {
 
 <template>
 <q-dialog :model-value="show" @hide="() => $emit('hide')">
-    <q-card rounded class="c-language-sw
+    <q-card rounded class="c-language-switcher__card">
+        <q-card-section class="q-pa-md">
+            <p class="text-h6">
+                {{ $t('components.header.select_language') }}
+            </p>
+
+            <q-select
+                v-model="selectedLanguage"
+                :options="languageOptions"
+                option-value="code"
+                option-label="name"
+                color="secondary"
+            
