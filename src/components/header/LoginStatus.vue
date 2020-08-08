@@ -12,4 +12,19 @@ export default {
             'address',
             'nativeAccount',
         ]),
-        pretty
+        prettyIdentity() {
+            if (!this.isLoggedIn) {
+                return '';
+            }
+
+            if (this.isNative) {
+                return this.nativeAccount;
+            }
+
+            return `0x...${this.address.slice(38, 42)}`;
+        },
+    },
+    methods: {
+        goToAddress() {
+            this.$emit('navigated');
+            this.$router.push(`/address/${this.addre
