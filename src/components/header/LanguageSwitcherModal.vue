@@ -78,4 +78,8 @@ export default {
 <style lang="scss">
 .c-language-switcher {
     &__card {
-   
+        width: 700px;
+        max-width: 80vw;
+    }
+}
+</style>
