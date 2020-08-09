@@ -27,4 +27,22 @@ export default {
     methods: {
         goToAddress() {
             this.$emit('navigated');
-            this.$router.push(`/address/${this.addre
+            this.$router.push(`/address/${this.address}`);
+        },
+        copy() {
+            copyToClipboard(this.address);
+
+            this.$q.notify({
+                position: 'bottom',
+                message: this.$t('components.header.address_copied'),
+                color: 'green',
+            });
+        },
+    },
+};
+</script>
+
+<template>
+<div v-if="isLoggedIn" class="c-login-status u-flex--center-y">
+    <q-icon
+ 
