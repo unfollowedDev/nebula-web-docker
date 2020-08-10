@@ -45,4 +45,18 @@ export default {
 <template>
 <div v-if="isLoggedIn" class="c-login-status u-flex--center-y">
     <q-icon
- 
+        name="account_circle"
+        class="c-login-status__account-icon"
+        size="sm"
+    />
+    {{ prettyIdentity }}
+    <div class="u-flex--center">
+        <q-icon
+            name="preview"
+            size="sm"
+            class="q-px-sm cursor-pointer"
+            @click="goToAddress"
+        />
+        <q-tooltip>
+            {{ $t('components.header.goto_address_details') }}
+        </q
