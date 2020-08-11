@@ -59,4 +59,25 @@ export default {
         />
         <q-tooltip>
             {{ $t('components.header.goto_address_details') }}
-        </q
+        </q-tooltip>
+    </div>
+
+    <div class="u-flex--center">
+        <q-icon
+            name="content_copy"
+            size="sm"
+            class="q-px-sm cursor-pointer"
+            @click="copy"
+        />
+        <q-tooltip>
+            {{ $t('components.header.copy_address') }}
+        </q-tooltip>
+    </div>
+</div>
+</template>
+
+<style lang="scss">
+.c-login-status {
+    font-size: 18px;
+
+    &__account-icon
