@@ -80,4 +80,8 @@ export default {
 .c-login-status {
     font-size: 18px;
 
-    &__account-icon
+    &__account-icon {
+        margin-right: 8px;
+    }
+}
+</style>
