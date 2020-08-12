@@ -57,4 +57,15 @@ export default {
 
             return [
                 val => validateParsedArray(val) || invalidArrayStringMessage,
-                val 
+                val => validateArrayLength(val) || incorrectArrayLengthMessage,
+            ];
+        },
+        shapedLabel() {
+            const size = (Number.isInteger(+this.size) && +this.size !== -1) ? `${+this.size}` : '';
+            return `${this.label} (address[${size}])`;
+        },
+    },
+    watch: {
+        async size(newVal, oldVal) {
+            if (newVal !== oldVal) {
+                // addre
