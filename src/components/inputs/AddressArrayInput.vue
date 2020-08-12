@@ -26,4 +26,16 @@ export default {
             required: true,
         },
         // if size is undefined or -1, array size is unconstrained; else it is fixed-size (e.g. address[3])
-        size:
+        size: {
+            type: [Number, String],
+            default: -1,
+            validator: length => +length >= -1,
+        },
+    },
+    data: () => ({
+        placeholder: `[0x${'0'.repeat(40)}, ...]`,
+        previousParsedValue: undefined,
+    }),
+    computed: {
+        rules() {
+            const validateParsedArray = value => Array.isArray(parseAddressArrayString(value)) || value
