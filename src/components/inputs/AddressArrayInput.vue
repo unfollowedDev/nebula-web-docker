@@ -79,4 +79,14 @@ export default {
             if (newValue !== this.modelValue) {
                 this.$emit('update:modelValue', newValue);
 
-                const expectedSize = +this
+                const expectedSize = +this.size === -1 ? undefined : +this.size;
+                const newParsed = parseAddressArrayString(newValue, expectedSize);
+
+                if (this.previousParsedValue !== newParsed) {
+                    this.$emit('valueParsed', newParsed);
+                    this.previousParsedValue = newParsed;
+                }
+            }
+        },
+    },
+};
