@@ -68,4 +68,15 @@ export default {
     watch: {
         async size(newVal, oldVal) {
             if (newVal !== oldVal) {
-                // addre
+                // addresses size & error message out-of-sync issue
+                await this.$refs.input.resetValidation();
+                await this.$refs.input.validate();
+            }
+        },
+    },
+    methods: {
+        handleChange(newValue) {
+            if (newValue !== this.modelValue) {
+                this.$emit('update:modelValue', newValue);
+
+                const expectedSize = +this
