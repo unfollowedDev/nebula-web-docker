@@ -52,4 +52,9 @@ export default {
             return [];
         },
         binding() {
-            // 'required' case is handled in mergedRules; due to a bug, a defined for the required att
+            // 'required' case is handled in mergedRules; due to a bug, a defined for the required attribute value
+            // incorrectly causes the label to be always raised
+            const required = undefined;
+            const isRequired = ['required', true, 'true'].includes(this.required);
+            const disable  = (this.disable  || ['disabled', true, 'true'].includes(this.disabled)) || undefined;
+            const readonly = (this.readonly || ['readonly', true, 'tru
