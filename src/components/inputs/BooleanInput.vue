@@ -7,4 +7,22 @@ export default {
     props: {
         modelValue: {
             type: Boolean,
-            default: nul
+            default: null,
+        },
+        label: {
+            type: String,
+            required: true,
+        },
+        name: {
+            type: String,
+            required: true,
+        },
+        required: {
+            type: [Boolean, String],
+            default: false,
+        },
+        disabled: {
+            type: [Boolean, String],
+            default: false,
+        },
+        // added for 
