@@ -25,4 +25,22 @@ export default {
             type: [Boolean, String],
             default: false,
         },
-        // added for 
+        // added for compatibility with quasar input props
+        disable: {
+            type: Boolean,
+            default: false,
+        },
+        readonly: {
+            type: [Boolean, String],
+            default: false,
+        },
+    },
+    computed: {
+        options() {
+            return [
+                'true',
+                'false',
+            ];
+        },
+        rules() {
+            if ([
