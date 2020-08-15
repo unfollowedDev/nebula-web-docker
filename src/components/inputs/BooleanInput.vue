@@ -71,4 +71,17 @@ export default {
     watch: {
         async required(newValue, oldValue) {
             if (newValue !== oldValue) {
-               
+                // prevent 'field is required' error from persisting if 'required' prop changes
+                await this.$refs.input.resetValidation();
+            }
+        },
+    },
+    methods: {
+        handleChange(newValue) {
+            let newBool = null;
+
+            if (newValue === 'false') {
+                newBool = false;
+            } else if (newValue === 'true') {
+                newBool = true;
+   
