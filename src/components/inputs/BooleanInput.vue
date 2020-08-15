@@ -84,4 +84,22 @@ export default {
                 newBool = false;
             } else if (newValue === 'true') {
                 newBool = true;
-   
+            }
+
+            if (newValue !== this.modelValue) {
+                this.$emit('update:modelValue', newBool);
+            }
+        },
+        async validate() {
+            await this.$refs.input.validate();
+        },
+        async resetValidation() {
+            await this.$refs.input.resetValidation();
+        },
+    },
+};
+</script>
+
+<template>
+<q-select
+    ref="input
