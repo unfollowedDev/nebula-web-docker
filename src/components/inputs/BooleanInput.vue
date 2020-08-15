@@ -57,4 +57,18 @@ export default {
             const required = undefined;
             const isRequired = ['required', true, 'true'].includes(this.required);
             const disable  = (this.disable  || ['disabled', true, 'true'].includes(this.disabled)) || undefined;
-            const readonly = (this.readonly || ['readonly', true, 'tru
+            const readonly = (this.readonly || ['readonly', true, 'true'].includes(this.readonly)) || undefined;
+
+            return {
+                ...this.$attrs,
+                required,
+                disable,
+                readonly,
+                label: `${this.label}  (bool)${isRequired ? '*' : ''}`,
+            };
+        },
+    },
+    watch: {
+        async required(newValue, oldValue) {
+            if (newValue !== oldValue) {
+               
