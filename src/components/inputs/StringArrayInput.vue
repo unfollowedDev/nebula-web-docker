@@ -1,11 +1,11 @@
 
 <script>
-import { parseBytesArrayString } from 'components/ContractTab/function-interface-utils';
+import { parseStringArrayString } from 'components/ContractTab/function-interface-utils';
 
 import BaseTextInput from 'components/inputs/BaseTextInput';
 
 export default {
-    name: 'BytesArrayInput',
+    name: 'StringArrayInput',
     components: {
         BaseTextInput,
     },
@@ -26,21 +26,26 @@ export default {
             type: String,
             required: true,
         },
-        // if size is undefined or -1, array size is unconstrained; else it is fixed-size value type (e.g. bytes3)
-        // see https://docs.soliditylang.org/en/latest/types.html#fixed-size-byte-arrays
+        // if size is undefined or -1, array size is unconstrained; else it is fixed-size (e.g. string[3])
         size: {
             type: [Number, String],
             default: -1,
-            validator: length => (+length >= -1 && +length <= 32) || [undefined, null].includes(length),
+            validator: length => +length >= -1,
         },
     },
     data: () => ({
-        placeholder: '[a9, 4b, ff, ...]',
+        placeholder: '',
+        hint: '',
         previousParsedValue: undefined,
     }),
+    async created() {
+        // initialization of the translated texts
+        this.placeholder = this.$t('components.inputs.str_input_placeholder');
+        this.hint = this.$t('components.inputs.str_input_hint');
+    },
     computed: {
         rules() {
-            const validateParsedArray = value => Array.isArray(parseBytesArrayString(value)) || value === '';
+            const validateParsedArray = value => Array.isArray(parseStringArrayString(value)) || value === '';
 
             const validateArrayLength = (value) => {
                 const sizeIsUnconstrained = [undefined, null, -1, '-1'].includes(this.size);
@@ -50,12 +55,12 @@ export default {
                 }
 
                 const expectedLength = +this.size;
-                return Array.isArray(parseBytesArrayString(value, expectedLength));
+                return Array.isArray(parseStringArrayString(value, expectedLength));
             };
 
             const incorrectArrayLengthMessage =
-                this.$t('components.inputs.incorrect_bytes_array_length', { size: +this.size });
-            const invalidArrayStringMessage = this.$t('components.inputs.invalid_bytes_array_string');
+                this.$t('components.inputs.incorrect_strings_array_length', { size: +this.size });
+            const invalidArrayStringMessage = this.$t('components.inputs.invalid_strings_array_string');
 
             return [
                 val => validateParsedArray(val) || invalidArrayStringMessage,
@@ -63,15 +68,8 @@ export default {
             ];
         },
         shapedLabel() {
-            let sizeLabel;
-
-            if ([undefined, null, -1, '-1'].includes(this.size)) {
-                sizeLabel = '[]';
-            } else {
-                sizeLabel = `${this.size}`;
-            }
-
-            return `${this.label} (bytes${sizeLabel})`;
+            const size = (Number.isInteger(+this.size) && +this.size !== -1) ? `${+this.size}` : '';
+            return `${this.label} (string[${size}])`;
         },
     },
     watch: {
@@ -89,7 +87,7 @@ export default {
                 this.$emit('update:modelValue', newValue);
 
                 const expectedSize = +this.size === -1 ? undefined : +this.size;
-                const newParsed = parseBytesArrayString(newValue, expectedSize);
+                const newParsed = parseStringArrayString(newValue, expectedSize);
 
                 if (this.previousParsedValue !== newParsed) {
                     this.$emit('valueParsed', newParsed);
@@ -109,6 +107,7 @@ export default {
     :label="shapedLabel"
     :name="name"
     :placeholder="placeholder"
+    :hint="hint"
     :rules="rules"
     :lazy-rules="false"
     :size="undefined"
