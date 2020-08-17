@@ -18,4 +18,20 @@ export default {
             type: String,
             required: true,
         },
- 
+        name: {
+            type: String,
+            required: true,
+        },
+    },
+    computed: {
+        shapedLabel() {
+            return `${this.label} (string)`;
+        },
+    },
+    methods: {
+        handleChange(newValue) {
+            if (newValue !== this.modelValue) {
+                this.$emit('update:modelValue', newValue);
+            }
+        },
+    }
