@@ -34,4 +34,20 @@ export default {
                 this.$emit('update:modelValue', newValue);
             }
         },
-    }
+    },
+};
+</script>
+
+<template>
+<BaseTextInput
+    v-bind="$attrs"
+    :model-value="modelValue"
+    :label="shapedLabel"
+    :name="name"
+    @update:modelValue="handleChange"
+/>
+</template>
+
+<style>
+
+</style>
