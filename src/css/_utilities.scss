@@ -1,0 +1,14 @@
+/* General */
+.u-flex {
+    $this: &;
+
+    &--left,
+    &--center,
+    &--center-y,
+    &--right,
+    &--space-between {
+        display: flex;
+        align-items: center;
+
+        &#{$this}--inline {
+          

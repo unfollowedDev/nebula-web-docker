@@ -60,3 +60,45 @@ export default {
         async size(newValue, oldValue) {
             if (newValue !== oldValue) {
                 await this.$refs.input.resetValidation();
+                await this.$refs.input.validate();
+            }
+        },
+    },
+    methods: {
+        handleChange(newValue) {
+            if (newValue !== this.modelValue) {
+                this.$emit('update:modelValue', newValue);
+
+                const expectedSize = +this.size === -1 ? undefined : +this.size;
+                const newParsed = parseUintString(newValue, expectedSize);
+
+                if (this.previousParsedValue !== newParsed) {
+                    this.$emit('valueParsed', newParsed);
+                    this.previousParsedValue = newParsed;
+                }
+            }
+        },
+    },
+};
+</script>
+
+<template>
+<BaseTextInput
+    ref="input"
+    v-bind="$attrs"
+    :model-value="modelValue"
+    :label="shapedLabel"
+    :name="name"
+    :rules="rules"
+    :size="undefined"
+    @update:modelValue="handleChange"
+>
+    <template #append>
+        <slot name="append"></slot>
+    </template>
+</BaseTextInput>
+</template>
+
+<style>
+
+</style>
