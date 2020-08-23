@@ -13,4 +13,8 @@ export default {
             stake_tlos_confirm: 'Beim Bestätigen tauschen Sie Ihre TLOS gegen sTLOS. ' +
             'sTLOS kann jederzeit gegen TLOS eingetauscht werden, indem Sie die Registerkarte "Abheben" verwenden.',
             cancel: 'Abbrechen',
-            stake_tlos_confirm_2a: 'Nachdem TLOS eingetauscht wurden, sind diese für ei
+            stake_tlos_confirm_2a: 'Nachdem TLOS eingetauscht wurden, sind diese für einen Zeitraum von', /* unstakePeriodPretty...*/
+            stake_tlos_confirm_2b: /*...unstakePeriodPretty */ 'gesperrt. Nach Ablauf der Sperrfrist können Sie in der Registerkarte "Einfordern" erneut Ihrem Konto gutgeschrieben werden.',
+            stake_tlos_confirm_3: 'Möchten Sie fortfahren?',
+            stake_tlos: 'TLOS tauschen',
+            stake_tlos_subhead
