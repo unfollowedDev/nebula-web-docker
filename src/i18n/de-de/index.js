@@ -25,4 +25,9 @@ export default {
             available: '{balanceTlos} Verfügbar',
             insufficient_tlos_balance: 'Unzureichendes TLOS-Guthaben',
             login_using_an_evm_wallet: 'Melden Sie sich mit einem EVM-Wallet an',
-            wallet_not_connected: 'Wa
+            wallet_not_connected: 'Wallet nicht verbunden',
+            click_to_input_full_wallet_balance: 'Klicken Sie hier, um das gesamte Wallet-Guthaben einzusetzen.\n\n' +
+            'Der angezeigte Betrag wird um 1 TLOS reduziert, um die Handlungsfähigkeit Ihres Konto sicherzustellen.\n' +
+            'Exakter Betrag (abzüglich der geschätzten Gasgebühren):\n' +
+            '{prettyBalance} TLOS',
+            loading: 'In Bearbeitun
