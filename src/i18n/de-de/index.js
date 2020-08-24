@@ -17,4 +17,6 @@ export default {
             stake_tlos_confirm_2b: /*...unstakePeriodPretty */ 'gesperrt. Nach Ablauf der Sperrfrist können Sie in der Registerkarte "Einfordern" erneut Ihrem Konto gutgeschrieben werden.',
             stake_tlos_confirm_3: 'Möchten Sie fortfahren?',
             stake_tlos: 'TLOS tauschen',
-            stake_tlos_subhead
+            stake_tlos_subheader: 'Ihr Einsatz von TLOS in sTLOS gewährt Ihnen Zugriff auf einen regelmäßige Belohnungen und Zugang zu verschiedene DeFi-Anwendungen, ' +
+            'dies kann Ihre Erlöse weiter erhöhen. Der Umrechnungskurs von TLOS zu sTLOS erhöht sich regelmäßig durch das Wachstum des Belohnungs-Pools ' +
+            'Daher ist die erhaltene Menge an sTLOS grundsätzlich geringer als die Menge der eingesetzte
