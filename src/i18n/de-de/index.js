@@ -30,4 +30,14 @@ export default {
             'Der angezeigte Betrag wird um 1 TLOS reduziert, um die Handlungsfähigkeit Ihres Konto sicherzustellen.\n' +
             'Exakter Betrag (abzüglich der geschätzten Gasgebühren):\n' +
             '{prettyBalance} TLOS',
-            loading: 'In Bearbeitun
+            loading: 'In Bearbeitung...',
+            get_more_tlos: 'Erhalten Sie mehr TLOS',
+            connect_wallet: 'Wallet verbinden',
+            minutes: 'Minuten',
+            hours: 'Stunden',
+            days: 'Tage',
+            unstake: 'Abheben',
+            stake: 'Einzahlen',
+            withdraw: 'Einfordern',
+            telos_evm_staking: 'Telos EVM Staking',
+            stake_tlos_earn_interest: 'Tauschen Sie TLOS für sTLOS, um Belohnung
