@@ -19,4 +19,10 @@ export default {
             stake_tlos: 'TLOS tauschen',
             stake_tlos_subheader: 'Ihr Einsatz von TLOS in sTLOS gewährt Ihnen Zugriff auf einen regelmäßige Belohnungen und Zugang zu verschiedene DeFi-Anwendungen, ' +
             'dies kann Ihre Erlöse weiter erhöhen. Der Umrechnungskurs von TLOS zu sTLOS erhöht sich regelmäßig durch das Wachstum des Belohnungs-Pools ' +
-            'Daher ist die erhaltene Menge an sTLOS grundsätzlich geringer als die Menge der eingesetzte
+            'Daher ist die erhaltene Menge an sTLOS grundsätzlich geringer als die Menge der eingesetzten TLOS. Aufgrund der thesaurierenden ' +
+            'Auszahlung ist keine zusätzliche Aktion erforderlich.',
+            receive_stlos: 'sTLOS erhalten',
+            available: '{balanceTlos} Verfügbar',
+            insufficient_tlos_balance: 'Unzureichendes TLOS-Guthaben',
+            login_using_an_evm_wallet: 'Melden Sie sich mit einem EVM-Wallet an',
+            wallet_not_connected: 'Wa
