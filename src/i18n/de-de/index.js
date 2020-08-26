@@ -40,4 +40,9 @@ export default {
             stake: 'Einzahlen',
             withdraw: 'Einfordern',
             telos_evm_staking: 'Telos EVM Staking',
-            stake_tlos_earn_interest: 'Tauschen Sie TLOS für sTLOS, um Belohnung
+            stake_tlos_earn_interest: 'Tauschen Sie TLOS für sTLOS, um Belohnungen aus dem Rewards-Pool zu erhalten.',
+            staked: 'Eingezahlt',
+            unstaked: 'Abgehoben',
+            tooltip_1: 'APY: Annual Percentage Yield\n\nDie jährliche Rendite nach Berücksichtigung von Zinseszinsen.\n\n' +
+            'Die Belohnungen werden etwa alle 30 Minuten in den Rewards-Pool ausgezahlt. Der Prozentsatz ist variabel, er verändert sich ' +
+            'kontinuierli
