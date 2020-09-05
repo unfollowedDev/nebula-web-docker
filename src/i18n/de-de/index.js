@@ -48,4 +48,10 @@ export default {
             'kontinuierlich auf Basis der im Rewards-Pool enthaltenen TLOS, dies betrifft die kombinierten Telos von EVM und Native. ' +
             'Die Belohnungen werden aus einem Community Reserve in den sTLOS-Vertrag eingezahlt.',
             tooltip_2: 'TVL: Total Value Locked\n\nAktueller Wert (in TLOS) aller im sTLOS' +
-            '(Staked TLOS) Smart Contract gehaltenen Tokens, also die derzeitige Summe aller eingezahlt
+            '(Staked TLOS) Smart Contract gehaltenen Tokens, also die derzeitige Summe aller eingezahlten TLOS in der Telos EVM. ',
+            tooltip_3: 'Eingezahlt\n\n' +
+            'Der Gesamteinsatz für das angemeldete Konto, also ' +
+            'Ihr sTLOS-Guthaben mit seinem aktuellen Wert, in TLOS ',
+            tooltip_4: 'Abgehoben\n\n' +
+            'Der Gesamtwert der TLOS, die Sie abgehoben haben, dies beinhaltet gesperrte und einforderbare Beträge.\n\n' +
+        
