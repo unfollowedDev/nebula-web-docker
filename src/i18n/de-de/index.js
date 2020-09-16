@@ -54,4 +54,8 @@ export default {
             'Ihr sTLOS-Guthaben mit seinem aktuellen Wert, in TLOS ',
             tooltip_4: 'Abgehoben\n\n' +
             'Der Gesamtwert der TLOS, die Sie abgehoben haben, dies beinhaltet gesperrte und einforderbare Beträge.\n\n' +
-        
+            'Beim Abheben \u2014i.e. redeem\u2014 von sTLOS, wird die entsprechende Anzahl TLOS ' +
+            'für {unlockPeriod} in einen ESCROW-Vertrag übertragen ("gesperrt"), in diesem Zeitraum ' +
+            'ist keine Transaktion mit diesen TLOS möglich.\n\n' +
+            'Nach Ablauf der Sperrfrist können Sie Ihre abgehobenen TLOS auf der entsprechenden Registerkarte einfordern, ' +
+    
