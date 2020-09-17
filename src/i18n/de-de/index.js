@@ -58,4 +58,7 @@ export default {
             'für {unlockPeriod} in einen ESCROW-Vertrag übertragen ("gesperrt"), in diesem Zeitraum ' +
             'ist keine Transaktion mit diesen TLOS möglich.\n\n' +
             'Nach Ablauf der Sperrfrist können Sie Ihre abgehobenen TLOS auf der entsprechenden Registerkarte einfordern, ' +
-    
+            'der Betrag wird dann Ihrem TLOS-Konto gutgeschrieben ',
+            confirm_unstake_1a: 'Fortsetzen, um sTLOS in TLOS zu tauschen. ' +
+            'Abgehobene TLOS bleiben für den folgenden Zeitraum gesperrt:', /* unstakePeriodPretty...*/
+            confirm_unstake_1b: /*...unstakePeriodPretty */ 'Danach kann der Betrag über die Registerkarte "Einfordern" Ihrem Konto gutges
