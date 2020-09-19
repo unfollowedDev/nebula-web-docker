@@ -61,4 +61,8 @@ export default {
             'der Betrag wird dann Ihrem TLOS-Konto gutgeschrieben ',
             confirm_unstake_1a: 'Fortsetzen, um sTLOS in TLOS zu tauschen. ' +
             'Abgehobene TLOS bleiben für den folgenden Zeitraum gesperrt:', /* unstakePeriodPretty...*/
-            confirm_unstake_1b: /*...unstakePeriodPretty */ 'Danach kann der Betrag über die Registerkarte "Einfordern" Ihrem Konto gutges
+            confirm_unstake_1b: /*...unstakePeriodPretty */ 'Danach kann der Betrag über die Registerkarte "Einfordern" Ihrem Konto gutgeschrieben werden.',
+            confirm_unstake_2a: 'Achtung, dies führt zur Abhebung ', /* remainingDeposits...*/
+            confirm_unstake_2b: /*...remainingDeposits */ 'Verbleibende Abhebungen, ' +
+            'bis Sie die maximale Anzahl der parallelen Abhebungen erreicht haben. Bitte fordern Sie entsperrte Positionen ein, bevor Sie weitere Positionen öffnen.' +
+            'Bitte warten Sie bis die Sperr
