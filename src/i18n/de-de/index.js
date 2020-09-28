@@ -69,4 +69,11 @@ export default {
             'In dringenden Fällen können Sie sTLOS in einer DEX (Decentralized Exchange) für TLOS tauschen, bitte beachten Sie, dass der Wert deutlich abweichen kann. -',
             unstake_stlos_for_tlos: 'sTLOS für TLOS tauschen',
             unstake_stlos: 'sTLOS abheben',
-            receive_tlos: 'TLOS erha
+            receive_tlos: 'TLOS erhalten',
+            amount: 'Betrag',
+            time_remaining: 'Verbleibende Zeit',
+            full_staked_balance_tooltip: 'Clicken Sie hier, um die gesamte verfügbare Summe einzufügen\n\n' +
+            'Saldo (abzüglich geschätzter Transaktionskosten):\n' +
+            '{prettyBalance} sTLOS',
+            login_using_evm_wallet: 'Mit einem EVM-Wallet anmelden',
+            max_u
