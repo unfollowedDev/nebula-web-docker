@@ -65,4 +65,8 @@ export default {
             confirm_unstake_2a: 'Achtung, dies führt zur Abhebung ', /* remainingDeposits...*/
             confirm_unstake_2b: /*...remainingDeposits */ 'Verbleibende Abhebungen, ' +
             'bis Sie die maximale Anzahl der parallelen Abhebungen erreicht haben. Bitte fordern Sie entsperrte Positionen ein, bevor Sie weitere Positionen öffnen.' +
-            'Bitte warten Sie bis die Sperr
+            'Bitte warten Sie bis die Sperrfrist einer Position abgelaufgen ist, um weitere sTLOS abzuheben. ' +
+            'In dringenden Fällen können Sie sTLOS in einer DEX (Decentralized Exchange) für TLOS tauschen, bitte beachten Sie, dass der Wert deutlich abweichen kann. -',
+            unstake_stlos_for_tlos: 'sTLOS für TLOS tauschen',
+            unstake_stlos: 'sTLOS abheben',
+            receive_tlos: 'TLOS erha
