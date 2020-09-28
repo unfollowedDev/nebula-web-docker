@@ -80,4 +80,10 @@ export default {
             'Bitte fordern Sie verfügbare TLOS ein oder warten Sie, bis ausstehende Positionen entsperrt werden.',
             click_to_change_time_format: 'Clicken Sie hier, um die Zeit-Formatierung zu ändern.',
             unstaking: 'Abhebung',
-            available_to_withdraw: 'Zum Einforde
+            available_to_withdraw: 'Zum Einfordern verfügbar',
+            withdraw_tlos: 'TLOS Einfordern',
+            withdraw_successful: 'Transaktion erfolgreich! Jetzt prüfen:',
+            no_withdrawable_positions: 'Keine einforderbaren Positionen',
+            you_have_unlocked_tlos: 'Sie verfügen über einforderbare TLOS Positionen!',
+            stake_tlos_success: 'Transaktion erfolgreich! Jetzt prüfen:',
+            unstake_stlos_success: 'Trans
