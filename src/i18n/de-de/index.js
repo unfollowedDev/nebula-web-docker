@@ -76,4 +76,8 @@ export default {
             'Saldo (abzüglich geschätzter Transaktionskosten):\n' +
             '{prettyBalance} sTLOS',
             login_using_evm_wallet: 'Mit einem EVM-Wallet anmelden',
-            max_u
+            max_unstake_transactions_reached: 'Sie haben die maximale Anzahl paralleler Abhebungen erreicht, ' +
+            'Bitte fordern Sie verfügbare TLOS ein oder warten Sie, bis ausstehende Positionen entsperrt werden.',
+            click_to_change_time_format: 'Clicken Sie hier, um die Zeit-Formatierung zu ändern.',
+            unstaking: 'Abhebung',
+            available_to_withdraw: 'Zum Einforde
