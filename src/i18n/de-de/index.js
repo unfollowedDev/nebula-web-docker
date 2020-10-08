@@ -86,4 +86,8 @@ export default {
             no_withdrawable_positions: 'Keine einforderbaren Positionen',
             you_have_unlocked_tlos: 'Sie verfügen über einforderbare TLOS Positionen!',
             stake_tlos_success: 'Transaktion erfolgreich! Jetzt prüfen:',
-            unstake_stlos_success: 'Trans
+            unstake_stlos_success: 'Transaktion erfolgreich! Jetzt prüfen:',
+            deposit_failed: 'Fehler bei der TLOS Einzahlung: { message }',
+            redeem_failed: 'STLOS zu TLOS Konvertierung nicht möglich: { message }',
+            fetch_balance_error: 'Konten-Saldo konnte nicht abgerufen werden: { message }',
+            fetch_stlos_balance_error: 'sTLOS-Saldo konnte nicht abgerufen werden: { mess
