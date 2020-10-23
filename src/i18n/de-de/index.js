@@ -94,4 +94,8 @@ export default {
             fetch_stlos_value_error: 'Wert des sTLOS-Saldo konnte nicht abgerufen werden: { message }',
             fetch_unstaked_balance_error: 'Abruf des abgehobenen TLOS-Saldos fehlgeschlagen: { message }',
             fetch_unlocked_balance_error: 'Abruf des einforderbaren sTLOS-Saldos fehlgeschlagen: { message }',
-            fetch_escrow_deposits_error: 'Abruf der ESCROW-
+            fetch_escrow_deposits_error: 'Abruf der ESCROW-Salden fehlgeschlagen: { message }',
+            fetch_conversion_rate_error: 'Abruf des TLOS->sTLOS Umrechnungskurses fehlgeschlagen: { message }',
+            fetch_stlos_contract_error: 'Abruf des sTLOS Smart Contract fehlgeschlagen: { message }',
+            fetch_escrow_contract_error: 'Abruf des ESCROW Smart Contract fehlgeschlagen: { message }',
+            fetch
