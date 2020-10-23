@@ -90,4 +90,8 @@ export default {
             deposit_failed: 'Fehler bei der TLOS Einzahlung: { message }',
             redeem_failed: 'STLOS zu TLOS Konvertierung nicht möglich: { message }',
             fetch_balance_error: 'Konten-Saldo konnte nicht abgerufen werden: { message }',
-            fetch_stlos_balance_error: 'sTLOS-Saldo konnte nicht abgerufen werden: { mess
+            fetch_stlos_balance_error: 'sTLOS-Saldo konnte nicht abgerufen werden: { message }',
+            fetch_stlos_value_error: 'Wert des sTLOS-Saldo konnte nicht abgerufen werden: { message }',
+            fetch_unstaked_balance_error: 'Abruf des abgehobenen TLOS-Saldos fehlgeschlagen: { message }',
+            fetch_unlocked_balance_error: 'Abruf des einforderbaren sTLOS-Saldos fehlgeschlagen: { message }',
+            fetch_escrow_deposits_error: 'Abruf der ESCROW-
