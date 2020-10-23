@@ -98,4 +98,8 @@ export default {
             fetch_conversion_rate_error: 'Abruf des TLOS->sTLOS Umrechnungskurses fehlgeschlagen: { message }',
             fetch_stlos_contract_error: 'Abruf des sTLOS Smart Contract fehlgeschlagen: { message }',
             fetch_escrow_contract_error: 'Abruf des ESCROW Smart Contract fehlgeschlagen: { message }',
-            fetch
+            fetch_unstake_period_error: 'Abruf der Sperrfrist fehlgeschlagen: { message }',
+            fetch_account_error: 'Konto konnte nicht abgerufen werden: { message }',
+            fetch_stlos_tvl_error: 'Abruf des sTLOS TVL fehlgeschlagen: { message }',
+            fetch_stlos_apy_error: 'Abruf der sTLOS APY fehlgeschlagen: { message }',
+            fetch_max_deposits_error: 'Abruf der maximalen Abhebungen aus ESCRO
