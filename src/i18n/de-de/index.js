@@ -102,4 +102,8 @@ export default {
             fetch_account_error: 'Konto konnte nicht abgerufen werden: { message }',
             fetch_stlos_tvl_error: 'Abruf des sTLOS TVL fehlgeschlagen: { message }',
             fetch_stlos_apy_error: 'Abruf der sTLOS APY fehlgeschlagen: { message }',
-            fetch_max_deposits_error: 'Abruf der maximalen Abhebungen aus ESCRO
+            fetch_max_deposits_error: 'Abruf der maximalen Abhebungen aus ESCROW Smar Contract fehlgeschlagen: { message }',
+            convert_tlos_to_stlos_error: 'TLOS konnte nicht in STLOS umgewandelt werden: { message }',
+            convert_stlos_to_tlos_error: 'sTLOS konnte nicht in TLOS umgewandelt werden:S { message }',
+            unstake_stlos_error: 'sTLOS konnte nicht abgehoben werden: { message }',
+            withdraw_failed: 'TLOS Position konnte n
