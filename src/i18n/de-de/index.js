@@ -106,4 +106,13 @@ export default {
             convert_tlos_to_stlos_error: 'TLOS konnte nicht in STLOS umgewandelt werden: { message }',
             convert_stlos_to_tlos_error: 'sTLOS konnte nicht in TLOS umgewandelt werden:S { message }',
             unstake_stlos_error: 'sTLOS konnte nicht abgehoben werden: { message }',
-            withdraw_failed: 'TLOS Position konnte n
+            withdraw_failed: 'TLOS Position konnte nicht ausgezahlt werden: { message }',
+        },
+        explore_transactions: 'Transaktionen prüfen',
+        recent_transactions: 'Neueste Transaktionen',
+        telos_evm_explorer: 'Telos EVM Explorer',
+        rpc_endpoints: 'RPC Endpunkte',
+        monitor: 'Monitor',
+        oops: 'Oh. Hier existiert nichts...',
+        go_home: 'Home',
+        select_sol_
