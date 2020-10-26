@@ -115,4 +115,8 @@ export default {
         monitor: 'Monitor',
         oops: 'Oh. Hier existiert nichts...',
         go_home: 'Home',
-        select_sol_
+        select_sol_file: 'Bitte .sol Smart Contract Datei für Hochladen auswählen',
+        select_json_file: 'Bitte standard JSON Objekt-Datei für Hochladen auswählen',
+        paste_contract_contents: 'Sie müssen eine Datei zum Hochladen auswählen oder den Reiter wechseln, um Smart Contract Inhalte direkt einzufügen.',
+        contract_address: 'Smart Contract Adresse',
+        enter_contract_a
