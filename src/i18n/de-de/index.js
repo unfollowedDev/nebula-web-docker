@@ -119,4 +119,9 @@ export default {
         select_json_file: 'Bitte standard JSON Objekt-Datei für Hochladen auswählen',
         paste_contract_contents: 'Sie müssen eine Datei zum Hochladen auswählen oder den Reiter wechseln, um Smart Contract Inhalte direkt einzufügen.',
         contract_address: 'Smart Contract Adresse',
-        enter_contract_a
+        enter_contract_address: 'Bitte Smart Contract Adresse eingeben \'0x0123...\'',
+        invalid_address_format: 'Ungültiges Adress-Format',
+        compiler_version: 'Compiler Version',
+        select_compiler_version: 'Compiler Version auswählen',
+        eg_contracts: 'd.h.:, \'contracts/\'',
+        contract_file_directory_path: 'Smart Contract Datei(en) Verzeichnis Pfad (leer lassen, f
