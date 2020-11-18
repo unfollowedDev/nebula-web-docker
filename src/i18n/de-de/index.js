@@ -124,4 +124,11 @@ export default {
         compiler_version: 'Compiler Version',
         select_compiler_version: 'Compiler Version auswählen',
         eg_contracts: 'd.h.:, \'contracts/\'',
-        contract_file_directory_path: 'Smart Contract Datei(en) Verzeichnis Pfad (leer lassen, f
+        contract_file_directory_path: 'Smart Contract Datei(en) Verzeichnis Pfad (leer lassen, falls nicht vorhanden)',
+        invalid_path_format: 'Der Pfad muss mit einem Schrägstrich enden /',
+        upload_file: 'Datei hochladen',
+        text_input: 'Texteingabe',
+        runs_value_for_optimization: 'Führt Wert zur Optimierung aus',
+        constructor_arguments: 'Constructor Arguments',
+        comma_seperated_values: 'Kommagetrennte Werte z.B.:, Bob,123,0x12345...',
+  
