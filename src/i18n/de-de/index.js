@@ -131,4 +131,11 @@ export default {
         runs_value_for_optimization: 'Führt Wert zur Optimierung aus',
         constructor_arguments: 'Constructor Arguments',
         comma_seperated_values: 'Kommagetrennte Werte z.B.:, Bob,123,0x12345...',
-  
+        no_trailing_commas: 'Keine nachgestellten Kommas',
+        paste_contract_code_here: 'Smart Contract Code kopieren und hier einfügen...',
+        enter_contract_text: 'Smart Contract Code eingeben oder einfügen',
+        verify_contract: 'Smart Contract verifizieren',
+        reset: 'Zurücksetzen',
+        gas_used: 'Verbrauchtes Gas',
+        transactions: 'Transaktionen',
+ 
