@@ -138,4 +138,12 @@ export default {
         reset: 'Zurücksetzen',
         gas_used: 'Verbrauchtes Gas',
         transactions: 'Transaktionen',
- 
+        account: 'Konto',
+        contract: 'Smart Contract',
+        erc20_transfers: 'ERC20 Transfers',
+        erc721_transfers: 'ERC721 Transfers',
+        erc1155_transfers: 'ERC1155 Transfers',
+        tokens: 'Tokens',
+        created_at_trx: 'Erstellt in Transaktion',
+        by_address: 'Durch Konto/Adresse',
+        number_used_once: 'Einmalig verwendete Numm
