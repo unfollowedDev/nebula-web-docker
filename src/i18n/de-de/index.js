@@ -146,4 +146,10 @@ export default {
         tokens: 'Tokens',
         created_at_trx: 'Erstellt in Transaktion',
         by_address: 'Durch Konto/Adresse',
-        number_used_once: 'Einmalig verwendete Numm
+        number_used_once: 'Einmalig verwendete Nummer (nonce)',
+        native_account: 'Konto: Telos Native',
+        balance: 'Saldo',
+        view_source_prompt: 'Dieser Smart Contract wurde überprüft. Sie können den Quellcode und die Metadaten im Reiter \'contract\' ansehen',
+        account_url: '{ domain }/account/{ account }',
+        tlos_balance: '{ balance } TLOS',
+        couldnt_retreive_metadata_for_addres
