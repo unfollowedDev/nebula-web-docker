@@ -152,4 +152,12 @@ export default {
         view_source_prompt: 'Dieser Smart Contract wurde überprüft. Sie können den Quellcode und die Metadaten im Reiter \'contract\' ansehen',
         account_url: '{ domain }/account/{ account }',
         tlos_balance: '{ balance } TLOS',
-        couldnt_retreive_metadata_for_addres
+        couldnt_retreive_metadata_for_address: 'Metadata konnten nicht abgerufen werden { address }: { message }',
+        transaction_details: 'Transaktions-Details',
+        transaction_not_found: 'Nicht gefunden: { hash }',
+        general: 'Allgemein',
+        details: 'Details',
+        logs: 'Protokolle',
+        internal_txns: 'Interne Transaktionen',
+        transaction_hash: 'Transaktions Hash',
+        click_to_change_date_format: 'Klick
