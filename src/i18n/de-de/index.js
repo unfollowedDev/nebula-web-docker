@@ -160,4 +160,15 @@ export default {
         logs: 'Protokolle',
         internal_txns: 'Interne Transaktionen',
         transaction_hash: 'Transaktions Hash',
-        click_to_change_date_format: 'Klick
+        click_to_change_date_format: 'Klicken Sie hier, um das Datumsformat zu ändern',
+        block_number: 'Block Nummer',
+        from: 'Von',
+        to: 'Nach',
+        date: 'Datum',
+        success: 'Erfolg',
+        failure: 'Fehlgeschlagen',
+        status: 'Status',
+        balance_gwei: '{ amount } GWEI',
+        balance_tlos: '{ amount } TLOS',
+        error_message: 'Fehlermeldung',
+       
