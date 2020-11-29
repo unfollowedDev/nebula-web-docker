@@ -171,4 +171,12 @@ export default {
         balance_gwei: '{ amount } GWEI',
         balance_tlos: '{ amount } TLOS',
         error_message: 'Fehlermeldung',
-       
+        contract_function: 'Smart Contract Funktionen',
+        function_parameters: 'Funktions-Parameter',
+        deployed_contract: 'Bereitgestellter Smart Contract',
+        click_to_show_in_wei: 'Anklicken zum Einblenden in wei',
+        gas_price_charged: 'Berechnete Transaktionskosten',
+        gas_fee: 'Transaktionskosten',
+        gas_limit: 'Transaktionskosten-Limit',
+        nonce: 'Nonce',
+        
