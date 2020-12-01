@@ -179,4 +179,13 @@ export default {
         gas_fee: 'Transaktionskosten',
         gas_limit: 'Transaktionskosten-Limit',
         nonce: 'Nonce',
-        
+        input: 'Eingabe',
+        output: 'Ausgabe',
+        value: 'Wert',
+    },
+    components: {
+        internal_txns: 'Interne Transaktionen',
+        n_internal_txns: '{ amount } Interne Transaktionen',
+        none: 'Keine',
+        verify_prompt: 'Dieser Smart Contract wurde noch nicht überprüft.  Möchten Sie den Contract/die Contracts und deren Metadaten jetzt hochladen, um die Quelle zu verifizieren?',
+        verify_con
