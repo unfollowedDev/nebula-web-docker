@@ -188,4 +188,9 @@ export default {
         n_internal_txns: '{ amount } Interne Transaktionen',
         none: 'Keine',
         verify_prompt: 'Dieser Smart Contract wurde noch nicht überprüft.  Möchten Sie den Contract/die Contracts und deren Metadaten jetzt hochladen, um die Quelle zu verifizieren?',
-        verify_con
+        verify_contract: 'Smart Contract verifizieren',
+        search_evm_address_failed: 'Suche nach EVM-Adresse zu Telos Native Konto { accountName } fehlgeschlagen. Sie können auf wallet.telos.net eine EVM-Adresse erstellen.',
+        unknown_web3_login_type: 'Unbekannter web3 Login Typ: { provider }',
+        connect_wallet: 'Wallet verbinden',
+        view_address: 'Adresse ansehen',
+        disconn
