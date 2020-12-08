@@ -193,4 +193,6 @@ export default {
         unknown_web3_login_type: 'Unbekannter web3 Login Typ: { provider }',
         connect_wallet: 'Wallet verbinden',
         view_address: 'Adresse ansehen',
-        disconn
+        disconnect: 'Verbindung trennen',
+        disable_wallet_extensions: 'Deaktivieren Sie die Wallet-Erweiterungen oder setzen Sie Brave-Wallet als Standard in den Browser-Einstellungen, um Brave Wallet zu verwenden.',
+        enable_wallet_extensions: 'Aktivieren Sie die MetaMask-Erweiterung und setzen Sie die Voreinstellung "Erweiterung bevorzugen" in den Browser-Einstellungen, um die MetaMask-Wallet zu verwe
