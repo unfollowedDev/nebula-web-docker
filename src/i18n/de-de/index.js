@@ -201,4 +201,10 @@ export default {
         continue_on_metamask: 'Mit Metamask fortfahren',
         text1_native_wallets: 'Telos Native Wallets für',
         text2_advanced_users: 'Fortgeschrittene Benutzer',
-        text3_or_to_recover_assets: 'oder zur Wiedererlangung von Werten, die an eine Te
+        text3_or_to_recover_assets: 'oder zur Wiedererlangung von Werten, die an eine Telos Native Adresse gesendet wurden',
+        copy_to_clipboard: '{ text } in die Zwischenablage kopieren',
+        latest_block: 'Letzter Block',
+        tlos_price: 'TLOS Preis',
+        gas_price: 'Gas Preis',
+        click_to_expand: 'Klicken Sie, um die Funktionssignatur zu erweitern',
+        search_evm_failed: 'Suche nach verlinkter EVM-Adresse für Telos Native Konto { search_term } fehlgeschlagen.
