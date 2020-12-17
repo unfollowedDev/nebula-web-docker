@@ -195,4 +195,10 @@ export default {
         view_address: 'Adresse ansehen',
         disconnect: 'Verbindung trennen',
         disable_wallet_extensions: 'Deaktivieren Sie die Wallet-Erweiterungen oder setzen Sie Brave-Wallet als Standard in den Browser-Einstellungen, um Brave Wallet zu verwenden.',
-        enable_wallet_extensions: 'Aktivieren Sie die MetaMask-Erweiterung und setzen Sie die Voreinstellung "Erweiterung bevorzugen" in den Browser-Einstellungen, um die MetaMask-Wallet zu verwe
+        enable_wallet_extensions: 'Aktivieren Sie die MetaMask-Erweiterung und setzen Sie die Voreinstellung "Erweiterung bevorzugen" in den Browser-Einstellungen, um die MetaMask-Wallet zu verwenden.',
+        evm_wallets: 'EVM-Wallets',
+        advanced: 'Erweiterte Optionen',
+        continue_on_metamask: 'Mit Metamask fortfahren',
+        text1_native_wallets: 'Telos Native Wallets für',
+        text2_advanced_users: 'Fortgeschrittene Benutzer',
+        text3_or_to_recover_assets: 'oder zur Wiedererlangung von Werten, die an eine Te
