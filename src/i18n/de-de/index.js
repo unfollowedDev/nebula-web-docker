@@ -207,4 +207,15 @@ export default {
         tlos_price: 'TLOS Preis',
         gas_price: 'Gas Preis',
         click_to_expand: 'Klicken Sie, um die Funktionssignatur zu erweitern',
-        search_evm_failed: 'Suche nach verlinkter EVM-Adresse für Telos Native Konto { search_term } fehlgeschlagen.
+        search_evm_failed: 'Suche nach verlinkter EVM-Adresse für Telos Native Konto { search_term } fehlgeschlagen.',
+        search_failed: 'Suche fehlgeschlagen, bitte geben Sie einen gültigen Suchbegriff ein.',
+        add_to_metamask: '{ symbol } zu MetaMask hinzufügen',
+        tx_hash: 'Tx Hash',
+        block: 'Block',
+        date: 'Datum',
+        method: 'Methode',
+        to_interacted_with: 'An/Interagiert mit',
+        value_transfer: 'Wert/Transfer',
+        value: 'Wert',
+        token: 'Token',
+       
