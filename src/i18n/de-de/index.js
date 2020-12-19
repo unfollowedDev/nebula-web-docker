@@ -218,4 +218,9 @@ export default {
         value_transfer: 'Wert/Transfer',
         value: 'Wert',
         token: 'Token',
-       
+        unknown_precision: 'Unbekannte Präzision/Dezimalstellen',
+        click_to_change_format: 'Zum Ändern des Formats anklicken',
+        func_exed_based_on_dec_data: 'Funktion auf Basis der dekodierten Daten ausgeführt.',
+        balance: 'Saldo',
+        error_fetching_balance: 'Fehler beim Aufrufen des Saldos',
+        launch_metamask_dialog_to_add: 'MetaMask Dialog öffnen, um
