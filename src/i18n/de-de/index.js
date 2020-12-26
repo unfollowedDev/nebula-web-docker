@@ -223,4 +223,9 @@ export default {
         func_exed_based_on_dec_data: 'Funktion auf Basis der dekodierten Daten ausgeführt.',
         balance: 'Saldo',
         error_fetching_balance: 'Fehler beim Aufrufen des Saldos',
-        launch_metamask_dialog_to_add: 'MetaMask Dialog öffnen, um
+        launch_metamask_dialog_to_add: 'MetaMask Dialog öffnen, um { symbol } hinzuzufügen',
+        search_hints: 'Transaktion,Adresse/Konto,Block',
+        no_provider_found: 'Mehr als ein Anbieter ist aktiv, bitte deaktivieren Sie zusätzliche Anbieter oder der aktuelle EVM-Wallet-Anbieter wird nicht unterstützt.',
+        copied: 'Kopiert',
+        copy_to_clipboard_failed: 'Koipieren in die Zwischenablage ist fehlgeschlagen',
+        gwei: 'G
