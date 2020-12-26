@@ -228,4 +228,7 @@ export default {
         no_provider_found: 'Mehr als ein Anbieter ist aktiv, bitte deaktivieren Sie zusätzliche Anbieter oder der aktuelle EVM-Wallet-Anbieter wird nicht unterstützt.',
         copied: 'Kopiert',
         copy_to_clipboard_failed: 'Koipieren in die Zwischenablage ist fehlgeschlagen',
-        gwei: 'G
+        gwei: 'Gwei',
+        failed_to_parse_transaction: 'Das Parsen der Daten für die Transaktion ist fehlgeschlagen, Fehler: { message }',
+        executed_based_on_decoded_data: 'Funktion wird auf der Grundlage der dekodierten Eingabedaten ausgeführt. Bei nicht identifizierter Funktion wird stattdessen die Methoden-ID angezeigt.',
+        unsupported_token_type: 'Token Typ nicht unterstützt: { tokenTy
