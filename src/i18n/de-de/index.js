@@ -251,4 +251,10 @@ export default {
             unknown: 'Unbekannt',
             contract_deployment: 'Smart Contract Deployment',
             no_internal_trxs_found: 'Keine interne Transaktion gefunden',
-            human_readabl
+            human_readable: 'Für Menschen lesbar',
+            no_logs_found: 'Keine Protokolle gefunden',
+            verify_related_contract: 'Überprüfen Sie den zugehörigen Smart Contract für jedes Protokoll, um seine für den Menschen lesbare Version zu sehen',
+            failed_to_retrieve_contract: 'Smart Contract mit dieser Adresse konnte nicht abgerufen werden { address }',
+        },
+        inputs: {
+            incorrect_address_array_length: 'Das Array sollte { s
