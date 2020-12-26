@@ -231,4 +231,16 @@ export default {
         gwei: 'Gwei',
         failed_to_parse_transaction: 'Das Parsen der Daten für die Transaktion ist fehlgeschlagen, Fehler: { message }',
         executed_based_on_decoded_data: 'Funktion wird auf der Grundlage der dekodierten Eingabedaten ausgeführt. Bei nicht identifizierter Funktion wird stattdessen die Methoden-ID angezeigt.',
-        unsupported_token_type: 'Token Typ nicht unterstützt: { tokenTy
+        unsupported_token_type: 'Token Typ nicht unterstützt: { tokenType }',
+        token_id: 'Id #{ tokenId }',
+        status: 'Status',
+        nonce: 'Nonce',
+        from: 'Von',
+        to: 'An',
+        transaction: {
+            form_from: 'Von : ',
+            form_to: 'An : ',
+            form_token: 'Token : ',
+            consult_collection: 'Sammlung ansehen',
+            consult_metadata: 'Metadaten ansehen',
+            consult_media: 'Medien ansehen',
