@@ -244,3 +244,11 @@ export default {
             consult_collection: 'Sammlung ansehen',
             consult_metadata: 'Metadaten ansehen',
             consult_media: 'Medien ansehen',
+            show_total: 'Summe anzeigen',
+            show_wei: 'wei anzeigen',
+            value_uint256: 'Wert (uint256) : ',
+            tlos_transfer: 'TLOS Transfer',
+            unknown: 'Unbekannt',
+            contract_deployment: 'Smart Contract Deployment',
+            no_internal_trxs_found: 'Keine interne Transaktion gefunden',
+            human_readabl
