@@ -257,4 +257,8 @@ export default {
             failed_to_retrieve_contract: 'Smart Contract mit dieser Adresse konnte nicht abgerufen werden { address }',
         },
         inputs: {
-            incorrect_address_array_length: 'Das Array sollte { s
+            incorrect_address_array_length: 'Das Array sollte { size } Adressen enthalten',
+            incorrect_booleans_array_length: 'In dem Array sollten { size } Boolesche Werte enthalten sein',
+            incorrect_bytes_array_length: 'Das Array sollte { size } Bytes enthalten',
+            incorrect_sigint_array_length: 'Das Array muss { size } signed Integers enthalten',
+            incorrect_strings_array_length: 'Das Array sollte nur
