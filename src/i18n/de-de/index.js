@@ -266,4 +266,9 @@ export default {
 
             invalid_address_array_string: 'Eingegebener Wert repräsentiert kein Array von Adressen',
             invalid_booleans_array_string: 'Der eingegebene Wert entspricht keinem Array von bool(s)',
-            invalid_bytes_array_string: 'Eingegebener W
+            invalid_bytes_array_string: 'Eingegebener Wert entspricht keinem Array von Bytes dar',
+            invalid_sigint_array_string: 'Eingegebener Wert entspricht keinem Array von signed Integers dar',
+            invalid_strings_array_string: 'Eingegebener Wert entspricht keinem Array von Strings dar',
+            invalid_unsigint_array_string: 'Eingegebener Wert entspricht keinem Array von unsigned Integers dar',
+
+            invalid_add
