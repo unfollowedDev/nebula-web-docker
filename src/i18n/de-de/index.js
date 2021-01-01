@@ -261,4 +261,9 @@ export default {
             incorrect_booleans_array_length: 'In dem Array sollten { size } Boolesche Werte enthalten sein',
             incorrect_bytes_array_length: 'Das Array sollte { size } Bytes enthalten',
             incorrect_sigint_array_length: 'Das Array muss { size } signed Integers enthalten',
-            incorrect_strings_array_length: 'Das Array sollte nur
+            incorrect_strings_array_length: 'Das Array sollte nur { size } Zeichenfolgen enthalten',
+            incorrect_unsigint_array_length: 'Das Array muss { size } unsigned Integers enthalten',
+
+            invalid_address_array_string: 'Eingegebener Wert repräsentiert kein Array von Adressen',
+            invalid_booleans_array_string: 'Der eingegebene Wert entspricht keinem Array von bool(s)',
+            invalid_bytes_array_string: 'Eingegebener W
