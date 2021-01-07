@@ -271,4 +271,9 @@ export default {
             invalid_strings_array_string: 'Eingegebener Wert entspricht keinem Array von Strings dar',
             invalid_unsigint_array_string: 'Eingegebener Wert entspricht keinem Array von unsigned Integers dar',
 
-            invalid_add
+            invalid_address_length: 'Eine Adresse muss genau 40 Zeichen lang sein, exklusive Prefix "0x"',
+            invalid_address_start: 'Eine Adresse muss mit 0x beginnen',
+            invalid_address_characters: 'Der Eintrag enthält ungültige Zeichen',
+            readonly: 'Dieses Feld ist schreibgeschützt',
+            required: 'Dieses Feld ist erforderlich',
+            too_large: 'Ma
