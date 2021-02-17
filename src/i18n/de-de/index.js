@@ -276,4 +276,9 @@ export default {
             invalid_address_characters: 'Der Eintrag enthält ungültige Zeichen',
             readonly: 'Dieses Feld ist schreibgeschützt',
             required: 'Dieses Feld ist erforderlich',
-            too_large: 'Ma
+            too_large: 'Maximalwert für int{ size } ist { max }',
+            too_small: 'Minimalwert für int{ size } ist { max }',
+            too_large_pow2: 'Maximalwert für uint{ size } ist 2^{ size } - 1',
+            too_small_pow2: 'Minimalwert für int{ size } ist -(2^{ size }) + 1',
+            too_large_unsigint: 'Maximalwert für uint{ size } ist 2^{ size } - 1',
+            no_negative_u
