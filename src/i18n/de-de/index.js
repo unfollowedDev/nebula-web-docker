@@ -281,4 +281,9 @@ export default {
             too_large_pow2: 'Maximalwert für uint{ size } ist 2^{ size } - 1',
             too_small_pow2: 'Minimalwert für int{ size } ist -(2^{ size }) + 1',
             too_large_unsigint: 'Maximalwert für uint{ size } ist 2^{ size } - 1',
-            no_negative_u
+            no_negative_unsigint: 'Wert für uint{ size } darf nicht negativ sein',
+            invalid_signed_integer: 'Ungültiger signed integer',
+            invalid_unsigint: 'Der Eintrag muss einen gültigen unsigned integer enthalten',
+            str_input_placeholder: '["Wert", ... , "Endgültiger Wert"]',
+            str_input_hint: 'Doppelte Anführungszeichen in Strings müssen escaped werden (\\")',
+            address
