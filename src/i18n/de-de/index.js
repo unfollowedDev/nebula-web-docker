@@ -286,4 +286,13 @@ export default {
             invalid_unsigint: 'Der Eintrag muss einen gültigen unsigned integer enthalten',
             str_input_placeholder: '["Wert", ... , "Endgültiger Wert"]',
             str_input_hint: 'Doppelte Anführungszeichen in Strings müssen escaped werden (\\")',
-            address
+            address_placeholder: 'Adresse beginnt mit 0x',
+            address_label: '{ label } (Adresse/Konto)',
+            boolean_array_label: '{ label } (bool[{ size }])',
+        },
+        health: {
+            status: 'Status',
+            checked_at: 'Geprüft am',
+            task: 'Aufgabe',
+            message: 'Nachricht',
+            block_height: 'Block Nummer
