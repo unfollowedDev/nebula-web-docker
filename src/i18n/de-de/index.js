@@ -302,4 +302,13 @@ export default {
         contract_tab: {
             copy_abi_to_clipboard: 'ABI JSON des Smart Contracts in die Zwischenablage kopieren',
             enter_amount: 'Wählen Sie Anzahl der Dezimalstellen und geben Sie einen Betrag ein, dieser wird als Funktionsparameter als uint256 erfasst',
-         
+            result: 'Ergebnis',
+            view_transaction: 'Transaktion ansehen',
+            code: 'Code',
+            read: 'Lesen',
+            write: 'Schreiben',
+            amount: 'Anzahl',
+            value: 'Wert',
+            custom_decimals: 'Benutzerdefinierte Dezimalen',
+            custom: 'Benutzerdefiniert',
+            unverified_contract_source: 'Diese
