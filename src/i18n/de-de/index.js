@@ -311,4 +311,9 @@ export default {
             value: 'Wert',
             custom_decimals: 'Benutzerdefinierte Dezimalen',
             custom: 'Benutzerdefiniert',
-            unverified_contract_source: 'Diese
+            unverified_contract_source: 'Dieser Smart Contract wurde nicht verifiziert...',
+            click_here: 'Klicken Sie hier, ',
+            upload_source_files: 'um Quelldateien hochzuladen und diesen Smart Contract zu verifizieren. ' +
+                'Alternativ können Sie mit dem Smart Contract interagieren, indem Sie ein beliebiges ABI verwenden:',
+            use_erc20_abi: 'ERC20 ABI nutzen',
+            use_erc721_
