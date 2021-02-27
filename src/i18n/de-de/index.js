@@ -295,4 +295,11 @@ export default {
             checked_at: 'Geprüft am',
             task: 'Aufgabe',
             message: 'Nachricht',
-            block_height: 'Block Nummer
+            block_height: 'Block Nummer',
+            latency: 'Latenz',
+            click_to_change_format: 'Zum Ändern des Formats anklicken',
+        },
+        contract_tab: {
+            copy_abi_to_clipboard: 'ABI JSON des Smart Contracts in die Zwischenablage kopieren',
+            enter_amount: 'Wählen Sie Anzahl der Dezimalstellen und geben Sie einen Betrag ein, dieser wird als Funktionsparameter als uint256 erfasst',
+         
