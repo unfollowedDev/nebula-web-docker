@@ -323,4 +323,13 @@ export default {
             provided_abi_invalid: 'Bereitgestellte ABI ist ungültig',
             provided_json_invalid: 'Bereitgestellte JSON ist ungültig',
             read_functions: 'Lese-Funktionen',
-           
+            write_functions: 'Schreib-Funktionen',
+            unverified_contract: 'Ungeprüfter Smart Contract',
+        },
+        header: {
+            sign_in: 'Anmelden',
+            sign_out: 'Abmelden',
+            liq_staking: 'Liquid Staking',
+            goto_staking: 'Staking/Anlage öffnen',
+            goto_health_monitor: 'Health Monitor öffnen',
+            goto_mainnet: 'Mainne
