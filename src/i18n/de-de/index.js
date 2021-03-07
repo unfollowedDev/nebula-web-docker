@@ -332,4 +332,12 @@ export default {
             liq_staking: 'Liquid Staking',
             goto_staking: 'Staking/Anlage öffnen',
             goto_health_monitor: 'Health Monitor öffnen',
-            goto_mainnet: 'Mainne
+            goto_mainnet: 'Mainnet auswählen',
+            goto_testnet: 'Testnet auswählen',
+            health_monitor: 'Health Monitor',
+            health_status: 'Health Status',
+            advanced: 'Erweitert',
+            light_mode: 'Light Mode',
+            dark_mode: 'Dark Mode',
+            address_not_found: 'Suche nach verlinkter EVM-Adresse für Telos Native Konto { search_term } fehlgeschlagen.',
+ 
