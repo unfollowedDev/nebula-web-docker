@@ -340,4 +340,10 @@ export default {
             light_mode: 'Light Mode',
             dark_mode: 'Dark Mode',
             address_not_found: 'Suche nach verlinkter EVM-Adresse für Telos Native Konto { search_term } fehlgeschlagen.',
- 
+            search_failed: 'Suche fehlgeschlagen, bitte geben Sie einen gültigen Suchbegriff ein.',
+            goto_address_details: 'Adresse/Konto Details öffnen',
+            copy_address: 'Adresse/Konto kopieren',
+            address_copied: 'Adresse/Konto in Zwischenablage kopiert',
+            search_placeholder: 'Adresse/Konto, Transaktion, Block',
+            select_language: 'Sprache wählen',
+        },
