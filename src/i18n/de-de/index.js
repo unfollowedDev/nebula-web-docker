@@ -347,3 +347,17 @@ export default {
             search_placeholder: 'Adresse/Konto, Transaktion, Block',
             select_language: 'Sprache wählen',
         },
+    },
+    global: {
+        language: 'Sprache',
+        cancel: 'Abbrechen',
+        ok: 'Ok',
+        dismiss: 'Ablehnen',
+    },
+    layouts: {
+        health_status: 'Health Status',
+        stake_telos: 'Stake TLOS',
+        teloscan_mainnet: 'Teloscan Mainnet',
+        teloscan_testnet: 'Teloscan Testnet',
+    },
+};
