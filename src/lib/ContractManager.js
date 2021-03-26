@@ -262,3 +262,72 @@ export default class ContractManager {
         const contract = new ethers.Contract(address, this.getTokenABI(type), this.getEthersProvider());
         try {
             let tokenData = {};
+            if (type === 'erc20') {
+                tokenData.symbol = await contract.symbol();
+                tokenData.name = await contract.name();
+                tokenData.decimals = await contract.decimals();
+            } else if(type === 'erc721'){
+                tokenData.symbol = await contract.symbol();
+                tokenData.name = await contract.name();
+                tokenData.extensions = {
+                    metadata: await this.supportsInterface(address, '0x5b5e139f'),
+                };
+            } else if(type === 'erc1155'){
+                tokenData.name = contract.name || contract.address;
+                tokenData.extensions = {
+                    metadata: await this.supportsInterface(address, '0x0e89341c'),
+                };
+            }
+
+            tokenData.type = type;
+            return tokenData;
+        } catch (e) {
+            return;
+        }
+    }
+
+    async loadTokenList() {
+        const results = await axios.get(tokenList);
+        const { tokens } = results.data;
+        results.data.tokens = (tokens ?? []).filter(({ chainId }) => chainId === +process.env.NETWORK_EVM_CHAIN_ID);
+
+        this.tokenList = results.data;
+    }
+
+    async getTokenList() {
+        if (!this.tokenList) {
+            await this.loadTokenList();
+        }
+        return this.tokenList;
+    }
+
+    async getToken(address, suspectedType) {
+        if (!this.tokenList) {
+            await this.loadTokenList();
+        }
+
+        let i = this.tokenList.tokens.length;
+        while (i--) {
+            if (this.tokenList.tokens[i].address.toLowerCase() === address.toLowerCase()) {
+                return this.tokenList.tokens[i];
+            }
+        }
+        return await this.getTokenData(address, suspectedType);
+    }
+
+    async getContractFromTokenList(address, creationInfo, suspectedType) {
+        const token = await this.getToken(address, suspectedType);
+        if (token) {
+            return new Contract({
+                name: `${token.name} (${token.symbol})`,
+                address,
+                creationInfo,
+                abi: this.getTokenABI(token.type),
+                manager: this,
+                token: Object.assign({
+                    address,
+                }, token),
+            });
+        }
+    }
+}
