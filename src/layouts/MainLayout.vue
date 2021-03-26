@@ -94,3 +94,27 @@ export default {
 
 .q-item
     .q-icon
+        transition: 400ms color ease
+
+.q-item:hover
+    .grayscale
+        filter: grayscale(0)
+    .q-icon
+        color: $secondary
+
+.account
+  width: 120px
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+.q-header
+  position: relative
+
+@media only screen and (max-width: 400px)
+    #logo
+        .text-h5
+            font-size: 1.1rem
+        img
+            width: 24px
+</style>
