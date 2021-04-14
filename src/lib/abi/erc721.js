@@ -11,4 +11,16 @@ export const erc721Abi = [{
         'internalType': 'address',
         'name': '_chainlinkCoordinator',
         'type': 'address',
-    }, { 'internalType': 'uint256', 'name': '_chainlinkFee', 'type': 'uint25
+    }, { 'internalType': 'uint256', 'name': '_chainlinkFee', 'type': 'uint256' }, {
+        'internalType': 'bytes32',
+        'name': '_chainlinkHash',
+        'type': 'bytes32',
+    }],
+    'stateMutability': 'nonpayable',
+    'type': 'constructor',
+}, {
+    'anonymous': false,
+    'inputs': [{ 'indexed': true, 'internalType': 'address', 'name': 'owner', 'type': 'address' }, {
+        'indexed': true,
+        'internalType': 'address',
+        'name': 'approved',
