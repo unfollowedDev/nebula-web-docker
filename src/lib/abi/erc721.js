@@ -34,4 +34,15 @@ export const erc721Abi = [{
         'indexed': true,
         'internalType': 'address',
         'name': 'operator',
-        'type': 'addr
+        'type': 'address',
+    }, { 'indexed': false, 'internalType': 'bool', 'name': 'approved', 'type': 'bool' }],
+    'name': 'ApprovalForAll',
+    'type': 'event',
+}, {
+    'anonymous': false,
+    'inputs': [{
+        'indexed': true,
+        'internalType': 'address',
+        'name': 'previousOwner',
+        'type': 'address',
+    }, { 'indexed': true, 'internalType': 'address', 'name': 'newOwner', 'type': 'address'
