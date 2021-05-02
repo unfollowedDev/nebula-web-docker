@@ -45,4 +45,19 @@ export const erc721Abi = [{
         'internalType': 'address',
         'name': 'previousOwner',
         'type': 'address',
-    }, { 'indexed': true, 'internalType': 'address', 'name': 'newOwner', 'type': 'address'
+    }, { 'indexed': true, 'internalType': 'address', 'name': 'newOwner', 'type': 'address' }],
+    'name': 'OwnershipTransferred',
+    'type': 'event',
+}, {
+    'anonymous': false,
+    'inputs': [{ 'indexed': true, 'internalType': 'string', 'name': 'baseURI', 'type': 'string' }],
+    'name': 'SetBaseURI',
+    'type': 'event',
+}, {
+    'anonymous': false,
+    'inputs': [{
+        'indexed': false,
+        'internalType': 'uint256',
+        'name': 'chainlinkFee',
+        'type': 'uint256',
+   
