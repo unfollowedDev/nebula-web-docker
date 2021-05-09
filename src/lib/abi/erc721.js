@@ -60,4 +60,14 @@ export const erc721Abi = [{
         'internalType': 'uint256',
         'name': 'chainlinkFee',
         'type': 'uint256',
-   
+    }, { 'indexed': false, 'internalType': 'bytes32', 'name': 'chainlinkHash', 'type': 'bytes32' }],
+    'name': 'SetChainlinkConfig',
+    'type': 'event',
+}, {
+    'anonymous': false,
+    'inputs': [{ 'indexed': true, 'internalType': 'string', 'name': 'defaultURI', 'type': 'string' }],
+    'name': 'SetDefaultURI',
+    'type': 'event',
+}, {
+    'anonymous': false,
+    'inputs':
