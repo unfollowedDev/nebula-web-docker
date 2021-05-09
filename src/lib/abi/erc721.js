@@ -70,4 +70,15 @@ export const erc721Abi = [{
     'type': 'event',
 }, {
     'anonymous': false,
-    'inputs':
+    'inputs': [{ 'indexed': true, 'internalType': 'address', 'name': 'minter', 'type': 'address' }],
+    'name': 'SetMinter',
+    'type': 'event',
+}, {
+    'anonymous': false,
+    'inputs': [{ 'indexed': false, 'internalType': 'uint256', 'name': 'seed', 'type': 'uint256' }, {
+        'indexed': false,
+        'internalType': 'bytes32',
+        'name': 'requestId',
+        'type': 'bytes32',
+    }],
+    'name': 'SetRandomSeed',
