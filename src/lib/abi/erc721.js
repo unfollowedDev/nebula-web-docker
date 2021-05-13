@@ -106,4 +106,17 @@ export const erc721Abi = [{
 }, {
     'inputs': [{ 'internalType': 'address', 'name': 'owner', 'type': 'address' }],
     'name': 'balanceOf',
-    'outputs': [{ 'internalType': 'uint256', 'name': '', 'type':
+    'outputs': [{ 'internalType': 'uint256', 'name': '', 'type': 'uint256' }],
+    'stateMutability': 'view',
+    'type': 'function',
+}, {
+    'inputs': [],
+    'name': 'baseURI',
+    'outputs': [{ 'internalType': 'string', 'name': '', 'type': 'string' }],
+    'stateMutability': 'view',
+    'type': 'function',
+}, {
+    'inputs': [],
+    'name': 'chainlinkFee',
+    'outputs': [{ 'internalType': 'uint256', 'name': '', 'type': 'uint256' }],
+    'stateMutab
