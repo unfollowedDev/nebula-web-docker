@@ -119,4 +119,17 @@ export const erc721Abi = [{
     'inputs': [],
     'name': 'chainlinkFee',
     'outputs': [{ 'internalType': 'uint256', 'name': '', 'type': 'uint256' }],
-    'stateMutab
+    'stateMutability': 'view',
+    'type': 'function',
+}, {
+    'inputs': [],
+    'name': 'chainlinkHash',
+    'outputs': [{ 'internalType': 'bytes32', 'name': '', 'type': 'bytes32' }],
+    'stateMutability': 'view',
+    'type': 'function',
+}, {
+    'inputs': [],
+    'name': 'defaultURI',
+    'outputs': [{ 'internalType': 'string', 'name': '', 'type': 'string' }],
+    'stateMutability': 'view',
+    
