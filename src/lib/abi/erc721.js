@@ -132,4 +132,15 @@ export const erc721Abi = [{
     'name': 'defaultURI',
     'outputs': [{ 'internalType': 'string', 'name': '', 'type': 'string' }],
     'stateMutability': 'view',
-    
+    'type': 'function',
+}, {
+    'inputs': [],
+    'name': 'finalBaseURI',
+    'outputs': [{ 'internalType': 'bool', 'name': '', 'type': 'bool' }],
+    'stateMutability': 'view',
+    'type': 'function',
+}, {
+    'inputs': [{ 'internalType': 'uint256', 'name': 'tokenId', 'type': 'uint256' }],
+    'name': 'getApproved',
+    'outputs': [{ 'internalType': 'address', 'name': '', 'type': 'address' }],
+    '
