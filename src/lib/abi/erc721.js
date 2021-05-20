@@ -166,4 +166,18 @@ export const erc721Abi = [{
     'name': 'metadataOf',
     'outputs': [{ 'internalType': 'string', 'name': '', 'type': 'string' }],
     'stateMutability': 'view',
-    'type': 'fu
+    'type': 'function',
+}, {
+    'inputs': [{ 'internalType': 'address', 'name': '_to', 'type': 'address' }, {
+        'internalType': 'uint256',
+        'name': '_count',
+        'type': 'uint256',
+    }],
+    'name': 'mintMultiple',
+    'outputs': [],
+    'stateMutability': 'nonpayable',
+    'type': 'function',
+}, {
+    'inputs': [],
+    'name': 'minter',
+    'outputs': [{ 'internalType': 'address', 'na
