@@ -157,4 +157,13 @@ export const erc721Abi = [{
     'type': 'function',
 }, {
     'inputs': [],
-    'nam
+    'name': 'maxTokens',
+    'outputs': [{ 'internalType': 'uint256', 'name': '', 'type': 'uint256' }],
+    'stateMutability': 'view',
+    'type': 'function',
+}, {
+    'inputs': [{ 'internalType': 'uint256', 'name': '_tokenId', 'type': 'uint256' }],
+    'name': 'metadataOf',
+    'outputs': [{ 'internalType': 'string', 'name': '', 'type': 'string' }],
+    'stateMutability': 'view',
+    'type': 'fu
