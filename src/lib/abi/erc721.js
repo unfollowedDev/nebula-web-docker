@@ -180,4 +180,18 @@ export const erc721Abi = [{
 }, {
     'inputs': [],
     'name': 'minter',
-    'outputs': [{ 'internalType': 'address', 'na
+    'outputs': [{ 'internalType': 'address', 'name': '', 'type': 'address' }],
+    'stateMutability': 'view',
+    'type': 'function',
+}, {
+    'inputs': [],
+    'name': 'name',
+    'outputs': [{ 'internalType': 'string', 'name': '', 'type': 'string' }],
+    'stateMutability': 'view',
+    'type': 'function',
+}, {
+    'inputs': [],
+    'name': 'owner',
+    'outputs': [{ 'internalType': 'address', 'name': '', 'type': 'address' }],
+    'stateMutability': 'view',
+    'type': '
