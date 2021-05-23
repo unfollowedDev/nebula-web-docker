@@ -205,4 +205,17 @@ export const erc721Abi = [{
     'inputs': [{ 'internalType': 'bytes32', 'name': 'requestId', 'type': 'bytes32' }, {
         'internalType': 'uint256',
         'name': 'randomness',
-       
+        'type': 'uint256',
+    }],
+    'name': 'rawFulfillRandomness',
+    'outputs': [],
+    'stateMutability': 'nonpayable',
+    'type': 'function',
+}, {
+    'inputs': [],
+    'name': 'renounceOwnership',
+    'outputs': [],
+    'stateMutability': 'nonpayable',
+    'type': 'function',
+}, {
+    'inputs': [{ 'internalType': 'address', 'name': 'from', 'type': 'addre
