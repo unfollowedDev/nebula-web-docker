@@ -243,4 +243,17 @@ export const erc721Abi = [{
     'type': 'function',
 }, {
     'inputs': [],
-    'name':
+    'name': 'seed',
+    'outputs': [{ 'internalType': 'uint256', 'name': '', 'type': 'uint256' }],
+    'stateMutability': 'view',
+    'type': 'function',
+}, {
+    'inputs': [],
+    'name': 'seedReveal',
+    'outputs': [],
+    'stateMutability': 'nonpayable',
+    'type': 'function',
+}, {
+    'inputs': [{ 'internalType': 'address', 'name': 'operator', 'type': 'address' }, {
+        'internalType': 'bool',
+  
