@@ -284,3 +284,14 @@ export const erc721Abi = [{
     'stateMutability': 'nonpayable',
     'type': 'function',
 }, {
+    'inputs': [{ 'internalType': 'string', 'name': '_defaultURI', 'type': 'string' }],
+    'name': 'setDefaultURI',
+    'outputs': [],
+    'stateMutability': 'nonpayable',
+    'type': 'function',
+}, {
+    'inputs': [{ 'internalType': 'address', 'name': '_minter', 'type': 'address' }],
+    'name': 'setMinter',
+    'outputs': [],
+    'stateMutability': 'nonpayable',
+    'type
