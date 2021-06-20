@@ -325,4 +325,16 @@ export const erc721Abi = [{
     'type': 'function',
 }, {
     'inputs': [{ 'internalType': 'uint256', 'name': 'tokenId', 'type': 'uint256' }],
-    'na
+    'name': 'tokenURI',
+    'outputs': [{ 'internalType': 'string', 'name': '', 'type': 'string' }],
+    'stateMutability': 'view',
+    'type': 'function',
+}, {
+    'inputs': [],
+    'name': 'totalSupply',
+    'outputs': [{ 'internalType': 'uint256', 'name': '', 'type': 'uint256' }],
+    'stateMutability': 'view',
+    'type': 'function',
+}, {
+    'inputs': [{ 'internalType': 'address', 'name': 'from', 'type': 'address' }, {
+     
