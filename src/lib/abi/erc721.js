@@ -347,4 +347,8 @@ export const erc721Abi = [{
     'type': 'function',
 }, {
     'inputs': [{ 'internalType': 'address', 'name': 'newOwner', 'type': 'address' }],
-    'name': 'transferOw
+    'name': 'transferOwnership',
+    'outputs': [],
+    'stateMutability': 'nonpayable',
+    'type': 'function',
+}];
