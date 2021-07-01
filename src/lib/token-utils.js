@@ -19,3 +19,20 @@ export async function promptAddToMetamask(
     symbol,
     image,
     type = 'ERC20',
+    decimals = WEI_PRECISION,
+) {
+    return window.ethereum.request({
+        method: 'wallet_watchAsset',
+        params: {
+            type,
+            options: {
+                address,
+                symbol,
+                decimals,
+                image,
+            },
+        },
+    }).catch(({ message }) => {
+        console.error(message);
+        $q.notify({
+            message: `Failed
