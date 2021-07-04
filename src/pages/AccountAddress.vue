@@ -18,3 +18,21 @@ const web3 = new Web3();
 const tabs = {
     transactions: '#transactions',
     int_transactions: '#int_transactions',
+    erc20_transfers: '#erc20',
+    erc721_transfers: '#erc721',
+    erc1155_transfers: '#erc1155',
+    tokens: '#tokens',
+    contract: '#contract',
+};
+
+export default {
+    name: 'AccountAddress',
+    components: {
+        AddressField,
+        ConfirmationDialog,
+        ContractTab,
+        CopyButton,
+        GenericContractInterface,
+        TokenList,
+        TransactionField,
+        Trans
