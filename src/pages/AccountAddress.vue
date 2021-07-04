@@ -35,4 +35,19 @@ export default {
         GenericContractInterface,
         TokenList,
         TransactionField,
-        Trans
+        TransactionTable,
+        InternalTransactionTable,
+        TransferTable,
+    },
+    data() {
+        return {
+            accountLoading: false,
+            title: '',
+            telosAccount: null,
+            balance: null,
+            nonce: null,
+            isContract: false,
+            isVerified: null,
+            contract: null,
+            verificationDate: '',
+        
