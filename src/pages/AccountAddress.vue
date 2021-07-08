@@ -50,4 +50,18 @@ export default {
             isVerified: null,
             contract: null,
             verificationDate: '',
-        
+            tab: '#transactions',
+            tokens: null,
+            confirmationDialog: false,
+        };
+    },
+    computed: {
+        address() {
+            return this.$route.params?.address ?? '';
+        },
+    },
+    watch: {
+        address: {
+            handler(newValue, oldValue) {
+                if (newValue !== oldValue) {
+                    const newAsChecksum = toChecksumAddress(newV
