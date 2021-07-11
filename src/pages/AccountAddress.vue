@@ -76,4 +76,13 @@ export default {
         $route: {
             immediate: true,
             deep: true,
-            async handler(newRoute, old
+            async handler(newRoute, oldRoute = {}) {
+                if (newRoute !== oldRoute) {
+                    const { hash: newHash } = newRoute;
+
+                    if (newRoute.name !== 'address' || !newHash) {
+                        return;
+                    }
+
+                    if (this.accountLoading && newHash === tabs.contract) {
+                        // wait for account to load; this.isContract will 
