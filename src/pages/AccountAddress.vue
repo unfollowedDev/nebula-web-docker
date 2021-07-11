@@ -64,4 +64,16 @@ export default {
         address: {
             handler(newValue, oldValue) {
                 if (newValue !== oldValue) {
-                    const newAsChecksum = toChecksumAddress(newV
+                    const newAsChecksum = toChecksumAddress(newValue);
+                    if (newAsChecksum !== newValue) {
+                        this.$router.replace({ params: { address: newAsChecksum } });
+                    }
+                    this.loadAccount();
+                }
+            },
+            immediate: true,
+        },
+        $route: {
+            immediate: true,
+            deep: true,
+            async handler(newRoute, old
