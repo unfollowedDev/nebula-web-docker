@@ -85,4 +85,13 @@ export default {
                     }
 
                     if (this.accountLoading && newHash === tabs.contract) {
-                        // wait for account to load; this.isContract will 
+                        // wait for account to load; this.isContract will not be set immediately on first load
+                        await new Promise(resolve => setTimeout(resolve, 750));
+                    }
+
+                    const tabHashes = Object.values(tabs);
+                    const newHashIsInvalid =
+                        !tabHashes.includes(newHash) ||
+                        (newHash === tabs.contract && !this.isContract);
+
+                
