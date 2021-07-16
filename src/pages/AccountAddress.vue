@@ -94,4 +94,18 @@ export default {
                         !tabHashes.includes(newHash) ||
                         (newHash === tabs.contract && !this.isContract);
 
-                
+                    if (newHashIsInvalid) {
+                        this.$router.replace({ hash: tabs.transactions });
+                    }
+                }
+            },
+        },
+    },
+    mounted() {
+        this.loadAccount();
+    },
+    methods: {
+        async loadAccount() {
+            this.accountLoading = true;
+
+            const account = await this.$evm.telos.getEthAccount(this.address);
