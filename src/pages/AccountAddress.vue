@@ -128,4 +128,14 @@ export default {
             const knownToken = this.$contractManager.tokenList.tokens
                 .find(({ address }) => address.toLowerCase() === this.address.toLowerCase());
 
-   
+            if (knownToken?.name) {
+                this.title = knownToken.name;
+            } else if (isVerifiedContract) {
+                this.title = this.contract.getName();
+            } else if (this.isContract) {
+                this.title = this.$t('pages.contract');
+            } else {
+                this.title = this.$t('pages.account');
+            }
+
+            this.accountLoading = false
