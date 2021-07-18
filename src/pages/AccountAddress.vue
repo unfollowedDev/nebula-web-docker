@@ -149,4 +149,15 @@ export default {
                     decimalIndex + 5,
                 )}`;
             }
-            return this.$t('pages.t
+            return this.$t('pages.tlos_balance', { balance: strBalance });
+        },
+        getAddressNativeExplorerURL() {
+            if (!this.telosAccount) {
+                return '';
+            }
+
+            return this.$t('pages.account_url', { domain: process.env.NETWORK_EXPLORER, account: this.telosAccount });
+        },
+        disableConfirmation(){
+            this.confirmationDialog = false;
+ 
