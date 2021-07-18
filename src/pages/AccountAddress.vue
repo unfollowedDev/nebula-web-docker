@@ -160,4 +160,18 @@ export default {
         },
         disableConfirmation(){
             this.confirmationDialog = false;
- 
+        },
+    },
+};
+</script>
+
+<template>
+<div class="pageContainer q-pt-xl">
+    <div>
+        <div class="row tableWrapper justify-between q-mb-lg">
+            <div class="homeInfo">
+                <div class="text-primary text-h4 q-pr-xs">
+                    {{ title }}
+                </div>
+                <q-icon
+                    v-if="isContract && isVerified !== null"
