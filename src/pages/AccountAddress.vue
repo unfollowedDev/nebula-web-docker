@@ -175,3 +175,12 @@ export default {
                 </div>
                 <q-icon
                     v-if="isContract && isVerified !== null"
+                    class="cursor"
+                    :name="isVerified ? 'verified' : 'warning'"
+                    :class="isVerified ? 'text-positive' : 'text-negative'"
+                    size="1.25rem"
+                    @click="confirmationDialog = true"
+                />
+                <ConfirmationDialog
+                    class="text-secondary"
+               
