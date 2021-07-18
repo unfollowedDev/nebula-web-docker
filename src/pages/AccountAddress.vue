@@ -138,4 +138,15 @@ export default {
                 this.title = this.$t('pages.account');
             }
 
-            this.accountLoading = false
+            this.accountLoading = false;
+        },
+        getBalanceDisplay(balance) {
+            let strBalance = web3.utils.fromWei(balance);
+            const decimalIndex = strBalance.indexOf('.');
+            if (decimalIndex > 0) {
+                strBalance = `${strBalance.substring(
+                    0,
+                    decimalIndex + 5,
+                )}`;
+            }
+            return this.$t('pages.t
