@@ -183,4 +183,14 @@ export default {
                 />
                 <ConfirmationDialog
                     class="text-secondary"
-               
+                    :flag="confirmationDialog"
+                    :address="address"
+                    :status="isVerified"
+                    @dialog="disableConfirmation"
+                />
+                <CopyButton
+                    class="text-secondary"
+                    :text="address"
+                    :accompanyingText="address"
+                    description="address"
+    
