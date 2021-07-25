@@ -201,4 +201,14 @@ export default {
                     </div>
                     <div class="text-white">{{ $t('pages.by_address') }}
                         &nbsp;
-    
+                        <AddressField :address="contract.getCreator()"/>
+                    </div>
+                </template>
+                <small v-else>
+                    <div class="text-white">
+                        {{ $t('pages.number_used_once') }}: &nbsp;
+                        <span class="q-pl-xs">{{ nonce }}</span>
+                    </div>
+                </small>
+            </div>
+            <
