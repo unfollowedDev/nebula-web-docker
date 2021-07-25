@@ -219,4 +219,14 @@ export default {
                     <div class="dataCardData">
                         <a :href="getAddressNativeExplorerURL()" target="_blank">{{ telosAccount }}</a>
                     </div>
+                </div>
+                <div v-if="!!balance" class="dataCardItem balance ">
+                    <div class="dataCardTile">
+                        {{ $t('pages.balance') }}
+                    </div>
+                    <div class="dataCardData">
+                        {{balance}}
+                    </div>
+                </div>
+            </div>
   
