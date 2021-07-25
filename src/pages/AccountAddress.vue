@@ -211,4 +211,12 @@ export default {
                     </div>
                 </small>
             </div>
-            <
+            <div class="dataCardsContainer">
+                <div v-if="!!telosAccount" class="dataCardItem">
+                    <div class="dataCardTile">
+                        {{ $t('pages.native_account') }}
+                    </div>
+                    <div class="dataCardData">
+                        <a :href="getAddressNativeExplorerURL()" target="_blank">{{ telosAccount }}</a>
+                    </div>
+  
