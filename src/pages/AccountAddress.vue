@@ -193,4 +193,12 @@ export default {
                     :text="address"
                     :accompanyingText="address"
                     description="address"
+                />
+                <template v-if="contract">
+                    <div class="text-white">
+                        {{ $t('pages.created_at_trx' )}} &nbsp;
+                        <TransactionField :transaction-hash="contract.getCreationTrx()"/>
+                    </div>
+                    <div class="text-white">{{ $t('pages.by_address') }}
+                        &nbsp;
     
