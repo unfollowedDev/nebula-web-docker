@@ -241,4 +241,17 @@ export default {
         >
             <q-route-tab
                 name="transactions"
-                :to="
+                :to="{ hash: '#transactions' }"
+                exact
+                replace
+                :label="$t('pages.transactions')"
+            />
+            <q-route-tab
+                name="int_transactions"
+                :to="{ hash: '#int_transactions' }"
+                exact
+                replace
+                :label="$t('pages.internal_txns')"
+            />
+            <q-route-tab
+  
