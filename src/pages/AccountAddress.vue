@@ -254,4 +254,16 @@ export default {
                 :label="$t('pages.internal_txns')"
             />
             <q-route-tab
-  
+                name="erc20_transfers"
+                :to="{ hash: '#erc20' }"
+                exact
+                replace
+                :label="$t('pages.erc20_transfers')"
+            />
+            <q-route-tab
+                name="erc721_transfers"
+                :to="{ hash: '#erc721' }"
+                exact
+                replace
+                :label="$t('pages.erc721_transfers')"
+       
