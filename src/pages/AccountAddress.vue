@@ -229,4 +229,16 @@ export default {
                     </div>
                 </div>
             </div>
-  
+        </div>
+        <q-tabs
+            v-model="tab"
+            class="tabs-header tabsBar topRounded text-white tableWrapper"
+            dense
+            active-color="secondary"
+            align="justify"
+            narrow-indicator
+            :class="{ 'q-dark': $q.dark.isActive}"
+        >
+            <q-route-tab
+                name="transactions"
+                :to="
