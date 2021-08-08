@@ -266,4 +266,18 @@ export default {
                 exact
                 replace
                 :label="$t('pages.erc721_transfers')"
+            />
+            <q-route-tab
+                name="erc1155_transfers"
+                :to="{ hash: '#erc1155' }"
+                exact
+                replace
+                :label="$t('pages.erc1155_transfers')"
+            />
+            <q-route-tab
+                name="tokens"
+                :to="{ hash: '#tokens' }"
+                exact
+                replace
+                :label="$t('pages.tokens')"
        
