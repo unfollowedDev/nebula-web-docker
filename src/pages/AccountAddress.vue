@@ -294,4 +294,12 @@ export default {
             <q-tab-panels
                 :key="address"
                 v-model="tab"
- 
+                class="shadow-2"
+                animated
+                keep-alive="keep-alive"
+            >
+                <q-tab-panel name="transactions">
+                    <TransactionTable :title="address" :filter="{address}"/>
+                </q-tab-panel>
+                <q-tab-panel name="int_transactions">
+                    <InternalTransactionTable :title="address" :filter="{address}
