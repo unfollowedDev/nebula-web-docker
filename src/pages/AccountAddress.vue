@@ -280,4 +280,18 @@ export default {
                 exact
                 replace
                 :label="$t('pages.tokens')"
-       
+            />
+            <q-route-tab
+                v-if="isContract"
+                name="contract"
+                :to="{ hash: '#contract' }"
+                exact
+                replace
+                :label="$t('pages.contract')"
+            />
+        </q-tabs>
+        <div class="q-mb-md tableWrapper">
+            <q-tab-panels
+                :key="address"
+                v-model="tab"
+ 
