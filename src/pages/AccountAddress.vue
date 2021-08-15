@@ -312,4 +312,14 @@ export default {
                         :address="address"
                     />
                 </q-tab-panel>
-             
+                <q-tab-panel name="erc1155_transfers">
+                    <TransferTable
+                        title="ERC-1155 Transfers"
+                        token-type="erc1155"
+                        :initialPageSize="10"
+                        :address="address"
+                    />
+                </q-tab-panel>
+                <q-tab-panel name="erc721_transfers">
+                    <TransferTable
+     
