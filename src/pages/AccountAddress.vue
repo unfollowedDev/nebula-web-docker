@@ -322,4 +322,13 @@ export default {
                 </q-tab-panel>
                 <q-tab-panel name="erc721_transfers">
                     <TransferTable
-     
+                        title="ERC-721 Transfers"
+                        token-type="erc721"
+                        :initialPageSize="10"
+                        :address="address"
+                    />
+                </q-tab-panel>
+                <q-tab-panel name="tokens">
+                    <TokenList :address="address"/>
+                </q-tab-panel>
+                <q-tab-panel v-if="isContract" 
