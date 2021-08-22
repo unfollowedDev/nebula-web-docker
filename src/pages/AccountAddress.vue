@@ -331,4 +331,19 @@ export default {
                 <q-tab-panel name="tokens">
                     <TokenList :address="address"/>
                 </q-tab-panel>
-                <q-tab-panel v-if="isContract" 
+                <q-tab-panel v-if="isContract" name="contract">
+                    <ContractTab v-if="isVerified" :contract="contract"/>
+                    <GenericContractInterface v-else/>
+                </q-tab-panel>
+            </q-tab-panels>
+        </div>
+    </div>
+</div>
+</template>
+
+<style scoped lang="sass">
+.shadow-2
+    box-shadow: none !important
+
+.dataCardsContainer .dataCardItem
+  width: fit-con
