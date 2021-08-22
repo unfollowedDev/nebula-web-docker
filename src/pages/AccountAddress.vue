@@ -346,4 +346,31 @@ export default {
     box-shadow: none !important
 
 .dataCardsContainer .dataCardItem
-  width: fit-con
+  width: fit-content
+  height: 5rem
+
+.homeInfo .text-secondary .q-icon
+  color: white !important
+
+.q-tab-panel
+  padding: 0
+
+.q-icon
+  padding-bottom: .75rem
+
+.cursor
+  cursor: pointer
+
+.tabs-header
+  background: white
+  color: black !important
+  &.q-dark
+    background: $dark
+    color: white !important
+
+.text-primary
+  display: inline-block
+
+@media only screen and (max-width: 1200px)
+    .pageContainer
+       
