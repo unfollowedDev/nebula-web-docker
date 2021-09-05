@@ -7,4 +7,14 @@ import LogsViewer from 'components/Transaction/LogsViewer';
 import InternalTxns from 'components/Transaction/InternalTxns';
 import CopyButton from 'components/CopyButton';
 import MethodField from 'components/MethodField';
-import ERCTransferList from 'components/Transaction/
+import ERCTransferList from 'components/Transaction/ERCTransferList';
+import ParameterList from 'components/Transaction/ParameterList';
+
+import { BigNumber } from 'ethers';
+import { WEI_PRECISION, formatWei, parseErrorMessage, getRouteWatcherForTabs } from 'src/lib/utils';
+import { TRANSFER_SIGNATURES } from 'src/lib/abi/signature/transfer_signatures';
+
+const tabs = {
+    general: '#general',
+    details: '#details',
+    eventLog: '#eventlog',
