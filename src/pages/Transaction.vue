@@ -47,4 +47,20 @@ export default {
             erc721_transfers: [],
             erc1155_transfers: [],
             params: [],
-            tab: '#general'
+            tab: '#general',
+            isContract: false,
+            contract: null,
+            parsedTransaction: null,
+            methodTrx: null,
+            showAge: true,
+            showWei: false,
+        };
+    },
+    computed: {
+        ...mapGetters('evm', ['tlosPrice']),
+    },
+    watch: {
+        '$route.params': {
+            handler(newValue) {
+                const { hash } = newValue;
+                if (t
