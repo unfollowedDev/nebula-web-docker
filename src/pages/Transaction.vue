@@ -18,3 +18,19 @@ const tabs = {
     general: '#general',
     details: '#details',
     eventLog: '#eventlog',
+    internal: '#internal',
+};
+
+// TODO: The get_transactions API doesn't format the internal transactions properly,
+//  need to fix that before we try to decode them
+export default {
+    name: 'TransactionPage',
+    components: {
+        LogsViewer,
+        InternalTxns,
+        AddressField,
+        BlockField,
+        CopyButton,
+        DateField,
+        MethodField,
+      
