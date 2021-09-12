@@ -33,4 +33,18 @@ export default {
         CopyButton,
         DateField,
         MethodField,
-      
+        ERCTransferList,
+        ParameterList,
+    },
+    data() {
+        return {
+            hash: this.$route.params.hash,
+            blockData: null,
+            trxNotFound: false,
+            errorMessage: null,
+            trx: null,
+            erc20_transfers: [],
+            erc721_transfers: [],
+            erc1155_transfers: [],
+            params: [],
+            tab: '#general'
