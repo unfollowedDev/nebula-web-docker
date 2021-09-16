@@ -63,4 +63,18 @@ export default {
         '$route.params': {
             handler(newValue) {
                 const { hash } = newValue;
-                if (t
+                if (this.hash === hash) {
+                    return;
+                }
+
+                this.resetTransaction();
+                this.hash = hash;
+                this.loadTransaction();
+            },
+            immediate: true,
+        },
+        $route: getRouteWatcherForTabs('transaction', tabs, tabs.general),
+    },
+    async mounted() {
+        await this.loadTransaction();
+  
