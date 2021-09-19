@@ -101,4 +101,12 @@ export default {
             const trxResponse = await this.$evmEndpoint.get(
                 `/v2/evm/get_transactions?hash=${this.hash}`,
             );
-            if (
+            if (trxResponse.data.transactions.length === 0) {
+                this.trxNotFound = true;
+                return;
+            }
+            this.trx = trxResponse.data.transactions[0];
+            this.trx.value = BigNumber.from(this.trx.value.toLocaleString('fullwide', { useGrouping:false }));
+            await this.loadContract();
+            await this.loadTransfers();
+            this.setEr
