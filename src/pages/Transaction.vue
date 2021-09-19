@@ -90,4 +90,15 @@ export default {
             this.tab = '#general';
             this.isContract = false;
             this.contract = null;
-            this.parsedTransaction = 
+            this.parsedTransaction = null;
+            this.methodTrx = null;
+            this.erc20_transfers = [];
+            this.erc721_transfers = [];
+            this.erc1155_transfers = [];
+            this.params = [];
+        },
+        async loadTransaction() {
+            const trxResponse = await this.$evmEndpoint.get(
+                `/v2/evm/get_transactions?hash=${this.hash}`,
+            );
+            if (
