@@ -77,4 +77,17 @@ export default {
     },
     async mounted() {
         await this.loadTransaction();
-  
+    },
+    async created() {
+        this.fetchTlosPrice();
+    },
+    methods: {
+        ...mapActions('evm', ['fetchTlosPrice']),
+        formatWei,
+        resetTransaction() {
+            this.blockData = null;
+            this.trx = null;
+            this.tab = '#general';
+            this.isContract = false;
+            this.contract = null;
+            this.parsedTransaction = 
