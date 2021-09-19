@@ -109,4 +109,11 @@ export default {
             this.trx.value = BigNumber.from(this.trx.value.toLocaleString('fullwide', { useGrouping:false }));
             await this.loadContract();
             await this.loadTransfers();
-            this.setEr
+            this.setErrorMessage();
+        },
+        async loadTransfers() {
+            this.transfers = [];
+            for (const log of this.trx.logs) {
+                // ERC20, ERC721 & ERC1155 transfers (ERC721 & ERC20 have same first topic but ERC20 has 4 topics for
+                // transfers, ERC20 has 3 log topics, ERC1155 has a different first topic)
+                let sig = log.topics[
