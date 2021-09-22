@@ -122,4 +122,10 @@ export default {
                     let contract = await this.$contractManager.getContract(log.address, type);
                     if (typeof contract.token !== 'undefined' && contract.token !== null) {
                         let token = {
-                   
+                            'symbol': contract.token.symbol,
+                            'address': log.address,
+                            name: contract.token.name,
+                            'decimals': contract.token.decimals,
+                        };
+                        if (contract.token.type === 'erc721') {
+                            let tokenId = BigNumber.from(log.topics[3]).toString()
