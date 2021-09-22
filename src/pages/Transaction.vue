@@ -116,4 +116,10 @@ export default {
             for (const log of this.trx.logs) {
                 // ERC20, ERC721 & ERC1155 transfers (ERC721 & ERC20 have same first topic but ERC20 has 4 topics for
                 // transfers, ERC20 has 3 log topics, ERC1155 has a different first topic)
-                let sig = log.topics[
+                let sig = log.topics[0].substr(0, 10);
+                if (TRANSFER_SIGNATURES.includes(sig)) {
+                    let type = this.$contractManager.getTokenTypeFromLog(log);
+                    let contract = await this.$contractManager.getContract(log.address, type);
+                    if (typeof contract.token !== 'undefined' && contract.token !== null) {
+                        let token = {
+                   
