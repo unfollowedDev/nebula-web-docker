@@ -128,4 +128,12 @@ export default {
                             'decimals': contract.token.decimals,
                         };
                         if (contract.token.type === 'erc721') {
-                            let tokenId = BigNumber.from(log.topics[3]).toString()
+                            let tokenId = BigNumber.from(log.topics[3]).toString();
+                            if (contract.token.extensions?.metadata) {
+                                try {
+                                    token = await this.$contractManager.loadTokenMetadata(
+                                        log.address,
+                                        contract.token,
+                                        tokenId,
+                                    );
+   
