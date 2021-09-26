@@ -136,4 +136,9 @@ export default {
                                         contract.token,
                                         tokenId,
                                     );
-   
+                                } catch (e) {
+                                    console.error(`Could not retreive metadata for ${contract.address}: ${e.message}`);
+                                    // notify the user
+                                    this.$q.notify({
+                                        message: this.$t(
+                                            'pages.couldnt_retreive_metadata_fo
