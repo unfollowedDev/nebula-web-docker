@@ -141,4 +141,12 @@ export default {
                                     // notify the user
                                     this.$q.notify({
                                         message: this.$t(
-                                            'pages.couldnt_retreive_metadata_fo
+                                            'pages.couldnt_retreive_metadata_for_address',
+                                            { address: contract.address, message: e.message },
+                                        ),
+                                        color: 'negative',
+                                        position: 'top',
+                                        timeout: 5000,
+                                    });
+                                }
+ 
