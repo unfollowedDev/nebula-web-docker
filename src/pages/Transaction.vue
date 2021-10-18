@@ -149,4 +149,9 @@ export default {
                                         timeout: 5000,
                                     });
                                 }
- 
+                            }
+                            this.erc721_transfers.push({
+                                'tokenId': tokenId,
+                                'to': '0x' + log.topics[2].substr(log.topics[2].length - 40, 40),
+                                'from': '0x' + log.topics[1].substr(log.topics[1].length - 40, 40),
+                           
