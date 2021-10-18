@@ -154,4 +154,10 @@ export default {
                                 'tokenId': tokenId,
                                 'to': '0x' + log.topics[2].substr(log.topics[2].length - 40, 40),
                                 'from': '0x' + log.topics[1].substr(log.topics[1].length - 40, 40),
-                           
+                                'token': token,
+                            });
+                        } else if (contract.token.type === 'erc1155') {
+                            let tokenId = BigNumber.from(log.data.substr(0, 66)).toString();
+                            if (contract.token.extensions?.metadata) {
+                                try {
+                                    token = await this.$contractManager.loadToken
