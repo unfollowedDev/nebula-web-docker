@@ -160,4 +160,10 @@ export default {
                             let tokenId = BigNumber.from(log.data.substr(0, 66)).toString();
                             if (contract.token.extensions?.metadata) {
                                 try {
-                                    token = await this.$contractManager.loadToken
+                                    token = await this.$contractManager.loadTokenMetadata(
+                                        log.address,
+                                        contract.token,
+                                        tokenId,
+                                    );
+                                } catch (e) {
+                                    console.error(`Could not retreive metadata for ${contract.address}: ${e.
