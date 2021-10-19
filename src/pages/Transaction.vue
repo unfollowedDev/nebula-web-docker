@@ -180,4 +180,10 @@ export default {
                                 }
                             }
                             this.erc1155_transfers.push({
-                                'tokenId': 
+                                'tokenId': tokenId,
+                                'amount': BigNumber.from(log.data).toString(),
+                                'to': '0x' + log.topics[3].substr(log.topics[3].length - 40, 40),
+                                'from': '0x' + log.topics[2].substr(log.topics[2].length - 40, 40),
+                                'token': token,
+                            });
+                     
