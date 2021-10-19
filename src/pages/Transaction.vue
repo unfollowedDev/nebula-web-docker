@@ -172,4 +172,12 @@ export default {
                                         message: this.$t(
                                             'pages.couldnt_retreive_metadata_for_address',
                                             { address: contract.address, message: e.message },
-                     
+                                        ),
+                                        color: 'negative',
+                                        position: 'top',
+                                        timeout: 5000,
+                                    });
+                                }
+                            }
+                            this.erc1155_transfers.push({
+                                'tokenId': 
