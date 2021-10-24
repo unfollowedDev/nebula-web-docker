@@ -186,4 +186,9 @@ export default {
                                 'from': '0x' + log.topics[2].substr(log.topics[2].length - 40, 40),
                                 'token': token,
                             });
-                     
+                        } else {
+                            this.erc20_transfers.push({
+                                'value': log.data,
+                                'wei': BigNumber.from(log.data).toString(),
+                                'to': '0x' + log.topics[2].substr(log.topics[2].length - 40, 40),
+                                'from': '0x' + log.topics[1].substr(log
