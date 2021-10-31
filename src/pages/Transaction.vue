@@ -204,4 +204,14 @@ export default {
                 return;
             }
 
-            const contract = await this.$contractManager.getContract(th
+            const contract = await this.$contractManager.getContract(this.trx.to);
+            if (!contract) {
+                return;
+            }
+
+            this.contract = contract;
+            this.parsedTransaction = await this.contract.parseTransaction(this.trx.input_data);
+            this.params = this.getFunctionParams();
+            this.methodTrx = Object.assign(
+                { parsedTransaction: this.parsedTransaction },
+               
