@@ -214,4 +214,18 @@ export default {
             this.params = this.getFunctionParams();
             this.methodTrx = Object.assign(
                 { parsedTransaction: this.parsedTransaction },
-               
+                this.trx,
+            );
+            this.isContract = true;
+        },
+        setErrorMessage() {
+            if (this.trx.status !== 0) {
+                return;
+            }
+
+            this.errorMessage = parseErrorMessage(this.trx.output);
+        },
+        getFunctionName() {
+            if (this.parsedTransaction) {
+                return this.parsedTransaction.name;
+            }
