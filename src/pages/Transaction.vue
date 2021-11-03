@@ -239,4 +239,13 @@ export default {
                 args.push({
                     name: input.name,
                     type: input.type,
-                    arrayChildren: (input.
+                    arrayChildren: (input.arrayChildren !== null) ? input.arrayChildren.type : false,
+                    value:  this.parsedTransaction.args[i],
+                });
+            });
+            return args;
+        },
+        getGasFee() {
+            return formatWei(
+                BigNumber.from(this.trx.charged_gas_price)
+                    .mul(this.trx.gasused).toLocaleString
