@@ -229,3 +229,14 @@ export default {
             if (this.parsedTransaction) {
                 return this.parsedTransaction.name;
             }
+        },
+        getFunctionParams() {
+            if (!this.parsedTransaction) {
+                return [];
+            }
+            let args = [];
+            this.parsedTransaction.functionFragment.inputs.forEach((input, i) => {
+                args.push({
+                    name: input.name,
+                    type: input.type,
+                    arrayChildren: (input.
