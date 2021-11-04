@@ -274,4 +274,13 @@ export default {
     </div>
     <div class="row tableWrapper">
         <div class="col-12 q-py-lg">
-            <div v-if="trx" :key="erc20_transfers.length + isContract" 
+            <div v-if="trx" :key="erc20_transfers.length + isContract" class="content-container">
+                <q-tabs
+                    v-model="tab"
+                    class="text-white topRounded"
+                    dense="dense"
+                    active-color="secondary"
+                    align="justify"
+                    narrow-indicator="narrow-indicator"
+                    :class="$q.dark.isActive ? 'q-dark' : 'q-light'"
+          
