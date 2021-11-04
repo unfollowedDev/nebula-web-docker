@@ -265,4 +265,13 @@ export default {
     <div class="row">
         <div class="col-12 q-px-md">
             <div class="text-h4 text-primary q-mb-lg title q-pt-xl">
-          
+                {{ $t('pages.transaction_details') }}
+            </div>
+            <div v-if="trxNotFound" class="text-h6 q-mb-lg text-white">
+                {{ $t('pages.transaction_not_found', { hash }) }}
+            </div>
+        </div>
+    </div>
+    <div class="row tableWrapper">
+        <div class="col-12 q-py-lg">
+            <div v-if="trx" :key="erc20_transfers.length + isContract" 
