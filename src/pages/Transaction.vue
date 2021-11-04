@@ -283,4 +283,14 @@ export default {
                     align="justify"
                     narrow-indicator="narrow-indicator"
                     :class="$q.dark.isActive ? 'q-dark' : 'q-light'"
-          
+                >
+                    <q-route-tab
+                        class="topLeftRounded"
+                        name="general"
+                        :to="{ hash: '#general' }"
+                        exact="exact"
+                        replace="replace"
+                        :label="$t('pages.general')"
+                    />
+                    <q-route-tab
+                        name="de
