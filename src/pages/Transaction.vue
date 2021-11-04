@@ -248,4 +248,21 @@ export default {
         getGasFee() {
             return formatWei(
                 BigNumber.from(this.trx.charged_gas_price)
-                    .mul(this.trx.gasused).toLocaleString
+                    .mul(this.trx.gasused).toLocaleString('fullwide', { useGrouping:false }),
+                WEI_PRECISION,
+                5,
+            );
+        },
+        getGasChargedGWEI() {
+            return formatWei(this.trx.charged_gas_price, 9, 2);
+        },
+    },
+};
+</script>
+
+<template>
+<div class="pageContainer">
+    <div class="row">
+        <div class="col-12 q-px-md">
+            <div class="text-h4 text-primary q-mb-lg title q-pt-xl">
+          
