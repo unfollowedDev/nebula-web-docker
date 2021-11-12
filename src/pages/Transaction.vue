@@ -293,4 +293,13 @@ export default {
                         :label="$t('pages.general')"
                     />
                     <q-route-tab
-                        name="de
+                        name="details"
+                        :to="{ hash: '#details' }"
+                        exact="exact"
+                        replace="replace"
+                        :label="$t('pages.details')"
+                    />
+                    <q-route-tab
+                        name="logs"
+                        :to="{ hash: '#eventlog' }"
+                        exact="exac
