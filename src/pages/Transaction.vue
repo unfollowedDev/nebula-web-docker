@@ -321,4 +321,11 @@ export default {
                     animated="animated"
                     keep-alive="keep-alive"
                 >
-                    <q-tab-panel id="transaction-page" name="general"><br><
+                    <q-tab-panel id="transaction-page" name="general"><br><br>
+                        <div class="fit row wrap justify-start items-start content-start">
+                            <div class="col-3">
+                                <strong class="wrapStrong">{{ $t('pages.transaction_hash') }}:&nbsp;</strong>
+                            </div>
+                            <div class="col-9">
+                                <span>{{ hash }}</span>
+          
