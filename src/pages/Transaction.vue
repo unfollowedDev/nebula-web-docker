@@ -312,4 +312,13 @@ export default {
                         :to="{ hash: '#internal' }"
                         exact="exact"
                         replace="replace"
-                    
+                        :label="$t('pages.internal_txns')"
+                    />
+                </q-tabs>
+                <q-tab-panels
+                    v-model="tab"
+                    class="column shadow-2"
+                    animated="animated"
+                    keep-alive="keep-alive"
+                >
+                    <q-tab-panel id="transaction-page" name="general"><br><
