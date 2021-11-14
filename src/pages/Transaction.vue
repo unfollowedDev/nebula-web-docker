@@ -302,4 +302,14 @@ export default {
                     <q-route-tab
                         name="logs"
                         :to="{ hash: '#eventlog' }"
-                        exact="exac
+                        exact="exact"
+                        replace="replace"
+                        :label="$t('pages.logs')"
+                    />
+                    <q-route-tab
+                        class="topRightRounded"
+                        name="internal"
+                        :to="{ hash: '#internal' }"
+                        exact="exact"
+                        replace="replace"
+                    
