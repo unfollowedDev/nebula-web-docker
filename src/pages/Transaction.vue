@@ -328,4 +328,11 @@ export default {
                             </div>
                             <div class="col-9">
                                 <span>{{ hash }}</span>
-          
+                                <CopyButton :text="hash"/>
+                            </div>
+                        </div><br>
+                        <div class="fit row wrap justify-start items-start content-start">
+                            <div class="col-3">
+                                <strong>{{ $t('pages.block_number') }}:&nbsp;</strong>
+                            </div>
+                            <d
