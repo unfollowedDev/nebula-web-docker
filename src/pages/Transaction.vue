@@ -343,4 +343,11 @@ export default {
                             class="fit row wrap justify-start items-start content-start date"
                             @click="showAge = !showAge"
                         >
-                            <div cl
+                            <div class="col-3">
+                                <strong>{{ $t('pages.date') }}:&nbsp;</strong>
+                            </div>
+                            <div class="u-flex--left">
+                                <DateField :epoch="trx.epoch"/>
+                            </div>
+                        </div><br>
+                        <div class="fit row wrap justify-start items-start 
