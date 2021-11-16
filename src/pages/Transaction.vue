@@ -335,4 +335,12 @@ export default {
                             <div class="col-3">
                                 <strong>{{ $t('pages.block_number') }}:&nbsp;</strong>
                             </div>
-                            <d
+                            <div class="col-9">
+                                <BlockField :block="trx.block"/>
+                            </div>
+                        </div><br>
+                        <div
+                            class="fit row wrap justify-start items-start content-start date"
+                            @click="showAge = !showAge"
+                        >
+                            <div cl
