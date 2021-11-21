@@ -350,4 +350,11 @@ export default {
                                 <DateField :epoch="trx.epoch"/>
                             </div>
                         </div><br>
-                        <div class="fit row wrap justify-start items-start 
+                        <div class="fit row wrap justify-start items-start content-start">
+                            <div class="col-3">
+                                <strong>{{ $t('pages.status') }}:&nbsp;</strong>
+                            </div>
+                            <div class="col-9 q-py-xs">
+                                <span v-if="trx.status == 1" class="positive">
+                                    <q-icon name="check"/>
+                    
