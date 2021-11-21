@@ -364,4 +364,10 @@ export default {
                                 </span>
                             </div>
                         </div><br>
-                        <
+                        <div v-if="errorMessage" class="fit row wrap justify-start items-start content-start">
+                            <div class="col-3">
+                                <strong>{{ $t('pages.error_message') }}:&nbsp;</strong>
+                            </div>
+                            <div class="col-9">
+                                <span class="text-negative">{{ errorMessage }}</span>
+                            </div>
