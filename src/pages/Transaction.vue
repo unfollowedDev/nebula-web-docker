@@ -357,4 +357,11 @@ export default {
                             <div class="col-9 q-py-xs">
                                 <span v-if="trx.status == 1" class="positive">
                                     <q-icon name="check"/>
-                    
+                                    <span>{{ $t('pages.success') }}</span>
+                                </span>
+                                <span v-else class="negative">
+                                    <q-icon name="warning"/><span>{{ $t('pages.failure') }}</span>
+                                </span>
+                            </div>
+                        </div><br>
+                        <
