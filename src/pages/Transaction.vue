@@ -385,4 +385,11 @@ export default {
                                 />
                             </div>
                         </div><br>
-                        <div class="fit row wrap justify
+                        <div class="fit row wrap justify-start items-start content-start">
+                            <div class="col-3">
+                                <strong>{{ $t('pages.to') }}:&nbsp;</strong>
+                            </div>
+                            <div class="col-9 word-break">
+                                <AddressField
+                                    :address="trx.to"
+                                    :is-
