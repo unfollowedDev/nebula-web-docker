@@ -378,3 +378,11 @@ export default {
                             </div>
                             <div class="col-9 word-break">
                                 <AddressField
+                                    :address="trx.from"
+                                    :truncate="0"
+                                    :highlight="erc20_transfers.length + erc721_transfers.length > 1"
+                                    copy="copy"
+                                />
+                            </div>
+                        </div><br>
+                        <div class="fit row wrap justify
