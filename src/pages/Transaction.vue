@@ -371,3 +371,10 @@ export default {
                             <div class="col-9">
                                 <span class="text-negative">{{ errorMessage }}</span>
                             </div>
+                        </div><br v-if="errorMessage">
+                        <div class="fit row wrap justify-start items-start content-start">
+                            <div class="col-3">
+                                <strong>{{ $t('pages.from') }}:&nbsp;</strong>
+                            </div>
+                            <div class="col-9 word-break">
+                                <AddressField
