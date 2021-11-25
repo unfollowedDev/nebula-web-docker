@@ -392,4 +392,12 @@ export default {
                             <div class="col-9 word-break">
                                 <AddressField
                                     :address="trx.to"
-                                    :is-
+                                    :is-contract-trx="!!contract"
+                                    :truncate="0"
+                                    copy="copy"
+                                />
+                            </div>
+                        </div><br>
+                        <div v-if="isContract" class="fit row wrap justify-start items-start content-start">
+                            <div class="col-3">
+  
