@@ -400,4 +400,10 @@ export default {
                         </div><br>
                         <div v-if="isContract" class="fit row wrap justify-start items-start content-start">
                             <div class="col-3">
-  
+                                <strong>{{ $t('pages.contract_function') }}:&nbsp;</strong>
+                            </div>
+                            <div class="col-9">
+                                <MethodField :contract="contract" :trx="methodTrx" shortenSignature="shortenSignature"/>
+                            </div>
+                        </div><br v-if="isContract">
+                        
