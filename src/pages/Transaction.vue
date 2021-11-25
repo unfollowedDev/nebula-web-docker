@@ -406,4 +406,10 @@ export default {
                                 <MethodField :contract="contract" :trx="methodTrx" shortenSignature="shortenSignature"/>
                             </div>
                         </div><br v-if="isContract">
-                        
+                        <div
+                            v-if="isContract && params.length > 0"
+                            class="fit row wrap justify-start items-start content-start"
+                        >
+                            <div class="col-3"><strong>{{ $t('pages.function_parameters') }}:&nbsp;</strong></div>
+                            <div id="function-parameters" class="col">
+                  
