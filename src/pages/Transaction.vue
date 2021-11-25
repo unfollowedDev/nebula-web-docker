@@ -412,4 +412,8 @@ export default {
                         >
                             <div class="col-3"><strong>{{ $t('pages.function_parameters') }}:&nbsp;</strong></div>
                             <div id="function-parameters" class="col">
-                  
+                                <ParameterList :params="params" :contract="contract" :trxFrom="trx.from"/>
+                            </div>
+                        </div><br v-if="isContract && params.length > 0">
+                        <div v-if="trx.createdaddr" class="fit row wrap justify-start items-start content-start">
+                            <div class="col-3"><strong>{{ $t('pages.deployed_cont
