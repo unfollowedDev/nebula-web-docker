@@ -416,4 +416,10 @@ export default {
                             </div>
                         </div><br v-if="isContract && params.length > 0">
                         <div v-if="trx.createdaddr" class="fit row wrap justify-start items-start content-start">
-                            <div class="col-3"><strong>{{ $t('pages.deployed_cont
+                            <div class="col-3"><strong>{{ $t('pages.deployed_contract') }}:&nbsp;</strong></div>
+                            <div class="col-9 word-break">
+                                <AddressField :address="trx.createdaddr"/>
+                            </div>
+                        </div><br v-if="trx.createdaddr">
+                        <div class="fit row wrap justify-start items-start content-start">
+                            <div class="col-3"><strong>{{ $t('pages.value') }}:&nbsp;</s
