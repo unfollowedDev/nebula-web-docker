@@ -428,4 +428,13 @@ export default {
                                     <span>{{ trx.value }}</span>
                                 </div>
                                 <span v-else>
-                                    <span>{{ $t('pages.balance_tlos', { amount: for
+                                    <span>{{ $t('pages.balance_tlos', { amount: formatWei(trx.value, 18) }) }}</span>
+                                    <q-tooltip>{{ $t('pages.click_to_show_in_wei') }}</q-tooltip>
+                                </span>
+                            </div>
+                        </div><br>
+                        <ERCTransferList
+                            v-if="erc20_transfers.length > 0"
+                            type="ERC20"
+                            :trxFrom="trx.from"
+    
