@@ -422,4 +422,10 @@ export default {
                             </div>
                         </div><br v-if="trx.createdaddr">
                         <div class="fit row wrap justify-start items-start content-start">
-                            <div class="col-3"><strong>{{ $t('pages.value') }}:&nbsp;</s
+                            <div class="col-3"><strong>{{ $t('pages.value') }}:&nbsp;</strong></div>
+                            <div class="col-9 clickable" @click="showWei = !showWei">
+                                <div v-if="showWei">
+                                    <span>{{ trx.value }}</span>
+                                </div>
+                                <span v-else>
+                                    <span>{{ $t('pages.balance_tlos', { amount: for
