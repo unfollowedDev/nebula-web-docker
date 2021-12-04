@@ -437,4 +437,12 @@ export default {
                             v-if="erc20_transfers.length > 0"
                             type="ERC20"
                             :trxFrom="trx.from"
-    
+                            :contract="contract"
+                            :transfers="erc20_transfers"
+                        />
+                        <ERCTransferList
+                            v-if="erc721_transfers.length > 0"
+                            type="ERC721"
+                            :trxFrom="trx.from"
+                            :contract="contract"
+                            :tr
