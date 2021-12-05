@@ -445,4 +445,12 @@ export default {
                             type="ERC721"
                             :trxFrom="trx.from"
                             :contract="contract"
-                            :tr
+                            :transfers="erc721_transfers"
+                        />
+                        <ERCTransferList
+                            v-if="erc1155_transfers.length > 0"
+                            type="ERC1155"
+                            :trxFrom="trx.from"
+                            :contract="contract"
+                            :transfers="erc1155_transfers"
+                
