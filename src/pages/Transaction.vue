@@ -459,4 +459,11 @@ export default {
                                 <strong>{{ $t('pages.gas_price_charged') }}:&nbsp;</strong>
                             </div>
                             <span>{{ $t('pages.balance_gwei', { amount: getGasChargedGWEI() }) }}</span>
+                        </div><br>
+                        <div class="fit row wrap justify-start items-start content-start">
+                            <div class="col-3">
+                                <strong>{{ $t('pages.gas_fee') }}:&nbsp;</strong>
+                            </div>
+                            <span>
+                                {{ $t('pages.balance_tlos', { amount: getGasFee() }) }}
                  
