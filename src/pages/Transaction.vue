@@ -466,4 +466,9 @@ export default {
                             </div>
                             <span>
                                 {{ $t('pages.balance_tlos', { amount: getGasFee() }) }}
-                 
+                                <small class="q-pl-sm">(~ ${{ (getGasFee() * tlosPrice).toFixed(5) }})</small>
+                            </span>
+                        </div><br>
+                        <div class="fit row wrap justify-start items-start content-start">
+                            <div class="col-3"><strong>{{ $t('pages.gas_used') }}:&nbsp;</strong></div>
+                            <div class="col-9">{{ trx.ga
