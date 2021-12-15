@@ -471,4 +471,10 @@ export default {
                         </div><br>
                         <div class="fit row wrap justify-start items-start content-start">
                             <div class="col-3"><strong>{{ $t('pages.gas_used') }}:&nbsp;</strong></div>
-                            <div class="col-9">{{ trx.ga
+                            <div class="col-9">{{ trx.gasused }}</div>
+                        </div><br>
+                        <div class="fit row wrap justify-start items-start content-start">
+                            <div class="col-3"><strong>{{ $t('pages.gas_limit') }}:&nbsp;</strong></div>
+                            <div class="col-9">{{ trx.gas_limit }}</div>
+                        </div><br>
+                        <div class="fit row wrap justify-sta
