@@ -484,4 +484,12 @@ export default {
                     </q-tab-panel>
                     <q-tab-panel name="details">
                         <div>
-                            <div class="col-3"><strong>{
+                            <div class="col-3"><strong>{{ $t('pages.input') }}:&nbsp;</strong></div>
+                            <div class="col-9">{{ trx.input_data }}</div>
+                        </div><br>
+                        <div>
+                            <div class="col-3"><strong>{{ $t('pages.output') }}:&nbsp;</strong></div>
+                            <div class="col-9">{{ trx.output }}</div>
+                        </div>
+                    </q-tab-panel>
+              
