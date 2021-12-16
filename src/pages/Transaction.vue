@@ -477,4 +477,11 @@ export default {
                             <div class="col-3"><strong>{{ $t('pages.gas_limit') }}:&nbsp;</strong></div>
                             <div class="col-9">{{ trx.gas_limit }}</div>
                         </div><br>
-                        <div class="fit row wrap justify-sta
+                        <div class="fit row wrap justify-start items-start content-start">
+                            <div class="col-3"><strong>{{ $t('pages.nonce') }}:&nbsp;</strong></div>
+                            <div class="col-9">{{ trx.nonce }}</div>
+                        </div>
+                    </q-tab-panel>
+                    <q-tab-panel name="details">
+                        <div>
+                            <div class="col-3"><strong>{
