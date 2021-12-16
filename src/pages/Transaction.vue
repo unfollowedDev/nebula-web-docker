@@ -492,4 +492,11 @@ export default {
                             <div class="col-9">{{ trx.output }}</div>
                         </div>
                     </q-tab-panel>
-              
+                    <q-tab-panel name="logs">
+                        <div class="jsonViewer">
+                            <LogsViewer :logs="trx.logs" :contract="contract"/>
+                        </div>
+                    </q-tab-panel>
+                    <q-tab-panel name="internal">
+                        <InternalTxns :itxs="trx.itxs" :contract="contract"/>
+                    </q-tab-panel>
