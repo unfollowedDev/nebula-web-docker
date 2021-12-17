@@ -534,4 +534,27 @@ export default {
 
 <style lang="sass" scoped>
 .shadow-2
-    b
+    box-shadow: none !important
+
+span
+    word-break: break-word
+
+.col-9 .positive .q-icon, .col-9 .negative .q-icon
+    margin-top: -5px
+    margin-right: 5px
+
+.date .col-9 > div
+    display: inline-block
+
+.col-9 .positive, .col-9 .negative
+    border: 1px solid
+    border-radius: 5px
+    padding: 5px 10px
+
+.col-9 .jv-container .jv-code
+    padding: 0
+
+.col-9
+    word-break: break-word
+
+.q-tabs__conte
