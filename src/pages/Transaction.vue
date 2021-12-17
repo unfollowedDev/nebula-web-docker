@@ -500,3 +500,22 @@ export default {
                     <q-tab-panel name="internal">
                         <InternalTxns :itxs="trx.itxs" :contract="contract"/>
                     </q-tab-panel>
+                </q-tab-panels>
+            </div>
+        </div>
+    </div>
+</div>
+</template>
+
+<style scoped lang="sass">
+    @media screen and (max-width: 650px)
+        #function-parameters
+            width: 100%
+            flex: auto
+            margin-top: 20px
+
+        #transaction-page
+            .col-3
+                width: 100%
+            .col-9
+                width
