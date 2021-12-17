@@ -518,4 +518,20 @@ export default {
             .col-3
                 width: 100%
             .col-9
-                width
+                width: 100%
+
+    @media only screen and (max-width: 900px)
+        #function-parameters
+            .row
+                .col-4
+                    width: 100%
+                    padding-left: 15px
+                .col-8
+                    padding-bottom: 10px
+                    padding-left: 30px
+                    width: 100%
+</style>
+
+<style lang="sass" scoped>
+.shadow-2
+    b
