@@ -557,4 +557,12 @@ span
 .col-9
     word-break: break-word
 
-.q-tabs__conte
+.q-tabs__content
+    margin-bottom: -1px
+
+@media only screen and (max-width: 550px)
+    .q-tab
+        padding: 0px 5px
+    .q-tab__label
+        font-size: 11px
+</style>
