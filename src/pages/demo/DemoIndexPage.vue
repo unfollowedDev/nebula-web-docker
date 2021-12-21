@@ -32,4 +32,24 @@ export default {
                     <li>
                         <router-link :to="{ name: 'inputs-demo' }">Inputs</router-link>
                     </li>
-      
+                </ul>
+            </div>
+        </q-card>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <router-view />
+        </div>
+    </div>
+</div>
+</template>
+
+<style lang="scss">
+.c-demos {
+    margin: 24px;
+
+    &__ul {
+        padding-left: 12px;
+    }
+}
+</style>
