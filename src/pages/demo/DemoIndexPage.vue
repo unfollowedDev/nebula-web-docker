@@ -20,4 +20,16 @@ export default {
                 standout
                 class="q-mx-md"
                 :icon="$q.dark.isActive ? 'fas fa-sun' : 'fas fa-moon'"
-          
+                @click="toggleDarkMode()"
+            />
+        </div>
+    </div>
+    <div class="row q-mb-xl">
+        <q-card class="col-3">
+            <div class="q-pa-md text-left">
+                Pages
+                <ul class="c-demos__ul">
+                    <li>
+                        <router-link :to="{ name: 'inputs-demo' }">Inputs</router-link>
+                    </li>
+      
