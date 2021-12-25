@@ -9,4 +9,16 @@ import StakingStats from 'pages/staking/StakingStats';
 
 const oneEth = ethers.utils.parseEther('1').toString();
 
-const
+const tabs = {
+    stake: '#stake',
+    unstake: '#unstake',
+    withdraw: '#withdraw',
+};
+
+export default {
+    name: 'StakingPage',
+    components: {
+        WithdrawPage: defineAsyncComponent(() => import('pages/staking/WithdrawPage.vue')),
+        StakeForm,
+        StakingStats,
+        UnstakeForm: defineAsyncComponent(() => import('pages/staking/UnstakeFo
