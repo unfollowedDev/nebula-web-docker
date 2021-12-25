@@ -399,3 +399,22 @@ export default {
                     color="secondary"
                     text-color="black"
                     @click="initiateDeposit"
+                />
+            </q-card-actions>
+        </q-card>
+    </q-dialog>
+</div>
+<LoginModal :show="displayLoginModal" @hide="displayLoginModal = false" />
+</template>
+
+<style lang="scss">
+.c-stake-form {
+    &__metamask-prompt {
+        color: $secondary;
+        cursor: pointer;
+        width: max-content;
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+}
+</style>
