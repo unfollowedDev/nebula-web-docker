@@ -226,3 +226,14 @@ export default {
         margin: 0 0 16px;
 
         color: $grey-0;
+
+        @at-root .body--light & {
+            color: $purpleDark;
+        }
+
+        @media screen and (min-width: $breakpoint-sm) {
+            margin: 0;
+        }
+    }
+}
+</style>
