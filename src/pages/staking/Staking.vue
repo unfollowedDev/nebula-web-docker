@@ -58,4 +58,15 @@ export default {
     },
     async created() {
         await this.fetchContracts();
-        await this.fetchContractInstances(
+        await this.fetchContractInstances();
+    },
+    methods: {
+        async fetchBalances() {
+            if (!this.address) {
+                this.tlosBalance = null;
+                this.stlosBalance = null;
+                this.unlockedTlosBalance = null;
+                this.totalUnstakedTlosBalance = null;
+                this.stlosValue = null;
+                this.escrowDeposits = [];
+                this.valueOfOneStlosInTlos =
