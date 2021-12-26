@@ -21,4 +21,17 @@ export default {
         WithdrawPage: defineAsyncComponent(() => import('pages/staking/WithdrawPage.vue')),
         StakeForm,
         StakingStats,
-        UnstakeForm: defineAsyncComponent(() => import('pages/staking/UnstakeFo
+        UnstakeForm: defineAsyncComponent(() => import('pages/staking/UnstakeForm')),
+    },
+    data: () => ({
+        selectedTab: '#stake',
+        stlosContract: null,
+        escrowContract: null,
+        stlosContractInstance: null,
+        escrowContractInstance: null,
+        valueOfOneStlosInTlos: null,
+        tlosBalance: null,
+        stlosBalance: null,
+        stlosValue: null,
+        totalUnstakedTlosBalance: null,
+        unlockedTlosBalance: nu
