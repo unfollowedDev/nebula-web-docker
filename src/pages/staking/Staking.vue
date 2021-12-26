@@ -34,4 +34,17 @@ export default {
         stlosBalance: null,
         stlosValue: null,
         totalUnstakedTlosBalance: null,
-        unlockedTlosBalance: nu
+        unlockedTlosBalance: null,
+        unstakePeriodSeconds: null,
+        escrowDeposits: [],
+    }),
+    computed: {
+        ...mapGetters('login', ['address', 'isLoggedIn', 'isNative']),
+        showWithdrawNotification() {
+            return BigNumber.from(this.unlockedTlosBalance ?? '0').gt('0');
+        },
+    },
+    watch: {
+        address: {
+            immediate: true,
+            async handler(addr
