@@ -47,4 +47,15 @@ export default {
     watch: {
         address: {
             immediate: true,
-            async handler(addr
+            async handler(address, oldAddress) {
+                if (address !== oldAddress) {
+                    await this.fetchContractInstances();
+                    await this.fetchBalances();
+                }
+            },
+        },
+        $route: getRouteWatcherForTabs('staking', tabs, tabs.stake),
+    },
+    async created() {
+        await this.fetchContracts();
+        await this.fetchContractInstances(
