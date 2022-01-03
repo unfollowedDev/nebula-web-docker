@@ -80,4 +80,14 @@ export default {
                 })
                 .catch(({ message }) => {
                     console.error(`Failed to fetch account: ${message}`);
-                    this.$q.not
+                    this.$q.notify({
+                        type: 'negative',
+                        message: this.$t('page.staking.fetch_balance_error', { message }),
+                    });
+                    this.tlosBalance = null;
+                });
+
+
+            const stlosPromise = this.stlosContractInstance.balanceOf(this.address)
+                .then((balanceBn) => {
+                    this.stlosBalan
