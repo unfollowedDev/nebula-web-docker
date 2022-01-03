@@ -69,4 +69,15 @@ export default {
                 this.totalUnstakedTlosBalance = null;
                 this.stlosValue = null;
                 this.escrowDeposits = [];
-                this.valueOfOneStlosInTlos =
+                this.valueOfOneStlosInTlos = null;
+
+                return;
+            }
+
+            const tlosPromise = this.$providerManager.getEthersProvider().getBalance(this.address)
+                .then((balanceBn) => {
+                    this.tlosBalance = balanceBn.toString();
+                })
+                .catch(({ message }) => {
+                    console.error(`Failed to fetch account: ${message}`);
+                    this.$q.not
