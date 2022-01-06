@@ -90,4 +90,14 @@ export default {
 
             const stlosPromise = this.stlosContractInstance.balanceOf(this.address)
                 .then((balanceBn) => {
-                    this.stlosBalan
+                    this.stlosBalance = balanceBn.toString();
+                })
+                .catch(({ message }) => {
+                    console.error(`Failed to fetch account STLOS balance: ${message}`);
+                    this.$q.notify({
+                        type: 'negative',
+                        message: this.$t('page.staking.fetch_stlos_balance_error', { message }),
+                    });
+
+                    this.stlosBalance = null;
+                })
