@@ -100,4 +100,13 @@ export default {
                     });
 
                     this.stlosBalance = null;
+                });
+
+            const currentValuePromise = this.stlosContractInstance.maxWithdraw(this.address)
+                .then((valueBn) => {
+                    this.stlosValue = valueBn.toString();
                 })
+                .catch(({ message }) => {
+                    console.error(`Failed to fetch account STLOS balance value: ${message}`);
+                    this.$q.notify({
+       
