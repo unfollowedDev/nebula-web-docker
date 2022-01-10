@@ -118,4 +118,12 @@ export default {
             const totalUnstakedPromise = this.escrowContractInstance.balanceOf(this.address)
                 .then((amountBn) => {
                     this.totalUnstakedTlosBalance = amountBn.toString();
-   
+                })
+                .catch(({ message }) => {
+                    console.error(`Failed to fetch total unstaked TLOS balance: ${message}`);
+                    this.$q.notify({
+                        type: 'negative',
+                        message: this.$t('page.staking.fetch_unstaked_balance_error', { message }),
+                    });
+
+                    this.totalUns
