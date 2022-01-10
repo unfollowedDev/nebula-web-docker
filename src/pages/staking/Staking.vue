@@ -109,4 +109,13 @@ export default {
                 .catch(({ message }) => {
                     console.error(`Failed to fetch account STLOS balance value: ${message}`);
                     this.$q.notify({
-       
+                        type: 'negative',
+                        message: this.$t('page.staking.fetch_stlos_value_error', { message }),
+                    });
+                    this.stlosValue = null;
+                });
+
+            const totalUnstakedPromise = this.escrowContractInstance.balanceOf(this.address)
+                .then((amountBn) => {
+                    this.totalUnstakedTlosBalance = amountBn.toString();
+   
