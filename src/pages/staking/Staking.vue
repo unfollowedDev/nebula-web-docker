@@ -126,4 +126,12 @@ export default {
                         message: this.$t('page.staking.fetch_unstaked_balance_error', { message }),
                     });
 
-                    this.totalUns
+                    this.totalUnstakedTlosBalance = null;
+                });
+
+            const unlockedPromise = this.escrowContractInstance.maxWithdraw(this.address)
+                .then((amountBn) => {
+                    this.unlockedTlosBalance = amountBn.toString();
+                })
+                .catch(({ message }) => {
+                    console.error(`Failed to fetch withdrawable STLOS
