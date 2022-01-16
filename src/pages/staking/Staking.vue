@@ -142,4 +142,12 @@ export default {
                     this.unlockedTlosBalance = null;
                 });
 
-            const escrowDepositsPromise = this.escrowContractInstance.depositsOf(this.
+            const escrowDepositsPromise = this.escrowContractInstance.depositsOf(this.address)
+                .then((deposits) => {
+                    this.escrowDeposits = deposits;
+                })
+                .catch(({ message }) => {
+                    console.error(`Failed to fetch escrow deposits: ${message}`);
+                    this.$q.notify({
+                        type: 'negative',
+                        message: this.$t('page.stak
