@@ -150,4 +150,13 @@ export default {
                     console.error(`Failed to fetch escrow deposits: ${message}`);
                     this.$q.notify({
                         type: 'negative',
-                        message: this.$t('page.stak
+                        message: this.$t('page.staking.fetch_escrow_deposits_error', { message }),
+                    });
+                });
+
+            const conversionRatePromise = this.stlosContractInstance.previewDeposit(oneEth)
+                .then((stlosBn) => {
+                    this.valueOfOneStlosInTlos = formatWei(stlosBn, WEI_PRECISION, 3);
+                })
+                .catch(({ message }) => {
+                    console.error(`Failed to fetch 
