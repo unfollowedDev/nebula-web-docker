@@ -159,4 +159,14 @@ export default {
                     this.valueOfOneStlosInTlos = formatWei(stlosBn, WEI_PRECISION, 3);
                 })
                 .catch(({ message }) => {
-                    console.error(`Failed to fetch 
+                    console.error(`Failed to fetch TLOS->sTLOS conversion rate: ${message}`);
+                    this.$q.notify({
+                        type: 'negative',
+                        message: this.$t('page.staking.fetch_conversion_rate_error', { message }),
+                    });
+                });
+
+            return Promise.all([
+                tlosPromise,
+                stlosPromise,
+                current
