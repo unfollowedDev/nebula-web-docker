@@ -134,4 +134,12 @@ export default {
                     this.unlockedTlosBalance = amountBn.toString();
                 })
                 .catch(({ message }) => {
-                    console.error(`Failed to fetch withdrawable STLOS
+                    console.error(`Failed to fetch withdrawable STLOS balance: ${message}`);
+                    this.$q.notify({
+                        type: 'negative',
+                        message: this.$t('page.staking.fetch_unlocked_balance_error', { message }),
+                    });
+                    this.unlockedTlosBalance = null;
+                });
+
+            const escrowDepositsPromise = this.escrowContractInstance.depositsOf(this.
