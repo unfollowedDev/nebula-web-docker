@@ -178,4 +178,11 @@ export default {
         },
         async fetchContracts() {
             const stlosPromise = this.$contractManager.getContract(process.env.STAKED_TLOS_CONTRACT_ADDRESS)
-                .then((contrac
+                .then((contract) => {
+                    this.stlosContract = contract;
+                })
+                .catch(({ message }) => {
+                    console.error(`Failed to get STLOS contract: ${message}`);
+                    this.$q.notify({
+                        type: 'negative',
+                        message: this.$t('page.staking.fe
