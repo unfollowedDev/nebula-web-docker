@@ -169,4 +169,13 @@ export default {
             return Promise.all([
                 tlosPromise,
                 stlosPromise,
-                current
+                currentValuePromise,
+                totalUnstakedPromise,
+                unlockedPromise,
+                escrowDepositsPromise,
+                conversionRatePromise,
+            ]);
+        },
+        async fetchContracts() {
+            const stlosPromise = this.$contractManager.getContract(process.env.STAKED_TLOS_CONTRACT_ADDRESS)
+                .then((contrac
