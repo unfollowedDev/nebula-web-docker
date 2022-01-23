@@ -185,4 +185,13 @@ export default {
                     console.error(`Failed to get STLOS contract: ${message}`);
                     this.$q.notify({
                         type: 'negative',
-                        message: this.$t('page.staking.fe
+                        message: this.$t('page.staking.fetch_stlos_contract_error', { message }),
+                    });
+                    this.stlosContract = null;
+                });
+
+            const escrowPromise = this.$contractManager.getContract(process.env.TELOS_ESCROW_CONTRACT_ADDRESS)
+                .then((contract) => {
+                    this.escrowContract = contract;
+                })
+                .catch(({ message 
