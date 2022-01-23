@@ -194,4 +194,13 @@ export default {
                 .then((contract) => {
                     this.escrowContract = contract;
                 })
-                .catch(({ message 
+                .catch(({ message }) => {
+                    console.error(`Failed to get STLOS contract: ${message}`);
+                    this.$q.notify({
+                        type: 'negative',
+                        message: this.$t('page.staking.fetch_escrow_contract_error', { message }),
+                    });
+                    this.escrowContract = null;
+                });
+
+            return Promise.all([stlosP
