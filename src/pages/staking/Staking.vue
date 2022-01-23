@@ -212,4 +212,13 @@ export default {
 
             const provider = this.isLoggedIn && !this.isNative ?
                 this.$providerManager.getEthersProvider().getSigner() :
-                this.$contractManager.getEthe
+                this.$contractManager.getEthersProvider();
+
+            this.stlosContractInstance  = this.stlosContract.getContractInstance(provider, true);
+            this.escrowContractInstance = this.escrowContract.getContractInstance(provider, true);
+
+            await this.fetchBalances();
+
+            try {
+                this.unstakePeriodSeconds = (await this.escrowContractInstance.lockDuration()).toNumber();
+            } catch({ message }) 
