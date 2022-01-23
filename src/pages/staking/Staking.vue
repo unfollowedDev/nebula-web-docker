@@ -203,4 +203,13 @@ export default {
                     this.escrowContract = null;
                 });
 
-            return Promise.all([stlosP
+            return Promise.all([stlosPromise, escrowPromise]);
+        },
+        async fetchContractInstances() {
+            if (!this.stlosContract || !this.escrowContract) {
+                await this.fetchContracts();
+            }
+
+            const provider = this.isLoggedIn && !this.isNative ?
+                this.$providerManager.getEthersProvider().getSigner() :
+                this.$contractManager.getEthe
