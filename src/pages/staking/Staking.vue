@@ -221,4 +221,13 @@ export default {
 
             try {
                 this.unstakePeriodSeconds = (await this.escrowContractInstance.lockDuration()).toNumber();
-            } catch({ message }) 
+            } catch({ message }) {
+                console.error(`Failed to retrieve unstaking period: ${message}`);
+                this.$q.notify({
+                    type: 'negative',
+                    message: this.$t('page.staking.fetch_unstake_period_error', { message }),
+                });
+            }
+        },
+        async handleBalanceChanged() {
+            // note this method of attaining account balance is differe
