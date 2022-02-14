@@ -238,4 +238,17 @@ export default {
                     this.tlosBalance = account.balance.toString();
                 })
                 .catch(({ message }) => {
-        
+                    console.error(`Failed to fetch account: ${message}`);
+                    this.$q.notify({
+                        type: 'negative',
+                        message: this.$t('page.staking.fetch_account_error', { message }),
+                    });
+                    this.tlosBalance = null;
+                });
+        },
+    },
+};
+</script>
+
+<template>
+<di
