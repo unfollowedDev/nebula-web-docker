@@ -268,4 +268,17 @@ export default {
                 :stlos-balance="stlosBalance"
                 :stlos-value="stlosValue"
                 :total-unstaked-tlos-balance="totalUnstakedTlosBalance"
-                :unstake-period-second
+                :unstake-period-seconds="unstakePeriodSeconds"
+            />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div>
+                <q-tabs
+                    v-model="selectedTab"
+                    dense
+                    active-color="secondary"
+                    align="justify"
+                    narrow-indicator
+                    class="c-staking-page__tabs-h
