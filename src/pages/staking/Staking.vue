@@ -261,4 +261,11 @@ export default {
                 {{ $t('pages.staking.stake_tlos_earn_interest') }}
             </span>
         </div>
- 
+        <div class="col-xs-12 col-md-6">
+            <StakingStats
+                v-if="stlosContractInstance"
+                :stlos-contract-instance="stlosContractInstance"
+                :stlos-balance="stlosBalance"
+                :stlos-value="stlosValue"
+                :total-unstaked-tlos-balance="totalUnstakedTlosBalance"
+                :unstake-period-second
