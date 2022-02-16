@@ -281,4 +281,15 @@ export default {
                     active-color="secondary"
                     align="justify"
                     narrow-indicator
-                    class="c-staking-page__tabs-h
+                    class="c-staking-page__tabs-header tabsBar topRounded tableWrapper"
+                >
+                    <q-route-tab
+                        name="stake"
+                        :to="{ hash: '#stake'}"
+                        exact
+                        push
+                        :label="$t('pages.staking.stake')"
+                    />
+                    <q-route-tab
+                        name="unstake"
+     
