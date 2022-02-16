@@ -251,4 +251,14 @@ export default {
 </script>
 
 <template>
-<di
+<div class="c-staking-page pageContainer">
+    <div class="row q-mx-md">
+        <div class="c-staking-page__header col-xs-12 col-md-6">
+            <h1 class="c-staking-page__title">
+                {{ $t('pages.staking.telos_evm_staking') }}
+            </h1>
+            <span class="text-white">
+                {{ $t('pages.staking.stake_tlos_earn_interest') }}
+            </span>
+        </div>
+ 
