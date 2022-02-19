@@ -292,4 +292,13 @@ export default {
                     />
                     <q-route-tab
                         name="unstake"
-     
+                        :to="{ hash: '#unstake'}"
+                        exact
+                        push
+                        :label="$t('pages.staking.unstake')"
+                    />
+                    <q-route-tab
+                        name="withdraw"
+                        :to="{ hash: '#withdraw'}"
+                        exact
+               
