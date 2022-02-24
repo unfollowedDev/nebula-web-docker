@@ -301,4 +301,15 @@ export default {
                         name="withdraw"
                         :to="{ hash: '#withdraw'}"
                         exact
-               
+                        push
+                        :label="$t('pages.staking.withdraw')"
+                        :alert="showWithdrawNotification ? 'green' : false"
+                    />
+                </q-tabs>
+                <q-tab-panels
+                    v-model="selectedTab"
+                    animated
+                    keep-alive
+                    class="q-py-lg"
+                >
+       
