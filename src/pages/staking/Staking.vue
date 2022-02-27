@@ -319,4 +319,9 @@ export default {
                             </div>
                             <div v-else class="col-12">
                                 <StakeForm
-                                    :stlos-
+                                    :stlos-contract-instance="stlosContractInstance"
+                                    :tlos-balance="tlosBalance"
+                                    :has-unlocked-tlos="showWithdrawNotification"
+                                    :unstake-period-seconds="unstakePeriodSeconds"
+                                    :value-of-one-stlos-in-tlos="valueOfOneStlosInTlos"
+                                 
