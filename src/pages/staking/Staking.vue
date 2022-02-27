@@ -341,4 +341,9 @@ export default {
                             <div v-else class="col-12">
                                 <UnstakeForm
                                     :stlos-contract-instance="stlosContractInstance"
-            
+                                    :escrow-contract-instance="escrowContractInstance"
+                                    :stlos-balance="stlosBalance"
+                                    :unlocked-tlos-balance="unlockedTlosBalance"
+                                    :unstake-period-seconds="unstakePeriodSeconds"
+                                    :deposits="escrowDeposits"
+                                    :value-of-one
