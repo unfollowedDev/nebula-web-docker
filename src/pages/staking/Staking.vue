@@ -324,4 +324,13 @@ export default {
                                     :has-unlocked-tlos="showWithdrawNotification"
                                     :unstake-period-seconds="unstakePeriodSeconds"
                                     :value-of-one-stlos-in-tlos="valueOfOneStlosInTlos"
-                                 
+                                    @balance-changed="handleBalanceChanged"
+                                />
+                            </div>
+                        </div>
+                    </q-tab-panel>
+
+                    <q-tab-panel name="unstake">
+                        <div class="row">
+                            <div
+                                v-if="!stlosContractInsta
