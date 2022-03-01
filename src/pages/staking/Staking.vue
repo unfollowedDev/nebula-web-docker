@@ -356,4 +356,11 @@ export default {
                     <q-tab-panel name="withdraw">
                         <div class="row">
                             <div
-                   
+                                v-if="!escrowContractInstance"
+                                class="col-12 u-flex--center"
+                            >
+                                <q-spinner />
+                            </div>
+                            <div v-else class="col-12">
+                                <WithdrawPage
+                                    :escrow-contract-instance="e
