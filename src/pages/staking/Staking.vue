@@ -346,4 +346,14 @@ export default {
                                     :unlocked-tlos-balance="unlockedTlosBalance"
                                     :unstake-period-seconds="unstakePeriodSeconds"
                                     :deposits="escrowDeposits"
-                                    :value-of-one
+                                    :value-of-one-stlos-in-tlos="valueOfOneStlosInTlos"
+                                    @balance-changed="handleBalanceChanged"
+                                />
+                            </div>
+                        </div>
+                    </q-tab-panel>
+
+                    <q-tab-panel name="withdraw">
+                        <div class="row">
+                            <div
+                   
