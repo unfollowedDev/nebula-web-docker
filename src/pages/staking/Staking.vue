@@ -363,4 +363,11 @@ export default {
                             </div>
                             <div v-else class="col-12">
                                 <WithdrawPage
-                                    :escrow-contract-instance="e
+                                    :escrow-contract-instance="escrowContractInstance"
+                                    :unlocked-tlos-balance="unlockedTlosBalance"
+                                    :total-unstaked="totalUnstakedTlosBalance"
+                                    :deposits="escrowDeposits"
+                                    @balance-changed="handleBalanceChanged"
+                                />
+                            </div>
+                        </div>
