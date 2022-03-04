@@ -371,3 +371,27 @@ export default {
                                 />
                             </div>
                         </div>
+                    </q-tab-panel>
+                </q-tab-panels>
+            </div>
+        </div>
+    </div>
+</div>
+</template>
+
+<style lang="scss">
+.c-staking-page {
+    margin-top: 24px;
+
+    @media screen and (min-width: $breakpoint-md-min) {
+        margin-top: 48px;
+    }
+
+    &__header {
+        margin-bottom: 32px;
+    }
+
+    &__title {
+        color: $primary;
+        margin: 0 0 12px;
+        font-siz
