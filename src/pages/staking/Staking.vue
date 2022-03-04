@@ -394,4 +394,20 @@ export default {
     &__title {
         color: $primary;
         margin: 0 0 12px;
-        font-siz
+        font-size: 2.125rem;
+        font-weight: 400;
+        line-height: 2rem;
+        letter-spacing: 0.00735em;
+    }
+
+    &__tabs-header {
+        background: $dark;
+        color: white;
+
+        @at-root .body--light & {
+            background: white;
+            color: $dark;
+        }
+    }
+
+    // prevent scrolling behavior on quasar tab panels, which cannot be overridden using q-tab-pane
