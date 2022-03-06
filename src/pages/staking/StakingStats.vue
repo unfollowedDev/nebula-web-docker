@@ -11,3 +11,21 @@ export default {
             required: true,
         },
         stlosBalance: {
+            type: String,
+            default: null,
+        },
+        stlosValue: {
+            type: String,
+            default: null,
+        },
+        totalUnstakedTlosBalance: {
+            type: String,
+            default: null,
+        },
+        unstakePeriodSeconds: {
+            type: Number,
+            default: null,
+        },
+    },
+    data: () => ({
+        stlosTvl: nul
