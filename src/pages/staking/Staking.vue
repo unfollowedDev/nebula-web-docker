@@ -410,4 +410,9 @@ export default {
         }
     }
 
-    // prevent scrolling behavior on quasar tab panels, which cannot be overridden using q-tab-pane
+    // prevent scrolling behavior on quasar tab panels, which cannot be overridden using q-tab-panel API
+    .q-panel.scroll {
+        overflow: unset;
+    }
+}
+</style>
