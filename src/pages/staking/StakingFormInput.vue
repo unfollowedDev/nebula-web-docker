@@ -319,3 +319,45 @@ export default {
     }
 
     &__input,
+    &__loading {
+        height: 36px;
+    }
+
+    &__input {
+        width: 100%;
+        margin: auto;
+
+        color: $white;
+        background: none;
+        border: none;
+        outline: none;
+        font-size: 1.4rem;
+
+        @at-root .body--light & {
+            color: $info;
+        }
+    }
+
+    @keyframes wiggle {
+        0% {
+            transform: translateX(0);
+        }
+
+        25% {
+            transform: translateX(-4px);
+        }
+
+        50% {
+            transform: translateX(4px);
+        }
+
+        75% {
+            transform: translateX(-4px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
+</style>
