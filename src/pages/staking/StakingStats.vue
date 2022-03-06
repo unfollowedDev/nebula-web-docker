@@ -28,4 +28,17 @@ export default {
         },
     },
     data: () => ({
-        stlosTvl: nul
+        stlosTvl: null,
+        stlosApy: null,
+    }),
+    computed: {
+        ...mapGetters('login', ['isLoggedIn']),
+        globalStats() {
+            return [{
+                label: 'APY',
+                value: this.stlosApy ?? '--',
+                unit: '%',
+                tooltip: this.$t('pages.staking.tooltip_1'),
+            }, {
+                label: 'TVL',
+                value: this.formatWeiForStats(this.stlosTvl, true).r
