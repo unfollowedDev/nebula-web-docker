@@ -41,4 +41,14 @@ export default {
                 tooltip: this.$t('pages.staking.tooltip_1'),
             }, {
                 label: 'TVL',
-                value: this.formatWeiForStats(this.stlosTvl, true).r
+                value: this.formatWeiForStats(this.stlosTvl, true).replace(/\B(?=(\d{3})+(?!\d))/g, ' '),
+                unit: 'TLOS',
+                tooltip: this.$t('pages.staking.tooltip_2'),
+            }];
+        },
+        personalStats() {
+            return {
+                staked: {
+                    label: this.$t('pages.staking.staked'),
+                    value: {
+                        stlos: this.formatWeiForStats(this.stlo
