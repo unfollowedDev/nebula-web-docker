@@ -58,4 +58,18 @@ export default {
                 },
                 unstaked: {
                     label: this.$t('pages.staking.unstaked'),
-                    value: this.formatWeiForStats(this.totalUnstakedTlosBalan
+                    value: this.formatWeiForStats(this.totalUnstakedTlosBalance),
+                    tooltip: this.$t('pages.staking.tooltip_4', { unlockPeriod: this.unlockPeriodPretty }),
+                },
+            };
+        },
+        unlockPeriodPretty() {
+            return formatUnstakePeriod(this.unstakePeriodSeconds, this.$t);
+        },
+    },
+    async created() {
+        await this.fetchGlobalStats();
+    },
+    methods: {
+        async fetchGlobalStats() {
+         
