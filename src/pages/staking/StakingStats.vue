@@ -51,4 +51,11 @@ export default {
                 staked: {
                     label: this.$t('pages.staking.staked'),
                     value: {
-                        stlos: this.formatWeiForStats(this.stlo
+                        stlos: this.formatWeiForStats(this.stlosBalance),
+                        tlos: this.formatWeiForStats(this.stlosValue),
+                    },
+                    tooltip: this.$t('pages.staking.tooltip_3'),
+                },
+                unstaked: {
+                    label: this.$t('pages.staking.unstaked'),
+                    value: this.formatWeiForStats(this.totalUnstakedTlosBalan
