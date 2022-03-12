@@ -92,4 +92,14 @@ export default {
 
             try {
                 this.stlosApy = await fetchStlosApy(this.$telosApi);
-            } catch ({ message: apyErro
+            } catch ({ message: apyError }) {
+                console.error(`Failed to fetch sTLOS APY: ${apyError}`);
+                this.$q.notify({
+                    type: 'negative',
+                    message: this.$t('page.staking.fetch_stlos_apy_error', { message: apyError }),
+                });
+                this.stlosApy = null;
+            }
+        },
+        formatWeiForStats(wei) {
+            const form
