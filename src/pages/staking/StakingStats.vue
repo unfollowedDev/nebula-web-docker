@@ -78,4 +78,18 @@ export default {
                 console.error(`Failed to fetch sTLOS TVL: ${tvlError}`);
                 this.$q.notify({
                     type: 'negative',
-                    message: this.$t('page.staking.fetch_stlos_tvl_
+                    message: this.$t('page.staking.fetch_stlos_tvl_error', { message: tvlError }),
+                });
+                this.stlosTvl = null;
+                this.stlosApy = null;
+
+                return;
+            }
+
+            if (this.stlosTvl === null) {
+                return;
+            }
+
+            try {
+                this.stlosApy = await fetchStlosApy(this.$telosApi);
+            } catch ({ message: apyErro
