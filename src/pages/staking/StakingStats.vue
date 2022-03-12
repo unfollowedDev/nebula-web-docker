@@ -102,4 +102,18 @@ export default {
             }
         },
         formatWeiForStats(wei) {
-            const form
+            const format = val => formatWei(val, WEI_PRECISION, 3);
+
+            return wei === null ? '--' : format(wei);
+        },
+    },
+};
+</script>
+
+<template>
+<div class="c-staking-stats">
+    <div class="c-staking-stats__stats-container c-staking-stats__stats-container--global">
+        <div
+            v-for="{ label, value, unit, tooltip } in globalStats"
+            :key="label"
+       
