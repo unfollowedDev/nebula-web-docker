@@ -72,4 +72,10 @@ export default {
     },
     methods: {
         async fetchGlobalStats() {
-         
+            try {
+                this.stlosTvl = (await this.stlosContractInstance.totalAssets()).toString();
+            } catch ({ message: tvlError }) {
+                console.error(`Failed to fetch sTLOS TVL: ${tvlError}`);
+                this.$q.notify({
+                    type: 'negative',
+                    message: this.$t('page.staking.fetch_stlos_tvl_
