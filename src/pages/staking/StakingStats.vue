@@ -116,4 +116,13 @@ export default {
         <div
             v-for="{ label, value, unit, tooltip } in globalStats"
             :key="label"
-       
+            class="c-staking-stats__stat c-staking-stats__stat--global"
+        >
+            <div class="c-staking-stats__stat-label c-staking-stats__stat-label--global">
+                {{ label }}
+                <q-icon name="fas fa-info-circle" />
+            </div>
+
+            <div class="c-staking-stats__stat-value">
+                {{ value }}
+                <span class="c-staking-st
