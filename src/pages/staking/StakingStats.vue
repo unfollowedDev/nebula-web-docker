@@ -125,4 +125,17 @@ export default {
 
             <div class="c-staking-stats__stat-value">
                 {{ value }}
-                <span class="c-staking-st
+                <span class="c-staking-stats__stat-unit">{{ unit }}</span>
+            </div>
+
+            <q-tooltip
+                :offset="[0, 56]"
+                anchor="bottom middle"
+                self="center middle"
+            >
+                <span class="u-text--pre">{{ tooltip }}</span>
+            </q-tooltip>
+        </div>
+    </div>
+
+    <q-card class="c-staking-stats__stats-container c-staking-stats__stats-co
