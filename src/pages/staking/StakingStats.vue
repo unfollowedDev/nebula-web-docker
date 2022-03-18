@@ -138,4 +138,13 @@ export default {
         </div>
     </div>
 
-    <q-card class="c-staking-stats__stats-container c-staking-stats__stats-co
+    <q-card class="c-staking-stats__stats-container c-staking-stats__stats-container--personal">
+        <div class="c-staking-stats__stat">
+            <div class="c-staking-stats__stat-label">
+                {{ personalStats.staked.label }}
+                <q-icon name="fas fa-info-circle" />
+            </div>
+
+            <span class="c-staking-stats__stat-value">
+                {{ personalStats.staked.value.stlos }}
+                <span v-if="isLoggedIn" class="c-staking-sta
