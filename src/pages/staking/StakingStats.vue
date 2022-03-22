@@ -155,4 +155,15 @@ export default {
             <span v-if="isLoggedIn" class="c-staking-stats__stat-value">
                 <wbr>
                 &#8776; <!-- ≈ -->
-                {{ persona
+                {{ personalStats.staked.value.tlos }}
+                <span class="c-staking-stats__stat-unit c-staking-stats__stat-unit--personal">TLOS</span>
+            </span>
+
+            <q-tooltip
+                :offset="[0, 56]"
+                anchor="bottom middle"
+                self="center middle"
+            >
+                <span class="u-text--pre">{{ personalStats.staked.tooltip }}</span>
+            </q-tooltip>
+        </div
