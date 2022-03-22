@@ -147,4 +147,12 @@ export default {
 
             <span class="c-staking-stats__stat-value">
                 {{ personalStats.staked.value.stlos }}
-                <span v-if="isLoggedIn" class="c-staking-sta
+                <span v-if="isLoggedIn" class="c-staking-stats__stat-unit c-staking-stats__stat-unit--personal">
+                    sTLOS
+                </span>
+                &#32; <!-- breaking space - avoid whitespace collapsing when this long stat wraps-->
+            </span>
+            <span v-if="isLoggedIn" class="c-staking-stats__stat-value">
+                <wbr>
+                &#8776; <!-- ≈ -->
+                {{ persona
