@@ -166,4 +166,13 @@ export default {
             >
                 <span class="u-text--pre">{{ personalStats.staked.tooltip }}</span>
             </q-tooltip>
-        </div
+        </div>
+        <div class="c-staking-stats__stat">
+            <div class="c-staking-stats__stat-label">
+                {{ personalStats.unstaked.label }}
+                <q-icon name="fas fa-info-circle" />
+            </div>
+
+            <span class="c-staking-stats__stat-value">
+                {{ personalStats.unstaked.value }}
+                <span v-if="isLoggedIn" class="c-staking-stats__stat-u
