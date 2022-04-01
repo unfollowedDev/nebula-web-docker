@@ -187,4 +187,26 @@ export default {
             >
                 <span class="u-text--pre">{{ personalStats.unstaked.tooltip }}</span>
             </q-tooltip>
-        </
+        </div>
+    </q-card>
+</div>
+</template>
+
+<style lang="scss">
+.c-staking-stats {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: $breakpoint-md-min) {
+        justify-content: flex-end;
+    }
+
+    @media screen and (min-width: $breakpoint-lg-min) {
+        flex-wrap: nowrap;
+        gap: 16px;
+    }
+
+    &__stats-container {
+        height: min-content;
+
+        &--global {
