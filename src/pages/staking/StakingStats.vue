@@ -175,4 +175,16 @@ export default {
 
             <span class="c-staking-stats__stat-value">
                 {{ personalStats.unstaked.value }}
-                <span v-if="isLoggedIn" class="c-staking-stats__stat-u
+                <span v-if="isLoggedIn" class="c-staking-stats__stat-unit c-staking-stats__stat-unit--personal">
+                    TLOS
+                </span>
+            </span>
+
+            <q-tooltip
+                :offset="[0, 56]"
+                anchor="bottom middle"
+                self="center middle"
+            >
+                <span class="u-text--pre">{{ personalStats.unstaked.tooltip }}</span>
+            </q-tooltip>
+        </
