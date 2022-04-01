@@ -210,3 +210,16 @@ export default {
         height: min-content;
 
         &--global {
+            flex-basis: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 32px;
+            margin-bottom: 32px;
+
+            @media screen and (min-width: $breakpoint-md-min) {
+                justify-content: flex-end;
+                margin: 0;
+                padding: 0 0 12px;
+        
