@@ -222,4 +222,20 @@ export default {
                 justify-content: flex-end;
                 margin: 0;
                 padding: 0 0 12px;
-        
+            }
+
+            @media screen and (min-width: $breakpoint-lg-min) {
+                flex-basis: auto;
+                padding: 12px;
+            }
+        }
+
+        &--personal {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-evenly;
+            gap: 24px;
+            padding: 12px;
+            margin-bottom: 24px;
+
+            @media screen and (
