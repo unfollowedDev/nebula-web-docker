@@ -238,4 +238,20 @@ export default {
             padding: 12px;
             margin-bottom: 24px;
 
-            @media screen and (
+            @media screen and (min-width: $breakpoint-sm-min) {
+                max-width: max-content;
+                margin: 0 auto 24px;
+            }
+
+            @media screen and (min-width: $breakpoint-md-min) {
+                margin: 0 0 24px;
+            }
+
+            @media screen and (min-width: $breakpoint-lg-min) {
+                margin: 0;
+            }
+        }
+    }
+
+    &__stat {
+        width: fit-content
