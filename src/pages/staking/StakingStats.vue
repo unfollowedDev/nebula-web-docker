@@ -270,4 +270,25 @@ export default {
                 margin: auto;
 
                 height: 80%;
-          
+                width: 1px;
+
+                content: '';
+                border-radius: 4px;
+                background-color: #8591FD;
+            }
+        }
+    }
+
+    &__stat-label {
+        font-size: 14px;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        &--global {
+            color: $white;
+        }
+
+        &--personal {
+           
