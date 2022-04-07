@@ -254,4 +254,20 @@ export default {
     }
 
     &__stat {
-        width: fit-content
+        width: fit-content;
+        @media screen and (min-width: $breakpoint-md-min) {
+            width: max-content;
+        }
+
+        &--global {
+            position: relative;
+
+            &:not(:last-of-type)::after {
+                position: absolute;
+                top: 0;
+                right: -17px;
+                bottom: 0;
+                margin: auto;
+
+                height: 80%;
+          
