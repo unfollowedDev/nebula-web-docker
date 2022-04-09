@@ -310,3 +310,62 @@ export default {
             :top-input-amount="topInputAmount"
             :top-input-max-value="topInputMaxValue"
             :top-input-error-text="topInputErrorText"
+            :top-input-is-loading="topInputIsLoading"
+            :top-input-tooltip="topInputTooltip"
+            :bottom-input-label="bottomInputLabel"
+            :bottom-input-amount="bottomInputAmount"
+            :bottom-input-max-value="bottomInputMaxValue"
+            :bottom-input-is-loading="bottomInputIsLoading"
+            :cta-text="ctaText"
+            :cta-disabled="ctaIsDisabled"
+            :unstake-period-seconds="unstakePeriodSeconds"
+            :value-of-one-stlos-in-tlos="valueOfOneStlosInTlos"
+            @input-top="handleInputTop"
+            @input-bottom="handleInputBottom"
+            @cta-clicked="handleCtaClick"
+        />
+    </div>
+    <div v-if="resultHash" class="col-sm-12 col-md-6 offset-md-3">
+        {{ $t('pages.staking.unstake_stlos_success') }}
+        <TransactionField :transaction-hash="resultHash" />
+    </div>
+    <q-dialog v-model="displayConfirmModal">
+        <q-card>
+            <q-card-section>
+                <p>
+                    {{ $t('pages.staking.confirm_unstake_1a') }}
+                    <span class="text-primary">{{ unstakePeriodPretty }}</span>,
+                    {{ $t('pages.staking.confirm_unstake_1b') }}
+
+                </p>
+                <p v-if="remainingDeposits < 10">
+                    {{ $t('pages.staking.confirm_unstake_2a') }}
+                    <span class="text-primary">{{ remainingDeposits }}</span>
+                    {{ $t('pages.staking.confirm_unstake_2b') }}
+
+                </p>
+                {{ $t('pages.staking.stake_tlos_confirm_3') }}
+            </q-card-section>
+
+            <q-card-actions align="right" class="q-pb-md q-px-md">
+                <q-btn
+                    v-close-popup
+                    flat
+                    :label="$t('pages.staking.cancel')"
+                    color="negative"
+                />
+                <q-btn
+                    v-close-popup
+                    :label="$t('pages.staking.unstake_stlos')"
+                    color="secondary"
+                    text-color="black"
+                    @click="initiateUnstake"
+                />
+            </q-card-actions>
+        </q-card>
+    </q-dialog>
+</div>
+<LoginModal :show="displayLoginModal" @hide="displayLoginModal = false" />
+</template>
+
+<style lang="sass"></style>
