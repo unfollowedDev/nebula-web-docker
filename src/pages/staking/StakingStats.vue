@@ -291,4 +291,23 @@ export default {
         }
 
         &--personal {
-           
+            color: $dark;
+        }
+    }
+
+    &__stat-unit {
+        display: inline-block;
+        font-size: 10px;
+        color: $secondary;
+        transform: translateX(-2px);
+        vertical-align: super;
+
+        &--personal {
+            @at-root .body--light & {
+                color: darken($secondary, 10%);
+            }
+        }
+    }
+
+    &__stat-value {
+  
