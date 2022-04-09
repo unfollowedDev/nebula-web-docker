@@ -310,4 +310,9 @@ export default {
     }
 
     &__stat-value {
-  
+        font-size: 18px;
+        color: $accent;
+        white-space: nowrap;
+    }
+}
+</style>
