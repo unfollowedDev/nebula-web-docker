@@ -18,4 +18,19 @@ export function formatUnstakePeriod(seconds, $t) {
     if (seconds < HOUR_SECONDS) {
         quantity = seconds / 60;
         unit = $t('pages.staking.minutes');
-    } 
+    } else if (seconds < DAY_SECONDS) {
+        quantity = seconds / HOUR_SECONDS;
+        unit = $t('pages.staking.hours');
+    } else {
+        quantity = seconds / DAY_SECONDS;
+        unit = $t('pages.staking.days');
+    }
+
+    if (!Number.isInteger(quantity)) {
+        quantity = quantity.toFixed(1);
+    }
+
+    return `${quantity} ${unit}`;
+}
+
+export async function fetchStlosApy($tel
