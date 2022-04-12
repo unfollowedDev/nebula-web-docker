@@ -35,4 +35,17 @@ const routes = [
         path: '/block/:block',
         component: () => import('layouts/MainLayout.vue'),
         children: [{
-       
+            path: '',
+            name: 'block',
+            component: () => import('pages/Block.vue'),
+        }],
+    },
+    {
+        path: '/transactions',
+        component: () => import('layouts/MainLayout.vue'),
+        children: [
+            {
+                path: '',
+                name: 'transactions',
+                component: () => import('pages/Transactions.vue'),
+      
