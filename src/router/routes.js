@@ -19,4 +19,20 @@ const routes = [
                 name: 'address',
                 props: route => ({ page: route.query.page, pagesize: route.query.pagesize }),
                 component: () => import('pages/AccountAddress.vue'),
- 
+            },
+        ],
+    },
+    {
+        path: '/tx/:hash',
+        component: () => import('layouts/MainLayout.vue'),
+        children: [{
+            path: '',
+            name: 'transaction',
+            component: () => import('pages/Transaction.vue'),
+        }],
+    },
+    {
+        path: '/block/:block',
+        component: () => import('layouts/MainLayout.vue'),
+        children: [{
+       
