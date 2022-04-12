@@ -48,4 +48,19 @@ const routes = [
                 path: '',
                 name: 'transactions',
                 component: () => import('pages/Transactions.vue'),
-      
+            },
+        ],
+    },
+    {
+        path: '/staking',
+        component: () => import('layouts/MainLayout.vue'),
+        children: [{
+            path: '',
+            name: 'staking',
+            component: () => import('pages/staking/Staking.vue'),
+        }],
+    },
+    {
+        path: '/demo',
+        name: 'demo',
+        component: () => import('pages/demo/DemoIn
