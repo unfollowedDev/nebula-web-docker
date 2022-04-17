@@ -22,4 +22,15 @@ export async function getContract(_, { address }) {
 
 export const fetchTlosPrice = async function({ commit }) {
     try {
-        const response = awa
+        const response = await this.$api.getTableRows({
+            code: 'delphioracle',
+            limit: '1000',
+            scope: 'tlosusd',
+            table: 'datapoints',
+        });
+
+        const tlosPrice = response.rows[0].median / 10000;
+        commit('setTlosPrice', tlosPrice);
+    } catch (error) {
+        console.error('fetchTlosPrice');
+        commit('general/setErrorMsg', error.mess
