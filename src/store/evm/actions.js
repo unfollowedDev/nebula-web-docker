@@ -46,4 +46,15 @@ export const fetchGasPrice = async function({ dispatch, commit }) {
         commit('setGasPrice', BigNumber.from(gasPriceResponse.result));
     } catch (error) {
         console.error('fetchGasPrice');
- 
+        commit('general/setErrorMsg', error.message || error, { root: true });
+    }
+};
+
+export const fetchLatestBlock = async function({ dispatch, commit }) {
+    try {
+        const getBlockResponse = await dispatch('doRPC', {
+            method: 'eth_blockNumber',
+            params: [],
+        });
+        commit('setLatestBlock', BigNumber.from(getBlockResponse.result));
+    }
