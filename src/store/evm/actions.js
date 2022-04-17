@@ -33,4 +33,17 @@ export const fetchTlosPrice = async function({ commit }) {
         commit('setTlosPrice', tlosPrice);
     } catch (error) {
         console.error('fetchTlosPrice');
-        commit('general/setErrorMsg', error.mess
+        commit('general/setErrorMsg', error.message || error, { root: true });
+    }
+};
+
+export const fetchGasPrice = async function({ dispatch, commit }) {
+    try {
+        const gasPriceResponse = await dispatch('doRPC', {
+            method: 'eth_gasPrice',
+            params: [],
+        });
+        commit('setGasPrice', BigNumber.from(gasPriceResponse.result));
+    } catch (error) {
+        console.error('fetchGasPrice');
+ 
