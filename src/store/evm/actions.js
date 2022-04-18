@@ -57,4 +57,8 @@ export const fetchLatestBlock = async function({ dispatch, commit }) {
             params: [],
         });
         commit('setLatestBlock', BigNumber.from(getBlockResponse.result));
+    } catch (error) {
+        console.error('fetchLatestBlock');
+        commit('general/setErrorMsg', error.message || error, { root: true });
     }
+};
