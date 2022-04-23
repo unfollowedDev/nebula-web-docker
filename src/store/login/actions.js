@@ -28,4 +28,17 @@ export const login = async function(
         }
     } catch (e) {
         const error =
-      (authenticator.getError() && authenticator.g
+      (authenticator.getError() && authenticator.getError().message) ||
+      e.message ||
+      e.reason;
+        commit('general/setErrorMsg', error, { root: true });
+        console.log('Login error: ', error);
+    } finally {
+        commit('setLoadingWallet');
+    }
+};
+
+export const autoLogin = async function({ dispatch, commit }, returnUrl) {
+    const { authenticator, idx } = getAuthenticator(this.$ual);
+    if (authenticator) {
+        commit('se
