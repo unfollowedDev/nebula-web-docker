@@ -41,4 +41,16 @@ export const login = async function(
 export const autoLogin = async function({ dispatch, commit }, returnUrl) {
     const { authenticator, idx } = getAuthenticator(this.$ual);
     if (authenticator) {
-        commit('se
+        commit('setAutoLogin', true);
+        await dispatch('login', {
+            idx,
+            returnUrl,
+            account: localStorage.getItem('account'),
+        });
+        commit('setAutoLogin', false);
+    }
+};
+
+const getAuthenticator = function(ual, wallet = null) {
+    const authWallet = wallet || localStorage.getItem('autoLogin');
+    const idx = ual.authenticators.fin
