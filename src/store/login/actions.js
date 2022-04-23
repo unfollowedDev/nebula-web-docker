@@ -20,4 +20,12 @@ export const login = async function(
             const accountName = await account.getAccountName();
             this.$ualUser = account;
             this.$type = 'ual';
-            commit('s
+            commit('setAccountName', accountName);
+            localStorage.setItem('autoLogin', authenticator.constructor.name);
+            localStorage.setItem('account', accountName);
+            localStorage.setItem('returning', true);
+            dispatch('getAccountProfile');
+        }
+    } catch (e) {
+        const error =
+      (authenticator.getError() && authenticator.g
