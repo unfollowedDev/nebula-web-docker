@@ -53,4 +53,19 @@ export const autoLogin = async function({ dispatch, commit }, returnUrl) {
 
 const getAuthenticator = function(ual, wallet = null) {
     const authWallet = wallet || localStorage.getItem('autoLogin');
-    const idx = ual.authenticators.fin
+    const idx = ual.authenticators.findIndex(
+        auth => auth.constructor.name === authWallet,
+    );
+    return {
+        authenticator: ual.authenticators[idx],
+        idx,
+    };
+};
+
+export const logout = async function({ getters }) {
+    if (getters.isNative) {
+        const { authenticator } = getAuthenticator(this.$ual);
+        try {
+            authenticator && (await authenticator.logout());
+        } catch (error) {
+  
