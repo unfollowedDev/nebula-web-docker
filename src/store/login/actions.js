@@ -68,4 +68,13 @@ export const logout = async function({ getters }) {
         try {
             authenticator && (await authenticator.logout());
         } catch (error) {
-  
+            console.log('Authenticator logout error', error);
+        }
+
+        localStorage.removeItem('autoLogin');
+
+        if (this.$router.currentRoute.path !== '/') {
+            this.$router.push({ path: '/' });
+        }
+    }
+};
