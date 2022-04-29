@@ -34,4 +34,11 @@ describe('function-interface-utils', () => {
         it('should only return true if passed an array type', () => {
             expect(parameterIsArrayType('address')).toBe(false);
             expect(parameterIsArrayType('bool'))   .toBe(false);
-            e
+            expect(parameterIsArrayType('int128')) .toBe(false);
+            expect(parameterIsArrayType('string')) .toBe(false);
+            expect(parameterIsArrayType('uint256')).toBe(false);
+
+            expect(parameterIsArrayType('address[1]')) .toBe(true);
+            expect(parameterIsArrayType('address[]'))  .toBe(true);
+            expect(parameterIsArrayType('bool[3]'))    .toBe(true);
+         
