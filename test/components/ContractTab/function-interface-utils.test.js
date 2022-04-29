@@ -26,4 +26,12 @@ import {
     parseStringArrayString,
     parseUintArrayString,
     parseUintString,
-} fr
+} from 'components/ContractTab/function-interface-utils';
+import { BigNumber } from 'ethers';
+
+describe('function-interface-utils', () => {
+    describe('parameterIsArrayType', () => {
+        it('should only return true if passed an array type', () => {
+            expect(parameterIsArrayType('address')).toBe(false);
+            expect(parameterIsArrayType('bool'))   .toBe(false);
+            e
