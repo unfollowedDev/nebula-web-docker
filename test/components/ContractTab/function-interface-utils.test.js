@@ -41,4 +41,10 @@ describe('function-interface-utils', () => {
             expect(parameterIsArrayType('address[1]')) .toBe(true);
             expect(parameterIsArrayType('address[]'))  .toBe(true);
             expect(parameterIsArrayType('bool[3]'))    .toBe(true);
-         
+            expect(parameterIsArrayType('bool[]'))     .toBe(true);
+            expect(parameterIsArrayType('bytes32'))    .toBe(true);
+            expect(parameterIsArrayType('bytes[]'))    .toBe(true);
+            expect(parameterIsArrayType('int128[23]')) .toBe(true);
+            expect(parameterIsArrayType('int128[]'))   .toBe(true);
+            expect(parameterIsArrayType('string[100]')).toBe(true);
+            expe
