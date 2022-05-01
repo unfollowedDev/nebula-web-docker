@@ -47,4 +47,12 @@ describe('function-interface-utils', () => {
             expect(parameterIsArrayType('int128[23]')) .toBe(true);
             expect(parameterIsArrayType('int128[]'))   .toBe(true);
             expect(parameterIsArrayType('string[100]')).toBe(true);
-            expe
+            expect(parameterIsArrayType('string[]'))   .toBe(true);
+            expect(parameterIsArrayType('uint256[12]')).toBe(true);
+            expect(parameterIsArrayType('uint256[]'))  .toBe(true);
+        });
+    });
+
+    describe('parameterIsIntegerType', () => {
+        it('should only return true if passed an integer type', () => {
+            expect(parameterIsIntegerType('int128')) .t
