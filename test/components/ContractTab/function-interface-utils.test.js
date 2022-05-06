@@ -55,4 +55,11 @@ describe('function-interface-utils', () => {
 
     describe('parameterIsIntegerType', () => {
         it('should only return true if passed an integer type', () => {
-            expect(parameterIsIntegerType('int128')) .t
+            expect(parameterIsIntegerType('int128')) .toBe(true);
+            expect(parameterIsIntegerType('int8'))   .toBe(true);
+            expect(parameterIsIntegerType('uint16')) .toBe(true);
+            expect(parameterIsIntegerType('uint256')).toBe(true);
+
+            expect(parameterIsIntegerType('address'))    .toBe(false);
+            expect(parameterIsIntegerType('bool'))       .toBe(false);
+            expect(parame
