@@ -87,4 +87,8 @@ describe('function-interface-utils', () => {
             expect(getExpectedArrayLengthFromParameterType('uint256[12]')).toBe(12);
             expect(getExpectedArrayLengthFromParameterType('bytes32'))    .toBe(32);
 
-            expect(getExpectedArrayLengthFro
+            expect(getExpectedArrayLengthFromParameterType('address'))  .toBe(undefined);
+            expect(getExpectedArrayLengthFromParameterType('bool'))     .toBe(undefined);
+            expect(getExpectedArrayLengthFromParameterType('int128'))   .toBe(undefined);
+            expect(getExpectedArrayLengthFromParameterType('string'))   .toBe(undefined);
+            expect(getExpectedArrayLengthFromParameterT
