@@ -67,4 +67,10 @@ describe('function-interface-utils', () => {
             expect(parameterIsIntegerType('address[1]')) .toBe(false);
             expect(parameterIsIntegerType('bool[]'))     .toBe(false);
             expect(parameterIsIntegerType('bool[3]'))    .toBe(false);
-            expect(parameterIsIntegerType('string[]'
+            expect(parameterIsIntegerType('string[]'))   .toBe(false);
+            expect(parameterIsIntegerType('string[100]')).toBe(false);
+            expect(parameterIsIntegerType('int128[]'))   .toBe(false);
+            expect(parameterIsIntegerType('int128[23]')) .toBe(false);
+            expect(parameterIsIntegerType('uint256[]'))  .toBe(false);
+            expect(parameterIsIntegerType('uint256[12]')).toBe(false);
+            expect(parameterIsIn
