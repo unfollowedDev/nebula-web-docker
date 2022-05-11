@@ -81,4 +81,10 @@ describe('function-interface-utils', () => {
     describe('getExpectedArrayLengthFromParameterType', () => {
         it('should return a length iff passed an array type with fixed length', () => {
             expect(getExpectedArrayLengthFromParameterType('address[1]')) .toBe(1);
-            expect(getExpectedArrayLengthFromParam
+            expect(getExpectedArrayLengthFromParameterType('bool[3]'))    .toBe(3);
+            expect(getExpectedArrayLengthFromParameterType('string[100]')).toBe(100);
+            expect(getExpectedArrayLengthFromParameterType('int128[23]')) .toBe(23);
+            expect(getExpectedArrayLengthFromParameterType('uint256[12]')).toBe(12);
+            expect(getExpectedArrayLengthFromParameterType('bytes32'))    .toBe(32);
+
+            expect(getExpectedArrayLengthFro
