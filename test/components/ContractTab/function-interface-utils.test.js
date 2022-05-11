@@ -73,4 +73,12 @@ describe('function-interface-utils', () => {
             expect(parameterIsIntegerType('int128[23]')) .toBe(false);
             expect(parameterIsIntegerType('uint256[]'))  .toBe(false);
             expect(parameterIsIntegerType('uint256[12]')).toBe(false);
-            expect(parameterIsIn
+            expect(parameterIsIntegerType('bytes32'))    .toBe(false);
+            expect(parameterIsIntegerType('bytes[]'))    .toBe(false);
+        });
+    });
+
+    describe('getExpectedArrayLengthFromParameterType', () => {
+        it('should return a length iff passed an array type with fixed length', () => {
+            expect(getExpectedArrayLengthFromParameterType('address[1]')) .toBe(1);
+            expect(getExpectedArrayLengthFromParam
