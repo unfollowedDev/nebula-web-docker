@@ -91,4 +91,8 @@ describe('function-interface-utils', () => {
             expect(getExpectedArrayLengthFromParameterType('bool'))     .toBe(undefined);
             expect(getExpectedArrayLengthFromParameterType('int128'))   .toBe(undefined);
             expect(getExpectedArrayLengthFromParameterType('string'))   .toBe(undefined);
-            expect(getExpectedArrayLengthFromParameterT
+            expect(getExpectedArrayLengthFromParameterType('uint256'))  .toBe(undefined);
+            expect(getExpectedArrayLengthFromParameterType('address[]')).toBe(undefined);
+            expect(getExpectedArrayLengthFromParameterType('bool[]'))   .toBe(undefined);
+            expect(getExpectedArrayLengthFromParameterType('string[]')) .toBe(undefined);
+            expect(getExpectedArrayLengthFromParameterType('int128[]')
