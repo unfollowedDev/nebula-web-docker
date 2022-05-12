@@ -95,4 +95,12 @@ describe('function-interface-utils', () => {
             expect(getExpectedArrayLengthFromParameterType('address[]')).toBe(undefined);
             expect(getExpectedArrayLengthFromParameterType('bool[]'))   .toBe(undefined);
             expect(getExpectedArrayLengthFromParameterType('string[]')) .toBe(undefined);
-            expect(getExpectedArrayLengthFromParameterType('int128[]')
+            expect(getExpectedArrayLengthFromParameterType('int128[]')) .toBe(undefined);
+            expect(getExpectedArrayLengthFromParameterType('uint256[]')).toBe(undefined);
+            expect(getExpectedArrayLengthFromParameterType('bytes[]'))  .toBe(undefined);
+        });
+    });
+
+    describe('getIntegerBits', () => {
+        it('should return a number of bits iff passed an integer type', () => {
+            expect(
