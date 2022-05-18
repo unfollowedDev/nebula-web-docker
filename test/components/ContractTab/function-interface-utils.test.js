@@ -122,4 +122,13 @@ describe('function-interface-utils', () => {
             expect(getIntegerBits('uint256[12]')).toBe(undefined);
             expect(getIntegerBits('bytes32'))    .toBe(undefined);
             expect(getIntegerBits('bytes[]'))    .toBe(undefined);
-        })
+        });
+    });
+
+    describe('inputIsComplex', () => {
+        // eslint-disable-next-line max-len
+        it('should only return true for types for which the corresponding component emits the parsedValue event', () => {
+            expect(inputIsComplex('string'))     .toBe(false);
+            expect(inputIsComplex('bool'))       .toBe(false);
+
+            expect(inputIsComplex('address'))    .to
