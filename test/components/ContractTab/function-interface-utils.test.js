@@ -116,4 +116,10 @@ describe('function-interface-utils', () => {
             expect(getIntegerBits('bool[3]'))    .toBe(undefined);
             expect(getIntegerBits('string[]'))   .toBe(undefined);
             expect(getIntegerBits('string[100]')).toBe(undefined);
-            expe
+            expect(getIntegerBits('int128[]'))   .toBe(undefined);
+            expect(getIntegerBits('int128[23]')) .toBe(undefined);
+            expect(getIntegerBits('uint256[]'))  .toBe(undefined);
+            expect(getIntegerBits('uint256[12]')).toBe(undefined);
+            expect(getIntegerBits('bytes32'))    .toBe(undefined);
+            expect(getIntegerBits('bytes[]'))    .toBe(undefined);
+        })
