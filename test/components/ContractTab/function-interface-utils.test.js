@@ -110,4 +110,10 @@ describe('function-interface-utils', () => {
             expect(getIntegerBits('address'))    .toBe(undefined);
             expect(getIntegerBits('bool'))       .toBe(undefined);
             expect(getIntegerBits('string'))     .toBe(undefined);
-            expect(getIntegerBits('address
+            expect(getIntegerBits('address[]'))  .toBe(undefined);
+            expect(getIntegerBits('address[1]')) .toBe(undefined);
+            expect(getIntegerBits('bool[]'))     .toBe(undefined);
+            expect(getIntegerBits('bool[3]'))    .toBe(undefined);
+            expect(getIntegerBits('string[]'))   .toBe(undefined);
+            expect(getIntegerBits('string[100]')).toBe(undefined);
+            expe
