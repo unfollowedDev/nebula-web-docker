@@ -103,4 +103,11 @@ describe('function-interface-utils', () => {
 
     describe('getIntegerBits', () => {
         it('should return a number of bits iff passed an integer type', () => {
-            expect(
+            expect(getIntegerBits('uint256')).toBe(256);
+            expect(getIntegerBits('int128')) .toBe(128);
+            expect(getIntegerBits('int8'))   .toBe(8);
+
+            expect(getIntegerBits('address'))    .toBe(undefined);
+            expect(getIntegerBits('bool'))       .toBe(undefined);
+            expect(getIntegerBits('string'))     .toBe(undefined);
+            expect(getIntegerBits('address
