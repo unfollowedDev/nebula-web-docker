@@ -137,4 +137,10 @@ describe('function-interface-utils', () => {
             expect(inputIsComplex('bool[3]'))    .toBe(true);
             expect(inputIsComplex('bool[]'))     .toBe(true);
             expect(inputIsComplex('bytes32'))    .toBe(true);
-            expect(inputIsComplex('bytes[]'))    .to
+            expect(inputIsComplex('bytes[]'))    .toBe(true);
+            expect(inputIsComplex('int128'))     .toBe(true);
+            expect(inputIsComplex('int128[23]')) .toBe(true);
+            expect(inputIsComplex('int128[]'))   .toBe(true);
+            expect(inputIsComplex('string[100]')).toBe(true);
+            expect(inputIsComplex('string[]'))   .toBe(true);
+            expect(inputIsComplex('uint256
