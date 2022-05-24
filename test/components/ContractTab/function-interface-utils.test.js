@@ -131,4 +131,10 @@ describe('function-interface-utils', () => {
             expect(inputIsComplex('string'))     .toBe(false);
             expect(inputIsComplex('bool'))       .toBe(false);
 
-            expect(inputIsComplex('address'))    .to
+            expect(inputIsComplex('address'))    .toBe(true);
+            expect(inputIsComplex('address[1]')) .toBe(true);
+            expect(inputIsComplex('address[]'))  .toBe(true);
+            expect(inputIsComplex('bool[3]'))    .toBe(true);
+            expect(inputIsComplex('bool[]'))     .toBe(true);
+            expect(inputIsComplex('bytes32'))    .toBe(true);
+            expect(inputIsComplex('bytes[]'))    .to
