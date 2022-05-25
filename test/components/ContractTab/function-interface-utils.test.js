@@ -143,4 +143,13 @@ describe('function-interface-utils', () => {
             expect(inputIsComplex('int128[]'))   .toBe(true);
             expect(inputIsComplex('string[100]')).toBe(true);
             expect(inputIsComplex('string[]'))   .toBe(true);
-            expect(inputIsComplex('uint256
+            expect(inputIsComplex('uint256'))    .toBe(true);
+            expect(inputIsComplex('uint256[12]')).toBe(true);
+            expect(inputIsComplex('uint256[]'))  .toBe(true);
+        });
+    });
+
+    describe('integerSizeValidator', () => {
+        describe('should correctly validate a size prop for', () => {
+            test('signed integers', () => {
+                expect(intege
