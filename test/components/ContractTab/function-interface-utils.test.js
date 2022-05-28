@@ -152,4 +152,11 @@ describe('function-interface-utils', () => {
     describe('integerSizeValidator', () => {
         describe('should correctly validate a size prop for', () => {
             test('signed integers', () => {
-                expect(intege
+                expect(integerSizeValidator('8', true)).toBe(true);
+                expect(integerSizeValidator(8, true)).toBe(true);
+                expect(integerSizeValidator('128', true)).toBe(true);
+                expect(integerSizeValidator(128, true)).toBe(true);
+
+                expect(integerSizeValidator('-8', true)).toBe(false);
+                expect(integerSizeValidator(-8, true)).toBe(false);
+                expe
