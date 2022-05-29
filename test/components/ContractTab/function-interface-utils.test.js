@@ -159,4 +159,11 @@ describe('function-interface-utils', () => {
 
                 expect(integerSizeValidator('-8', true)).toBe(false);
                 expect(integerSizeValidator(-8, true)).toBe(false);
-                expe
+                expect(integerSizeValidator('256', true)).toBe(false);
+                expect(integerSizeValidator(256, true)).toBe(false);
+                expect(integerSizeValidator('abc', true)).toBe(false);
+            });
+
+            test('unsigned integers', () => {
+                expect(integerSizeValidator('8', false)).toBe(true);
+                expect(integerSizeValidator(8,
