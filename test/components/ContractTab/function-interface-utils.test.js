@@ -173,4 +173,13 @@ describe('function-interface-utils', () => {
                 expect(integerSizeValidator(256, false)).toBe(true);
 
                 expect(integerSizeValidator('800', false)).toBe(false);
-                exp
+                expect(integerSizeValidator('-800', false)).toBe(false);
+                expect(integerSizeValidator('-8', false)).toBe(false);
+                expect(integerSizeValidator(-8, false)).toBe(false);
+                expect(integerSizeValidator('abc', false)).toBe(false);
+            });
+        });
+    });
+
+    describe('parameterTypeIsAddress', () => {
+        it('should only retu
