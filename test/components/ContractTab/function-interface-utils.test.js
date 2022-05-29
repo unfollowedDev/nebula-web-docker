@@ -182,4 +182,10 @@ describe('function-interface-utils', () => {
     });
 
     describe('parameterTypeIsAddress', () => {
-        it('should only retu
+        it('should only return true if type === "address"', () => {
+            expect(parameterTypeIsAddress('address')).toBe(true);
+
+            expect(parameterTypeIsAddress('address[1]')) .toBe(false);
+            expect(parameterTypeIsAddress('address[]'))  .toBe(false);
+            expect(parameterTypeIsAddress('bool'))       .toBe(false);
+            expect(parameter
