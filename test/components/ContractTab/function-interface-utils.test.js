@@ -166,4 +166,11 @@ describe('function-interface-utils', () => {
 
             test('unsigned integers', () => {
                 expect(integerSizeValidator('8', false)).toBe(true);
-                expect(integerSizeValidator(8,
+                expect(integerSizeValidator(8, false)).toBe(true);
+                expect(integerSizeValidator('128', false)).toBe(true);
+                expect(integerSizeValidator(128, false)).toBe(true);
+                expect(integerSizeValidator('256', false)).toBe(true);
+                expect(integerSizeValidator(256, false)).toBe(true);
+
+                expect(integerSizeValidator('800', false)).toBe(false);
+                exp
