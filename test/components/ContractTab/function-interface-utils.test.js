@@ -193,4 +193,9 @@ describe('function-interface-utils', () => {
             expect(parameterTypeIsAddress('bytes32'))    .toBe(false);
             expect(parameterTypeIsAddress('bytes[]'))    .toBe(false);
             expect(parameterTypeIsAddress('int128'))     .toBe(false);
-            expect(para
+            expect(parameterTypeIsAddress('int128[23]')) .toBe(false);
+            expect(parameterTypeIsAddress('int128[]'))   .toBe(false);
+            expect(parameterTypeIsAddress('string'))     .toBe(false);
+            expect(parameterTypeIsAddress('string[100]')).toBe(false);
+            expect(parameterTypeIsAddress('string[]'))   .toBe(false);
+            expect(parameterTypeIsAdd
