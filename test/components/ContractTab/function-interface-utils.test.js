@@ -198,4 +198,13 @@ describe('function-interface-utils', () => {
             expect(parameterTypeIsAddress('string'))     .toBe(false);
             expect(parameterTypeIsAddress('string[100]')).toBe(false);
             expect(parameterTypeIsAddress('string[]'))   .toBe(false);
-            expect(parameterTypeIsAdd
+            expect(parameterTypeIsAddress('uint256'))    .toBe(false);
+            expect(parameterTypeIsAddress('uint256[12]')).toBe(false);
+            expect(parameterTypeIsAddress('uint256[]'))  .toBe(false);
+        });
+    });
+
+    describe('parameterTypeIsAddressArray', () => {
+        it('should only return true if type is an address array', () => {
+            expect(parameterTypeIsAddressArray('address[]'))  .toBe(true);
+          
