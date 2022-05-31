@@ -188,4 +188,9 @@ describe('function-interface-utils', () => {
             expect(parameterTypeIsAddress('address[1]')) .toBe(false);
             expect(parameterTypeIsAddress('address[]'))  .toBe(false);
             expect(parameterTypeIsAddress('bool'))       .toBe(false);
-            expect(parameter
+            expect(parameterTypeIsAddress('bool[3]'))    .toBe(false);
+            expect(parameterTypeIsAddress('bool[]'))     .toBe(false);
+            expect(parameterTypeIsAddress('bytes32'))    .toBe(false);
+            expect(parameterTypeIsAddress('bytes[]'))    .toBe(false);
+            expect(parameterTypeIsAddress('int128'))     .toBe(false);
+            expect(para
