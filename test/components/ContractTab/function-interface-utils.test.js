@@ -207,4 +207,10 @@ describe('function-interface-utils', () => {
     describe('parameterTypeIsAddressArray', () => {
         it('should only return true if type is an address array', () => {
             expect(parameterTypeIsAddressArray('address[]'))  .toBe(true);
-          
+            expect(parameterTypeIsAddressArray('address[1]')) .toBe(true);
+
+            expect(parameterTypeIsAddressArray('address'))    .toBe(false);
+            expect(parameterTypeIsAddressArray('bool'))       .toBe(false);
+            expect(parameterTypeIsAddressArray('bool[3]'))    .toBe(false);
+            expect(parameterTypeIsAddressArray('bool[]'))     .toBe(false);
+            expect(parameterTypeIsAddressAr
