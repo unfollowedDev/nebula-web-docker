@@ -218,4 +218,9 @@ describe('function-interface-utils', () => {
             expect(parameterTypeIsAddressArray('int128'))     .toBe(false);
             expect(parameterTypeIsAddressArray('int128[23]')) .toBe(false);
             expect(parameterTypeIsAddressArray('int128[]'))   .toBe(false);
-            expect(parameterTypeIsAddressArray('string')) 
+            expect(parameterTypeIsAddressArray('string'))     .toBe(false);
+            expect(parameterTypeIsAddressArray('string[100]')).toBe(false);
+            expect(parameterTypeIsAddressArray('string[]'))   .toBe(false);
+            expect(parameterTypeIsAddressArray('uint256'))    .toBe(false);
+            expect(parameterTypeIsAddressArray('uint256[12]')).toBe(false);
+            expect(parameterTypeIsAddressArray('uint256[]'))
