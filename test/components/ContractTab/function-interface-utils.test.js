@@ -223,4 +223,14 @@ describe('function-interface-utils', () => {
             expect(parameterTypeIsAddressArray('string[]'))   .toBe(false);
             expect(parameterTypeIsAddressArray('uint256'))    .toBe(false);
             expect(parameterTypeIsAddressArray('uint256[12]')).toBe(false);
-            expect(parameterTypeIsAddressArray('uint256[]'))
+            expect(parameterTypeIsAddressArray('uint256[]'))  .toBe(false);
+        });
+    });
+
+    describe('parameterTypeIsBoolean', () => {
+        it('should only return true if type is boolean', () => {
+            expect(parameterTypeIsBoolean('bool'))       .toBe(true);
+
+            expect(parameterTypeIsBoolean('address[]'))  .toBe(false);
+            expect(parameterTypeIsBoolean('address[1]')) .toBe(false);
+    
