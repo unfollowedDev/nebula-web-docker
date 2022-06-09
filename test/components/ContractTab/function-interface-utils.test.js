@@ -233,4 +233,9 @@ describe('function-interface-utils', () => {
 
             expect(parameterTypeIsBoolean('address[]'))  .toBe(false);
             expect(parameterTypeIsBoolean('address[1]')) .toBe(false);
-    
+            expect(parameterTypeIsBoolean('address'))    .toBe(false);
+            expect(parameterTypeIsBoolean('bool[3]'))    .toBe(false);
+            expect(parameterTypeIsBoolean('bool[]'))     .toBe(false);
+            expect(parameterTypeIsBoolean('bytes32'))    .toBe(false);
+            expect(parameterTypeIsBoolean('bytes[]'))    .toBe(false);
+            expect(parameterTypeIsBoolean('int1
