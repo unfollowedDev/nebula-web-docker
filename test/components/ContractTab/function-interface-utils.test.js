@@ -238,4 +238,10 @@ describe('function-interface-utils', () => {
             expect(parameterTypeIsBoolean('bool[]'))     .toBe(false);
             expect(parameterTypeIsBoolean('bytes32'))    .toBe(false);
             expect(parameterTypeIsBoolean('bytes[]'))    .toBe(false);
-            expect(parameterTypeIsBoolean('int1
+            expect(parameterTypeIsBoolean('int128'))     .toBe(false);
+            expect(parameterTypeIsBoolean('int128[23]')) .toBe(false);
+            expect(parameterTypeIsBoolean('int128[]'))   .toBe(false);
+            expect(parameterTypeIsBoolean('string'))     .toBe(false);
+            expect(parameterTypeIsBoolean('string[100]')).toBe(false);
+            expect(parameterTypeIsBoolean('string[]'))   .toBe(false);
+            expect(paramete
