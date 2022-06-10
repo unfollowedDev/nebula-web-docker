@@ -252,4 +252,11 @@ describe('function-interface-utils', () => {
 
     describe('parameterTypeIsBooleanArray', () => {
         it('should only return true if type is a boolean array', () => {
-            expect(parameterTypeIsBooleanArray('bool[3]'))    .toB
+            expect(parameterTypeIsBooleanArray('bool[3]'))    .toBe(true);
+            expect(parameterTypeIsBooleanArray('bool[]'))     .toBe(true);
+
+            expect(parameterTypeIsBooleanArray('address[]'))  .toBe(false);
+            expect(parameterTypeIsBooleanArray('address[1]')) .toBe(false);
+            expect(parameterTypeIsBooleanArray('address'))    .toBe(false);
+            expect(parameterTypeIsBooleanArray('bool'))       .toBe(false);
+      
