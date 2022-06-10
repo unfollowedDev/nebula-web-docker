@@ -244,4 +244,12 @@ describe('function-interface-utils', () => {
             expect(parameterTypeIsBoolean('string'))     .toBe(false);
             expect(parameterTypeIsBoolean('string[100]')).toBe(false);
             expect(parameterTypeIsBoolean('string[]'))   .toBe(false);
-            expect(paramete
+            expect(parameterTypeIsBoolean('uint256'))    .toBe(false);
+            expect(parameterTypeIsBoolean('uint256[12]')).toBe(false);
+            expect(parameterTypeIsBoolean('uint256[]'))  .toBe(false);
+        });
+    });
+
+    describe('parameterTypeIsBooleanArray', () => {
+        it('should only return true if type is a boolean array', () => {
+            expect(parameterTypeIsBooleanArray('bool[3]'))    .toB
