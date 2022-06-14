@@ -291,4 +291,13 @@ describe('function-interface-utils', () => {
             expect(parameterTypeIsBytes('string[100]')).toBe(false);
             expect(parameterTypeIsBytes('string[]'))   .toBe(false);
             expect(parameterTypeIsBytes('uint256'))    .toBe(false);
-     
+            expect(parameterTypeIsBytes('uint256[12]')).toBe(false);
+            expect(parameterTypeIsBytes('uint256[]'))  .toBe(false);
+        });
+    });
+
+    describe('parameterTypeIsSignedInt', () => {
+        it('should only return true if type is a signed int', () => {
+            expect(parameterTypeIsSignedInt('int128'))     .toBe(true);
+
+            expect(parameterTypeIsS
