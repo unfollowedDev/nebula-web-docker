@@ -279,4 +279,10 @@ describe('function-interface-utils', () => {
             expect(parameterTypeIsBytes('bytes[]'))    .toBe(true);
 
             expect(parameterTypeIsBytes('address[]'))  .toBe(false);
-            expect(parame
+            expect(parameterTypeIsBytes('address[1]')) .toBe(false);
+            expect(parameterTypeIsBytes('address'))    .toBe(false);
+            expect(parameterTypeIsBytes('bool'))       .toBe(false);
+            expect(parameterTypeIsBytes('bool[3]'))    .toBe(false);
+            expect(parameterTypeIsBytes('bool[]'))     .toBe(false);
+            expect(parameterTypeIsBytes('int128'))     .toBe(false);
+            e
