@@ -300,4 +300,9 @@ describe('function-interface-utils', () => {
         it('should only return true if type is a signed int', () => {
             expect(parameterTypeIsSignedInt('int128'))     .toBe(true);
 
-            expect(parameterTypeIsS
+            expect(parameterTypeIsSignedInt('address'))    .toBe(false);
+            expect(parameterTypeIsSignedInt('address[1]')) .toBe(false);
+            expect(parameterTypeIsSignedInt('address[]'))  .toBe(false);
+            expect(parameterTypeIsSignedInt('bool'))       .toBe(false);
+            expect(parameterTypeIsSignedInt('bool[3]'))    .toBe(false);
+            expect(parameterTypeIsSignedInt('bool[]'))     .toBe(f
