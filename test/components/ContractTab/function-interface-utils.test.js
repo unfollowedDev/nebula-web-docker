@@ -305,4 +305,10 @@ describe('function-interface-utils', () => {
             expect(parameterTypeIsSignedInt('address[]'))  .toBe(false);
             expect(parameterTypeIsSignedInt('bool'))       .toBe(false);
             expect(parameterTypeIsSignedInt('bool[3]'))    .toBe(false);
-            expect(parameterTypeIsSignedInt('bool[]'))     .toBe(f
+            expect(parameterTypeIsSignedInt('bool[]'))     .toBe(false);
+            expect(parameterTypeIsSignedInt('bytes32'))    .toBe(false);
+            expect(parameterTypeIsSignedInt('bytes[]'))    .toBe(false);
+            expect(parameterTypeIsSignedInt('int128[23]')) .toBe(false);
+            expect(parameterTypeIsSignedInt('int128[]'))   .toBe(false);
+            expect(parameterTypeIsSignedInt('string'))     .toBe(false);
+            expect(parameterTypeIsSig
