@@ -311,4 +311,12 @@ describe('function-interface-utils', () => {
             expect(parameterTypeIsSignedInt('int128[23]')) .toBe(false);
             expect(parameterTypeIsSignedInt('int128[]'))   .toBe(false);
             expect(parameterTypeIsSignedInt('string'))     .toBe(false);
-            expect(parameterTypeIsSig
+            expect(parameterTypeIsSignedInt('string[100]')).toBe(false);
+            expect(parameterTypeIsSignedInt('string[]'))   .toBe(false);
+            expect(parameterTypeIsSignedInt('uint256'))    .toBe(false);
+            expect(parameterTypeIsSignedInt('uint256[12]')).toBe(false);
+            expect(parameterTypeIsSignedInt('uint256[]'))  .toBe(false);
+        });
+    });
+
+    describe('parameterT
