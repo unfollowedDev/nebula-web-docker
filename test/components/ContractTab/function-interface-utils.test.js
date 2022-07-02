@@ -319,4 +319,10 @@ describe('function-interface-utils', () => {
         });
     });
 
-    describe('parameterT
+    describe('parameterTypeIsSignedIntArray', () => {
+        it('should only return true if type is a signed int array', () => {
+            expect(parameterTypeIsSignedIntArray('int128[23]')) .toBe(true);
+            expect(parameterTypeIsSignedIntArray('int128[]'))   .toBe(true);
+
+            expect(parameterTypeIsSignedIntArray('address'))    .toBe(false);
+            expect(parameterTypeIsSigned
