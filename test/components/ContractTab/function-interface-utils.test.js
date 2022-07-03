@@ -325,4 +325,9 @@ describe('function-interface-utils', () => {
             expect(parameterTypeIsSignedIntArray('int128[]'))   .toBe(true);
 
             expect(parameterTypeIsSignedIntArray('address'))    .toBe(false);
-            expect(parameterTypeIsSigned
+            expect(parameterTypeIsSignedIntArray('address[1]')) .toBe(false);
+            expect(parameterTypeIsSignedIntArray('address[]'))  .toBe(false);
+            expect(parameterTypeIsSignedIntArray('bool'))       .toBe(false);
+            expect(parameterTypeIsSignedIntArray('bool[3]'))    .toBe(false);
+            expect(parameterTypeIsSignedIntArray('bool[]'))     .toBe(false);
+            expect(param
