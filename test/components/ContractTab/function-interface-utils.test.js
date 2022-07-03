@@ -330,4 +330,9 @@ describe('function-interface-utils', () => {
             expect(parameterTypeIsSignedIntArray('bool'))       .toBe(false);
             expect(parameterTypeIsSignedIntArray('bool[3]'))    .toBe(false);
             expect(parameterTypeIsSignedIntArray('bool[]'))     .toBe(false);
-            expect(param
+            expect(parameterTypeIsSignedIntArray('bytes32'))    .toBe(false);
+            expect(parameterTypeIsSignedIntArray('bytes[]'))    .toBe(false);
+            expect(parameterTypeIsSignedIntArray('int128'))     .toBe(false);
+            expect(parameterTypeIsSignedIntArray('string'))     .toBe(false);
+            expect(parameterTypeIsSignedIntArray('string[100]')).toBe(false);
+            expect(parameterTy
