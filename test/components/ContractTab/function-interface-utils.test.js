@@ -335,4 +335,12 @@ describe('function-interface-utils', () => {
             expect(parameterTypeIsSignedIntArray('int128'))     .toBe(false);
             expect(parameterTypeIsSignedIntArray('string'))     .toBe(false);
             expect(parameterTypeIsSignedIntArray('string[100]')).toBe(false);
-            expect(parameterTy
+            expect(parameterTypeIsSignedIntArray('string[]'))   .toBe(false);
+            expect(parameterTypeIsSignedIntArray('uint256'))    .toBe(false);
+            expect(parameterTypeIsSignedIntArray('uint256[12]')).toBe(false);
+            expect(parameterTypeIsSignedIntArray('uint256[]'))  .toBe(false);
+        });
+    });
+
+    describe('parameterTypeIsString', () => {
+        it('should only ret
