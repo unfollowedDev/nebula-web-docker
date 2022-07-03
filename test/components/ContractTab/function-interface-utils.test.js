@@ -343,4 +343,10 @@ describe('function-interface-utils', () => {
     });
 
     describe('parameterTypeIsString', () => {
-        it('should only ret
+        it('should only return true if type is string', () => {
+            expect(parameterTypeIsString('string'))     .toBe(true);
+
+            expect(parameterTypeIsString('address'))    .toBe(false);
+            expect(parameterTypeIsString('address[1]')) .toBe(false);
+            expect(parameterTypeIsString('address[]'))  .toBe(false);
+            expect(parameterTypeIsString('bool'))  
