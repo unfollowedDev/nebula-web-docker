@@ -360,4 +360,12 @@ describe('function-interface-utils', () => {
             expect(parameterTypeIsString('string[100]')).toBe(false);
             expect(parameterTypeIsString('string[]'))   .toBe(false);
             expect(parameterTypeIsString('uint256'))    .toBe(false);
-            expect(parameterTypeIsStrin
+            expect(parameterTypeIsString('uint256[12]')).toBe(false);
+            expect(parameterTypeIsString('uint256[]'))  .toBe(false);
+        });
+    });
+
+    describe('parameterTypeIsStringArray', () => {
+        it('should only return true if type is a string array', () => {
+            expect(parameterTypeIsStringArray('string[100]')).toBe(true);
+            expect(parameterTypeIsStringArray('string[]'))   .toB
