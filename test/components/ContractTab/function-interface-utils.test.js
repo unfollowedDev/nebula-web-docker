@@ -368,4 +368,10 @@ describe('function-interface-utils', () => {
     describe('parameterTypeIsStringArray', () => {
         it('should only return true if type is a string array', () => {
             expect(parameterTypeIsStringArray('string[100]')).toBe(true);
-            expect(parameterTypeIsStringArray('string[]'))   .toB
+            expect(parameterTypeIsStringArray('string[]'))   .toBe(true);
+
+            expect(parameterTypeIsStringArray('address'))    .toBe(false);
+            expect(parameterTypeIsStringArray('address[1]')) .toBe(false);
+            expect(parameterTypeIsStringArray('address[]'))  .toBe(false);
+            expect(parameterTypeIsStringArray('bool'))       .toBe(false);
+            expect(parameterTypeIsStringArray('bool[3]')) 
