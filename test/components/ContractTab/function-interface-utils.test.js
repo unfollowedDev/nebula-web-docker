@@ -355,4 +355,9 @@ describe('function-interface-utils', () => {
             expect(parameterTypeIsString('bytes32'))    .toBe(false);
             expect(parameterTypeIsString('bytes[]'))    .toBe(false);
             expect(parameterTypeIsString('int128'))     .toBe(false);
-            expec
+            expect(parameterTypeIsString('int128[23]')) .toBe(false);
+            expect(parameterTypeIsString('int128[]'))   .toBe(false);
+            expect(parameterTypeIsString('string[100]')).toBe(false);
+            expect(parameterTypeIsString('string[]'))   .toBe(false);
+            expect(parameterTypeIsString('uint256'))    .toBe(false);
+            expect(parameterTypeIsStrin
