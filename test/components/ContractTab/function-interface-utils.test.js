@@ -374,4 +374,9 @@ describe('function-interface-utils', () => {
             expect(parameterTypeIsStringArray('address[1]')) .toBe(false);
             expect(parameterTypeIsStringArray('address[]'))  .toBe(false);
             expect(parameterTypeIsStringArray('bool'))       .toBe(false);
-            expect(parameterTypeIsStringArray('bool[3]')) 
+            expect(parameterTypeIsStringArray('bool[3]'))    .toBe(false);
+            expect(parameterTypeIsStringArray('bool[]'))     .toBe(false);
+            expect(parameterTypeIsStringArray('bytes32'))    .toBe(false);
+            expect(parameterTypeIsStringArray('bytes[]'))    .toBe(false);
+            expect(parameterTypeIsStringArray('int128'))     .toBe(false);
+            expect(parameterTypeIsStringArray('int128[23]')) .toBe(false);
