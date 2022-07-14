@@ -380,3 +380,9 @@ describe('function-interface-utils', () => {
             expect(parameterTypeIsStringArray('bytes[]'))    .toBe(false);
             expect(parameterTypeIsStringArray('int128'))     .toBe(false);
             expect(parameterTypeIsStringArray('int128[23]')) .toBe(false);
+            expect(parameterTypeIsStringArray('int128[]'))   .toBe(false);
+            expect(parameterTypeIsStringArray('string'))     .toBe(false);
+            expect(parameterTypeIsStringArray('uint256'))    .toBe(false);
+            expect(parameterTypeIsStringArray('uint256[12]')).toBe(false);
+            expect(parameterTypeIsStringArray('uint256[]'))  .toBe(false);
+   
