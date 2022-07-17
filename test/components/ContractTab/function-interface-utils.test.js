@@ -394,4 +394,9 @@ describe('function-interface-utils', () => {
 
             expect(parameterTypeIsUnsignedInt('address'))    .toBe(false);
             expect(parameterTypeIsUnsignedInt('address[1]')) .toBe(false);
-            expect(para
+            expect(parameterTypeIsUnsignedInt('address[]'))  .toBe(false);
+            expect(parameterTypeIsUnsignedInt('bool'))       .toBe(false);
+            expect(parameterTypeIsUnsignedInt('bool[3]'))    .toBe(false);
+            expect(parameterTypeIsUnsignedInt('bool[]'))     .toBe(false);
+            expect(parameterTypeIsUnsignedInt('bytes32'))    .toBe(false);
+            expect(parameterTypeIsUnsignedInt('bytes[
