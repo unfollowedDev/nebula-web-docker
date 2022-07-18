@@ -405,4 +405,12 @@ describe('function-interface-utils', () => {
             expect(parameterTypeIsUnsignedInt('int128[]'))   .toBe(false);
             expect(parameterTypeIsUnsignedInt('string'))     .toBe(false);
             expect(parameterTypeIsUnsignedInt('string[100]')).toBe(false);
-  
+            expect(parameterTypeIsUnsignedInt('string[]'))   .toBe(false);
+            expect(parameterTypeIsUnsignedInt('uint256[12]')).toBe(false);
+            expect(parameterTypeIsUnsignedInt('uint256[]'))  .toBe(false);
+        });
+    });
+
+    describe('parameterTypeIsUnsignedIntArray', () => {
+        it('should only return true if type is an unsigned int array', () => {
+            expect(pa
