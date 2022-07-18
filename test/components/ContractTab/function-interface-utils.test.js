@@ -399,4 +399,10 @@ describe('function-interface-utils', () => {
             expect(parameterTypeIsUnsignedInt('bool[3]'))    .toBe(false);
             expect(parameterTypeIsUnsignedInt('bool[]'))     .toBe(false);
             expect(parameterTypeIsUnsignedInt('bytes32'))    .toBe(false);
-            expect(parameterTypeIsUnsignedInt('bytes[
+            expect(parameterTypeIsUnsignedInt('bytes[]'))    .toBe(false);
+            expect(parameterTypeIsUnsignedInt('int128'))     .toBe(false);
+            expect(parameterTypeIsUnsignedInt('int128[23]')) .toBe(false);
+            expect(parameterTypeIsUnsignedInt('int128[]'))   .toBe(false);
+            expect(parameterTypeIsUnsignedInt('string'))     .toBe(false);
+            expect(parameterTypeIsUnsignedInt('string[100]')).toBe(false);
+  
