@@ -413,4 +413,10 @@ describe('function-interface-utils', () => {
 
     describe('parameterTypeIsUnsignedIntArray', () => {
         it('should only return true if type is an unsigned int array', () => {
-            expect(pa
+            expect(parameterTypeIsUnsignedIntArray('uint256[12]')).toBe(true);
+            expect(parameterTypeIsUnsignedIntArray('uint256[]'))  .toBe(true);
+
+            expect(parameterTypeIsUnsignedIntArray('address'))    .toBe(false);
+            expect(parameterTypeIsUnsignedIntArray('address[1]')) .toBe(false);
+            expect(parameterTypeIsUnsignedIntArray('address[]'))  .toBe(false);
+       
