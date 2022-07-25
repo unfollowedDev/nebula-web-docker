@@ -419,4 +419,9 @@ describe('function-interface-utils', () => {
             expect(parameterTypeIsUnsignedIntArray('address'))    .toBe(false);
             expect(parameterTypeIsUnsignedIntArray('address[1]')) .toBe(false);
             expect(parameterTypeIsUnsignedIntArray('address[]'))  .toBe(false);
-       
+            expect(parameterTypeIsUnsignedIntArray('bool'))       .toBe(false);
+            expect(parameterTypeIsUnsignedIntArray('bool[3]'))    .toBe(false);
+            expect(parameterTypeIsUnsignedIntArray('bool[]'))     .toBe(false);
+            expect(parameterTypeIsUnsignedIntArray('bytes32'))    .toBe(false);
+            expect(parameterTypeIsUnsignedIntArray('bytes[]'))    .toBe(false);
+         
