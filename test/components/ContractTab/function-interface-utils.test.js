@@ -429,4 +429,12 @@ describe('function-interface-utils', () => {
             expect(parameterTypeIsUnsignedIntArray('int128[]'))   .toBe(false);
             expect(parameterTypeIsUnsignedIntArray('string'))     .toBe(false);
             expect(parameterTypeIsUnsignedIntArray('string[100]')).toBe(false);
-            expec
+            expect(parameterTypeIsUnsignedIntArray('string[]'))   .toBe(false);
+            expect(parameterTypeIsUnsignedIntArray('uint256'))    .toBe(false);
+        });
+    });
+
+    describe('parseAddressArrayString', () => {
+        it('should correctly parse a string representation of address array', () => {
+            const addressOne = `0x${'0'.repeat(40)}`;
+            const addressTwo = 
