@@ -437,4 +437,12 @@ describe('function-interface-utils', () => {
     describe('parseAddressArrayString', () => {
         it('should correctly parse a string representation of address array', () => {
             const addressOne = `0x${'0'.repeat(40)}`;
-            const addressTwo = 
+            const addressTwo = `0x${'1'.repeat(40)}`;
+
+            // any length - valid
+            expect(parseAddressArrayString('[]')).toEqual([]);
+            expect(parseAddressArrayString(`[${addressOne}]`)).toEqual([addressOne]);
+            expect(parseAddressArrayString(`[${addressOne}, ${addressTwo}]`)).toEqual([addressOne, addressTwo]);
+
+            // any length - invalid
+            expect(parseAddressArrayString('[1]')).toEqual(undefi
