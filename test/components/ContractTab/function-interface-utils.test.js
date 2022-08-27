@@ -445,4 +445,13 @@ describe('function-interface-utils', () => {
             expect(parseAddressArrayString(`[${addressOne}, ${addressTwo}]`)).toEqual([addressOne, addressTwo]);
 
             // any length - invalid
-            expect(parseAddressArrayString('[1]')).toEqual(undefi
+            expect(parseAddressArrayString('[1]')).toEqual(undefined);
+
+
+            // fixed length - valid
+            expect(parseAddressArrayString(`[${addressOne}]`, 1)).toEqual([addressOne]);
+            expect(parseAddressArrayString(`[${addressOne}, ${addressTwo}]`, 2)).toEqual([addressOne, addressTwo]);
+
+            // fixed length - invalid
+            expect(parseAddressArrayString('[]', 2)).toEqual(undefined);
+            expect(parseAddressArrayString(`[${addressOne}]`, 2))
