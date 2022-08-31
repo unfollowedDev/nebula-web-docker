@@ -454,4 +454,18 @@ describe('function-interface-utils', () => {
 
             // fixed length - invalid
             expect(parseAddressArrayString('[]', 2)).toEqual(undefined);
-            expect(parseAddressArrayString(`[${addressOne}]`, 2))
+            expect(parseAddressArrayString(`[${addressOne}]`, 2)).toEqual(undefined);
+        });
+    });
+
+    describe('parseAddressString', () => {
+        it('should parse an address correctly', () => {
+            const address = `0x${'0'.repeat(40)}`;
+            const badAddress = `0x${'0'.repeat(39)}`;
+
+            expect(parseAddressString(address)).toBe(address);
+            expect(parseAddressString(badAddress)).toBe(undefined);
+        });
+    });
+
+    describe('pars
