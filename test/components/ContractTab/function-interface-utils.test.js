@@ -468,4 +468,11 @@ describe('function-interface-utils', () => {
         });
     });
 
-    describe('pars
+    describe('parseBooleanArrayString', () => {
+        it('should correctly parse a string representation of boolean array', () => {
+            // any length - valid
+            expect(parseBooleanArrayString('[]')).toEqual([]);
+            expect(parseBooleanArrayString('[true]')).toEqual([true]);
+            expect(parseBooleanArrayString('[true, false]')).toEqual([true, false]);
+
+            // any length
