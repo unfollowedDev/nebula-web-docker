@@ -475,4 +475,13 @@ describe('function-interface-utils', () => {
             expect(parseBooleanArrayString('[true]')).toEqual([true]);
             expect(parseBooleanArrayString('[true, false]')).toEqual([true, false]);
 
-            // any length
+            // any length - invalid
+            expect(parseBooleanArrayString('[1]')).toEqual(undefined);
+
+
+            // fixed length - valid
+            expect(parseBooleanArrayString('[true]', 1)).toEqual([true]);
+            expect(parseBooleanArrayString('[true, false]', 2)).toEqual([true, false]);
+
+            // fixed length - invalid
+            expect(parseBooleanArrayString('[]', 2)).toEqu
