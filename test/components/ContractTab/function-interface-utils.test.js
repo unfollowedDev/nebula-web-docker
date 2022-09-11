@@ -484,4 +484,13 @@ describe('function-interface-utils', () => {
             expect(parseBooleanArrayString('[true, false]', 2)).toEqual([true, false]);
 
             // fixed length - invalid
-            expect(parseBooleanArrayString('[]', 2)).toEqu
+            expect(parseBooleanArrayString('[]', 2)).toEqual(undefined);
+            expect(parseBooleanArrayString('[false]', 2)).toEqual(undefined);
+        });
+    });
+
+    describe('parseBooleanString', () => {
+        it('should parse a string representation of a boolean correctly', () => {
+            expect(parseBooleanString('false')).toBe(false);
+            expect(parseBooleanString('False')).toBe(false);
+       
