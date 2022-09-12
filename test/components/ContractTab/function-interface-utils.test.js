@@ -493,4 +493,14 @@ describe('function-interface-utils', () => {
         it('should parse a string representation of a boolean correctly', () => {
             expect(parseBooleanString('false')).toBe(false);
             expect(parseBooleanString('False')).toBe(false);
-       
+            expect(parseBooleanString('FAlSE')).toBe(false);
+            expect(parseBooleanString('true')).toBe(true);
+            expect(parseBooleanString('True')).toBe(true);
+            expect(parseBooleanString('TRUE')).toBe(true);
+
+            expect(parseBooleanString('fals')).toBe(undefined);
+            expect(parseBooleanString(3)).toBe(undefined);
+        });
+    });
+
+    describe('parseBytesArrayString', () => 
