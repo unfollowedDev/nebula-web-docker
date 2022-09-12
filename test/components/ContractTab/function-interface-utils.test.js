@@ -503,4 +503,12 @@ describe('function-interface-utils', () => {
         });
     });
 
-    describe('parseBytesArrayString', () => 
+    describe('parseBytesArrayString', () => {
+        it('should correctly parse a string representation of bytes', () => {
+            const bytesOne = 'fa';
+            const bytesTwo = 'B4';
+
+            // any length - valid
+            expect(parseBytesArrayString('[]')).toEqual([]);
+            expect(parseBytesArrayString(`[${bytesOne}]`)).toEqual([bytesOne]);
+            expect(parseBytesArrayString(`[${bytesOne}, ${bytesTwo}
