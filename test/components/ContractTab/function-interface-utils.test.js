@@ -511,4 +511,12 @@ describe('function-interface-utils', () => {
             // any length - valid
             expect(parseBytesArrayString('[]')).toEqual([]);
             expect(parseBytesArrayString(`[${bytesOne}]`)).toEqual([bytesOne]);
-            expect(parseBytesArrayString(`[${bytesOne}, ${bytesTwo}
+            expect(parseBytesArrayString(`[${bytesOne}, ${bytesTwo}]`)).toEqual([bytesOne, bytesTwo]);
+
+            // any length - invalid
+            expect(parseBytesArrayString('[1]')).toEqual(undefined);
+
+
+            // fixed length - valid
+            expect(parseBytesArrayString(`[${bytesOne}]`, 1)).toEqual([bytesOne]);
+            expect(parseBytesArrayString(`[${bytesOne}, ${bytesTwo}]`, 2)).toEqual([bytesOne, bytesTwo]);
