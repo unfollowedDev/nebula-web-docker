@@ -520,3 +520,14 @@ describe('function-interface-utils', () => {
             // fixed length - valid
             expect(parseBytesArrayString(`[${bytesOne}]`, 1)).toEqual([bytesOne]);
             expect(parseBytesArrayString(`[${bytesOne}, ${bytesTwo}]`, 2)).toEqual([bytesOne, bytesTwo]);
+
+            // fixed length - invalid
+            expect(parseBytesArrayString('[]', 2)).toEqual(undefined);
+            expect(parseBytesArrayString(`[${bytesOne}]`, 2)).toEqual(undefined);
+        });
+    });
+
+    describe('parseSignedIntArrayString', () => {
+        it('should correctly parse a string representation of signed int array', () => {
+            const intOne = 1;
+            const intTwo = 
