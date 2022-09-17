@@ -530,4 +530,12 @@ describe('function-interface-utils', () => {
     describe('parseSignedIntArrayString', () => {
         it('should correctly parse a string representation of signed int array', () => {
             const intOne = 1;
-            const intTwo = 
+            const intTwo = 3;
+
+            const intOneBn = BigNumber.from(intOne);
+            const intTwoBn = BigNumber.from(intTwo);
+
+            // any length - valid
+            expect(parseSignedIntArrayString('[]')).toEqual([]);
+            expect(parseSignedIntArrayString(`[${intOne}]`, undefined, 8)).toEqual([intOneBn]);
+            expect(parseSignedIntArrayString(`[${intOne}, ${intTwo}]`, undefined, 8)).toEqual([intOneBn
