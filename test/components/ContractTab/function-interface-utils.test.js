@@ -538,4 +538,12 @@ describe('function-interface-utils', () => {
             // any length - valid
             expect(parseSignedIntArrayString('[]')).toEqual([]);
             expect(parseSignedIntArrayString(`[${intOne}]`, undefined, 8)).toEqual([intOneBn]);
-            expect(parseSignedIntArrayString(`[${intOne}, ${intTwo}]`, undefined, 8)).toEqual([intOneBn
+            expect(parseSignedIntArrayString(`[${intOne}, ${intTwo}]`, undefined, 8)).toEqual([intOneBn, intTwoBn]);
+            expect(parseSignedIntArrayString('[-1]', undefined, 8)).toEqual([BigNumber.from(-1)]);
+
+            // any length - invalid
+            expect(parseSignedIntArrayString('[xy]', undefined, 8)).toEqual(undefined);
+            expect(parseSignedIntArrayString('[123456789]', undefined, 8)).toEqual(undefined); // to large for 8 bits
+
+
+            // fixed l
