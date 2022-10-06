@@ -546,4 +546,10 @@ describe('function-interface-utils', () => {
             expect(parseSignedIntArrayString('[123456789]', undefined, 8)).toEqual(undefined); // to large for 8 bits
 
 
-            // fixed l
+            // fixed length - valid
+            expect(parseSignedIntArrayString(`[${intOne}]`, 1, 8)).toEqual([intOneBn]);
+            expect(parseSignedIntArrayString(`[${intOne}, ${intTwo}]`, 2, 8)).toEqual([intOneBn, intTwoBn]);
+
+            // fixed length - invalid
+            expect(parseSignedIntArrayString('[]', 2, 8)).toEqual(undefined);
+            expect(parseSignedIntArrayString(`[${intOne}
