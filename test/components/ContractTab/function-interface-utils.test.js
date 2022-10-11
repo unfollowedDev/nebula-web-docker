@@ -564,4 +564,14 @@ describe('function-interface-utils', () => {
             const intOneBn = BigNumber.from(intOne);
             const intTwoBn = BigNumber.from(intTwo);
 
-            expect(parseSignedInt
+            expect(parseSignedIntString(intOne, 8)).toEqual(intOneBn);
+            expect(parseSignedIntString(intTwo, 8)).toEqual(intTwoBn);
+
+
+            expect(parseSignedIntString('abc', 8)).toEqual(undefined);
+            expect(parseSignedIntString('123456', 8)).toEqual(undefined); // too large for 8 bits
+        });
+    });
+
+    describe('parseStringArrayString', () => {
+        it('should correctly parse a string representation of an arr
