@@ -574,4 +574,11 @@ describe('function-interface-utils', () => {
     });
 
     describe('parseStringArrayString', () => {
-        it('should correctly parse a string representation of an arr
+        it('should correctly parse a string representation of an array of strings', () => {
+            // any length - valid
+            expect(parseStringArrayString('[]')).toEqual([]);
+            expect(parseStringArrayString('["test"]')).toEqual(['test']);
+            expect(parseStringArrayString('["test", "some other \\"test\\""]')).toEqual(['test', 'some other "test"']);
+
+            // any length - invalid
+            expect(parseStringArrayString('[1]')).toEqual
