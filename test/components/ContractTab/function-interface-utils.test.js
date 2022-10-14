@@ -601,4 +601,12 @@ describe('function-interface-utils', () => {
             const intTwo = 3;
 
             const intOneBn = BigNumber.from(intOne);
-            const intTwoBn = BigNumber.from(in
+            const intTwoBn = BigNumber.from(intTwo);
+
+            // any length - valid
+            expect(parseUintArrayString('[]')).toEqual([]);
+            expect(parseUintArrayString(`[${intOne}]`, undefined, 8)).toEqual([intOneBn]);
+            expect(parseUintArrayString(`[${intOne}, ${intTwo}]`, undefined, 8)).toEqual([intOneBn, intTwoBn]);
+
+            // any length - invalid
+            expect(parseUintArrayString('[xy]', undefi
