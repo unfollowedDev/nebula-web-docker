@@ -581,4 +581,14 @@ describe('function-interface-utils', () => {
             expect(parseStringArrayString('["test", "some other \\"test\\""]')).toEqual(['test', 'some other "test"']);
 
             // any length - invalid
-            expect(parseStringArrayString('[1]')).toEqual
+            expect(parseStringArrayString('[1]')).toEqual(undefined);
+
+
+            // fixed length - valid
+            expect(parseStringArrayString('["test"]', 1)).toEqual(['test']);
+            expect(parseStringArrayString('["test", "some other \\"test\\""]', 2))
+                .toEqual(['test', 'some other "test"']);
+
+            // fixed length - invalid
+            expect(parseStringArrayString('[]', 2)).toEqual(undefined);
+    
