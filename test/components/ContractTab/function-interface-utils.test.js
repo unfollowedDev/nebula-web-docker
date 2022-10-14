@@ -591,4 +591,14 @@ describe('function-interface-utils', () => {
 
             // fixed length - invalid
             expect(parseStringArrayString('[]', 2)).toEqual(undefined);
-    
+            expect(parseStringArrayString('["test"]', 2)).toEqual(undefined);
+        });
+    });
+
+    describe('parseUintArrayString', () => {
+        it('should correctly parse a string representation of unsigned int array', () => {
+            const intOne = 1;
+            const intTwo = 3;
+
+            const intOneBn = BigNumber.from(intOne);
+            const intTwoBn = BigNumber.from(in
