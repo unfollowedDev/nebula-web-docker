@@ -609,4 +609,11 @@ describe('function-interface-utils', () => {
             expect(parseUintArrayString(`[${intOne}, ${intTwo}]`, undefined, 8)).toEqual([intOneBn, intTwoBn]);
 
             // any length - invalid
-            expect(parseUintArrayString('[xy]', undefi
+            expect(parseUintArrayString('[xy]', undefined, 8)).toEqual(undefined);
+            expect(parseUintArrayString('[123456789]', undefined, 8)).toEqual(undefined); // to large for 8 bits
+            expect(parseUintArrayString('[-1]', undefined, 8)).toEqual(undefined);
+
+
+            // fixed length - valid
+            expect(parseUintArrayString(`[${intOne}]`, 1, 8)).toEqual([intOneBn]);
+            expect(parseUintArrayStri
