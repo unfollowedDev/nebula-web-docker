@@ -616,4 +616,13 @@ describe('function-interface-utils', () => {
 
             // fixed length - valid
             expect(parseUintArrayString(`[${intOne}]`, 1, 8)).toEqual([intOneBn]);
-            expect(parseUintArrayStri
+            expect(parseUintArrayString(`[${intOne}, ${intTwo}]`, 2, 8)).toEqual([intOneBn, intTwoBn]);
+
+            // fixed length - invalid
+            expect(parseUintArrayString('[]', 2, 8)).toEqual(undefined);
+            expect(parseUintArrayString(`[${intOne}]`, 2, 8)).toEqual(undefined);
+        });
+    });
+
+    describe('parseUintString', () => {
+        it('should correctly parse a string representation of 
