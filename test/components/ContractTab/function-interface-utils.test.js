@@ -625,4 +625,12 @@ describe('function-interface-utils', () => {
     });
 
     describe('parseUintString', () => {
-        it('should correctly parse a string representation of 
+        it('should correctly parse a string representation of an unsigned int', () => {
+            const intOne = '1';
+            const intOneBn = BigNumber.from(intOne);
+
+            expect(parseUintString(intOne, 8)).toEqual(intOneBn);
+
+            expect(parseUintString('abc', 8)).toEqual(undefined);
+            expect(parseUintString('123456', 8)).toEqual(undefined); // too large for 8 bits
+            expect(parseUintString('-3', 8)).to
