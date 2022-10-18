@@ -633,4 +633,7 @@ describe('function-interface-utils', () => {
 
             expect(parseUintString('abc', 8)).toEqual(undefined);
             expect(parseUintString('123456', 8)).toEqual(undefined); // too large for 8 bits
-            expect(parseUintString('-3', 8)).to
+            expect(parseUintString('-3', 8)).toEqual(undefined); // no signed ints
+        });
+    });
+});
