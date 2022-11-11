@@ -36,4 +36,13 @@ describe('StakeForm.vue', () => {
         ],
         stubs: {
             'q-btn': true,
-            'q-banner': stubWith
+            'q-banner': stubWithSlot('q-banner', ['action']),
+            'q-card': stubWithSlot('q-card'),
+            'q-card-section': stubWithSlot('q-card-section'),
+            'q-card-actions': stubWithSlot('q-card-actions'),
+            'q-dialog':  stubWithSlot('q-dialog'),
+            'transaction-field': stubWithSlot('transaction-field'),
+        },
+    };
+    const stlosContractInstanceMock = {
+        p
