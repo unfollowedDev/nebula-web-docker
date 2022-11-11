@@ -24,4 +24,16 @@ describe('StakeForm.vue', () => {
             createStore({
                 modules: {
                     login: {
-                        nam
+                        namespaced: true,
+                        getters: {
+                            address: () => '0x'.concat('0'.repeat(40)),
+                            isLoggedIn: isLoggedInMock,
+                            isNative: () => false,
+                        },
+                    },
+                },
+            }),
+        ],
+        stubs: {
+            'q-btn': true,
+            'q-banner': stubWith
