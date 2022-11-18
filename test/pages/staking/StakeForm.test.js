@@ -54,4 +54,18 @@ describe('StakeForm.vue', () => {
         tlosBalance: oneHundredFiftyEthInWei,
         hasUnlockedTlos: false,
         unstakePeriodSeconds: 60,
-        valueOfOneStlosInTlos: '1.23
+        valueOfOneStlosInTlos: '1.23456789',
+    };
+
+    beforeEach(() => {
+        jest.clearAllMocks();
+        isLoggedInMock.mockImplementation(() => true);
+    });
+
+    it('should have the correct name', () => {
+        expect(StakeForm.name).toBe('StakeForm');
+    });
+
+    it('should render correctly when the user is not logged in', async () => {
+        isLoggedInMock.mockImplementation(() => false);
+        const
