@@ -45,4 +45,13 @@ describe('StakeForm.vue', () => {
         },
     };
     const stlosContractInstanceMock = {
-        p
+        previewDeposit: jest.fn(),
+        previewRedeem: jest.fn(),
+        ['depositTLOS()']: jest.fn(),
+    };
+    const defaultProps = {
+        stlosContractInstance: { ...stlosContractInstanceMock },
+        tlosBalance: oneHundredFiftyEthInWei,
+        hasUnlockedTlos: false,
+        unstakePeriodSeconds: 60,
+        valueOfOneStlosInTlos: '1.23
