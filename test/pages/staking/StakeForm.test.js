@@ -79,4 +79,18 @@ describe('StakeForm.vue', () => {
     it('should render a banner when the user has unlocked TLOS', async () => {
         const wrapper = shallowMount(StakeForm, {
             props:  { ...defaultProps },
-            
+            global: { ...globalMock   },
+        });
+
+        // no banner
+        expect(wrapper.element).toMatchSnapshot();
+
+        await wrapper.setProps({ hasUnlockedTlos: true });
+
+        // snapshot contains q-banner-stub
+        expect(wrapper.element).toMatchSnapshot();
+    });
+
+    describe('user input should be correctly handled', () => {
+        jest.useFakeTimers();
+        le
