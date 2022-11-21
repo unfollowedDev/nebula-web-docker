@@ -68,4 +68,15 @@ describe('StakeForm.vue', () => {
 
     it('should render correctly when the user is not logged in', async () => {
         isLoggedInMock.mockImplementation(() => false);
-        const
+        const wrapper = shallowMount(StakeForm, {
+            props:  { ...defaultProps },
+            global: { ...globalMock   },
+        });
+
+        expect(wrapper.element).toMatchSnapshot();
+    });
+
+    it('should render a banner when the user has unlocked TLOS', async () => {
+        const wrapper = shallowMount(StakeForm, {
+            props:  { ...defaultProps },
+            
