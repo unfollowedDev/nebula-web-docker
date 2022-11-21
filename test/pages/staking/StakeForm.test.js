@@ -93,4 +93,17 @@ describe('StakeForm.vue', () => {
 
     describe('user input should be correctly handled', () => {
         jest.useFakeTimers();
-        le
+        let wrapper;
+        let formStub;
+
+        beforeEach(() => {
+            jest.clearAllMocks();
+            wrapper = shallowMount(StakeForm, {
+                props:  { ...defaultProps },
+                global: { ...globalMock   },
+            });
+            formStub = wrapper.findComponent(BaseStakingForm);
+        });
+
+        const runInputExpects = async (topOrBottomInput) => {
+         
