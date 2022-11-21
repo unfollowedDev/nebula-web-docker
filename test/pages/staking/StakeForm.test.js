@@ -106,4 +106,11 @@ describe('StakeForm.vue', () => {
         });
 
         const runInputExpects = async (topOrBottomInput) => {
-         
+            const mockedContractMethod = topOrBottomInput === 'top' ? 'previewDeposit' : 'previewRedeem';
+            const eventToSimulateUserInput = `input-${topOrBottomInput}`;
+
+            // mock 1 TLOS === 1.5 STLOS
+            stlosContractInstanceMock[mockedContractMethod]
+                .mockImplementationOnce(() => Promise.resolve(onePointFiveEthInWei));
+
+            formStub.vm.$emi
