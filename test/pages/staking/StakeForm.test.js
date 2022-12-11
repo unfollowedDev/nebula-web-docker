@@ -122,3 +122,10 @@ describe('StakeForm.vue', () => {
 
 
             stlosContractInstanceMock[mockedContractMethod]
+                .mockImplementationOnce(() => Promise.resolve('0'));
+
+            formStub.vm.$emit(eventToSimulateUserInput, '0');
+            await flushTimersAndPromises();
+
+            expect(stlosContractInstanceMock[mockedContractMethod]).toHaveBeenCalledTimes(2);
+            expect(stlosContractInstanceMock[mockedContractMethod]).toHaveBeenLastCalledWith(
