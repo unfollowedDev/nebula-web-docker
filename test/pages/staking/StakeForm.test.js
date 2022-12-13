@@ -141,4 +141,15 @@ describe('StakeForm.vue', () => {
 
     it('should render properly when the user has successfully staked TLOS', async () => {
         jest.useFakeTimers();
-   
+        stlosContractInstanceMock['depositTLOS()'].mockImplementationOnce(() => Promise.resolve({
+            hash: '0x123',
+        }));
+
+        const wrapper = shallowMount(StakeForm, {
+            props:  { ...defaultProps },
+            global: { ...globalMock   },
+        });
+        const formStub = wrapper.findComponent(BaseStakingForm);
+
+        // mock 1 TLOS === 1.5 STLOS
+        stlosContrac
