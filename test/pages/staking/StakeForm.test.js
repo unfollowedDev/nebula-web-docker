@@ -152,4 +152,13 @@ describe('StakeForm.vue', () => {
         const formStub = wrapper.findComponent(BaseStakingForm);
 
         // mock 1 TLOS === 1.5 STLOS
-        stlosContrac
+        stlosContractInstanceMock.previewDeposit
+            .mockImplementationOnce(() => Promise.resolve(onePointFiveEthInWei));
+
+        formStub.vm.$emit('input-top', oneEthInWei);
+        await flushTimersAndPromises();
+        expect(wrapper.element).toMatchSnapshot();
+
+        await formStub.vm.$emit('cta-clicked');
+
+        // q-dialog expects a boolean v-model binding to show/hide the element
