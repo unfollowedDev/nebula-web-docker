@@ -162,3 +162,14 @@ describe('StakeForm.vue', () => {
         await formStub.vm.$emit('cta-clicked');
 
         // q-dialog expects a boolean v-model binding to show/hide the element
+        expect(wrapper.element).toMatchSnapshot();
+
+        const confirmStakeButton = wrapper.findComponent('[label="pages.staking.stake_tlos"]');
+        confirmStakeButton.vm.$emit('click');
+
+        expect(stlosContractInstanceMock['depositTLOS()']).toHaveBeenCalledTimes(1);
+        expect(stlosContractInstanceMock['depositTLOS()']).toHaveBeenLastCalledWith({
+            value: BigNumber.from(oneEthInWei),
+        });
+
+        await
