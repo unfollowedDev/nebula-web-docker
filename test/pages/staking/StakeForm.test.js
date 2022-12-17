@@ -172,4 +172,10 @@ describe('StakeForm.vue', () => {
             value: BigNumber.from(oneEthInWei),
         });
 
-        await
+        await flushTimersAndPromises();
+        expect(wrapper.emitted('balance-changed').length).toBe(1);
+
+        // should now have a <transaction-field-stub ... />
+        expect(wrapper.element).toMatchSnapshot();
+    });
+});
