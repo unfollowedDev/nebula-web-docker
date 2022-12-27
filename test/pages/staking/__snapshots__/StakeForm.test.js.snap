@@ -19,4 +19,14 @@ exports[`StakeForm.vue should render a banner when the user has unlocked TLOS 1`
       <base-staking-form-stub
         bottominputamount="0"
         bottominputisloading="false"
-        bottominputlabel="pages
+        bottominputlabel="pages.staking.receive_stlos"
+        ctadisabled="true"
+        ctatext="pages.staking.stake_tlos"
+        header="pages.staking.stake_tlos"
+        subheader="pages.staking.stake_tlos_subheader"
+        topinputamount="0"
+        topinputerrortext=""
+        topinputinfotext="pages.staking.available"
+        topinputisloading="false"
+        topinputlabel="pages.staking.stake_tlos"
+        topinputmaxvalue="149000000000
