@@ -29,4 +29,22 @@ exports[`StakeForm.vue should render a banner when the user has unlocked TLOS 1`
         topinputinfotext="pages.staking.available"
         topinputisloading="false"
         topinputlabel="pages.staking.stake_tlos"
-        topinputmaxvalue="149000000000
+        topinputmaxvalue="149000000000000000000"
+        topinputtooltip="pages.staking.click_to_input_full_wallet_balance"
+        unstakeperiodseconds="60"
+        valueofonestlosintlos="1.23456789"
+      />
+    </div>
+    <!--v-if-->
+    <q-dialog-stub
+      modelvalue="false"
+    >
+      
+      <q-card-stub>
+        
+        <q-card-section-stub>
+          
+          <p>
+            pages.staking.stake_tlos_confirm
+          </p>
+   
