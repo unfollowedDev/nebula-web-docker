@@ -1,1 +1,22 @@
-// Jest 
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StakeForm.vue should render a banner when the user has unlocked TLOS 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="c-stake-form row"
+  >
+    <div
+      class="col-xs-12 col-md-6 offset-md-3"
+    >
+      <!--v-if-->
+    </div>
+    <div
+      class="col-12 q-mb-lg"
+    >
+      <base-staking-form-stub
+        bottominputamount="0"
+        bottominputisloading="false"
+        bottominputlabel="pages
