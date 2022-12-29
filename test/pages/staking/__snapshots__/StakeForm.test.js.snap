@@ -60,4 +60,22 @@ exports[`StakeForm.vue should render a banner when the user has unlocked TLOS 1`
           class="q-pb-md q-px-md"
         >
           
+          <!--v-if-->
+          <q-btn-stub
+            color="negative"
+            flat=""
+            label="pages.staking.cancel"
+          />
+          <q-btn-stub
+            color="secondary"
+            label="pages.staking.stake_tlos"
+            text-color="black"
+          />
           
+        </q-card-actions-stub>
+        
+      </q-card-stub>
+      
+    </q-dialog-stub>
+  </div>
+  <logi
