@@ -78,4 +78,26 @@ exports[`StakeForm.vue should render a banner when the user has unlocked TLOS 1`
       
     </q-dialog-stub>
   </div>
-  <logi
+  <login-modal-stub
+    show="false"
+  />
+  
+</div>
+`;
+
+exports[`StakeForm.vue should render a banner when the user has unlocked TLOS 2`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="c-stake-form row"
+  >
+    <div
+      class="col-xs-12 col-md-6 offset-md-3"
+    >
+      <q-banner-stub
+        class="bg-green text-black"
+        dense=""
+        inline-actions=""
+        r
