@@ -147,3 +147,18 @@ exports[`StakeForm.vue should render a banner when the user has unlocked TLOS 2`
     >
       
       <q-card-stub>
+        
+        <q-card-section-stub>
+          
+          <p>
+            pages.staking.stake_tlos_confirm
+          </p>
+          <p>
+            pages.staking.stake_tlos_confirm_2a 1 pages.staking.minutes, pages.staking.stake_tlos_confirm_2b
+          </p>
+          <p>
+            pages.staking.stake_tlos_confirm_3
+          </p>
+          
+        </q-card-section-stub>
+        <q-car
