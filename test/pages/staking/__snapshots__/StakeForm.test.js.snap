@@ -216,4 +216,19 @@ exports[`StakeForm.vue should render correctly when the user is not logged in 1`
         header="pages.staking.stake_tlos"
         subheader="pages.staking.stake_tlos_subheader"
         topinputamount="0"
-        to
+        topinputerrortext="pages.staking.wallet_not_connected"
+        topinputinfotext=""
+        topinputisloading="false"
+        topinputlabel="pages.staking.stake_tlos"
+        topinputtooltip="pages.staking.click_to_input_full_wallet_balance"
+        unstakeperiodseconds="60"
+        valueofonestlosintlos="1.23456789"
+      />
+    </div>
+    <!--v-if-->
+    <q-dialog-stub
+      modelvalue="false"
+    >
+      
+      <q-card-stub>
+ 
