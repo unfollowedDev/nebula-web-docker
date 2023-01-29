@@ -204,3 +204,16 @@ exports[`StakeForm.vue should render correctly when the user is not logged in 1`
     >
       <!--v-if-->
     </div>
+    <div
+      class="col-12 q-mb-lg"
+    >
+      <base-staking-form-stub
+        bottominputamount="0"
+        bottominputisloading="false"
+        bottominputlabel="pages.staking.receive_stlos"
+        ctadisabled="false"
+        ctatext="pages.staking.connect_wallet"
+        header="pages.staking.stake_tlos"
+        subheader="pages.staking.stake_tlos_subheader"
+        topinputamount="0"
+        to
