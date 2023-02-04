@@ -262,4 +262,31 @@ exports[`StakeForm.vue should render correctly when the user is not logged in 1`
             text-color="black"
           />
           
-        </q-c
+        </q-card-actions-stub>
+        
+      </q-card-stub>
+      
+    </q-dialog-stub>
+  </div>
+  <login-modal-stub
+    show="false"
+  />
+  
+</div>
+`;
+
+exports[`StakeForm.vue should render properly when the user has successfully staked TLOS 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="c-stake-form row"
+  >
+    <div
+      class="col-xs-12 col-md-6 offset-md-3"
+    >
+      <!--v-if-->
+    </div>
+    <div
+    
