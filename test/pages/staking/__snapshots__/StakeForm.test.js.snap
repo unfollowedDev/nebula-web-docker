@@ -244,4 +244,22 @@ exports[`StakeForm.vue should render correctly when the user is not logged in 1`
             pages.staking.stake_tlos_confirm_3
           </p>
           
-        </q-card-section
+        </q-card-section-stub>
+        <q-card-actions-stub
+          align="right"
+          class="q-pb-md q-px-md"
+        >
+          
+          <!--v-if-->
+          <q-btn-stub
+            color="negative"
+            flat=""
+            label="pages.staking.cancel"
+          />
+          <q-btn-stub
+            color="secondary"
+            label="pages.staking.stake_tlos"
+            text-color="black"
+          />
+          
+        </q-c
