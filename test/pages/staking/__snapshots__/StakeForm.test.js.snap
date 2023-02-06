@@ -299,4 +299,14 @@ exports[`StakeForm.vue should render properly when the user has successfully sta
         ctatext="pages.staking.stake_tlos"
         header="pages.staking.stake_tlos"
         subheader="pages.staking.stake_tlos_subheader"
-        topin
+        topinputamount="1000000000000000000"
+        topinputerrortext=""
+        topinputinfotext="pages.staking.available"
+        topinputisloading="false"
+        topinputlabel="pages.staking.stake_tlos"
+        topinputmaxvalue="149000000000000000000"
+        topinputtooltip="pages.staking.click_to_input_full_wallet_balance"
+        unstakeperiodseconds="60"
+        valueofonestlosintlos="1.23456789"
+      />
+   
