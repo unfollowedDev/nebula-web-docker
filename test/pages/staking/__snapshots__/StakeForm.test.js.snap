@@ -364,3 +364,21 @@ exports[`StakeForm.vue should render properly when the user has successfully sta
 <div
   data-v-app=""
 >
+  
+  <div
+    class="c-stake-form row"
+  >
+    <div
+      class="col-xs-12 col-md-6 offset-md-3"
+    >
+      <!--v-if-->
+    </div>
+    <div
+      class="col-12 q-mb-lg"
+    >
+      <base-staking-form-stub
+        bottominputamount="1500000000000000000"
+        bottominputisloading="false"
+        bottominputlabel="pages.staking.receive_stlos"
+        ctadisabled="false"
+        ctatext="pages.s
