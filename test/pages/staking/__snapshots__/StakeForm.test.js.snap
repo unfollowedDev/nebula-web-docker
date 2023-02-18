@@ -390,4 +390,22 @@ exports[`StakeForm.vue should render properly when the user has successfully sta
         topinputisloading="false"
         topinputlabel="pages.staking.stake_tlos"
         topinputmaxvalue="149000000000000000000"
-        topinputt
+        topinputtooltip="pages.staking.click_to_input_full_wallet_balance"
+        unstakeperiodseconds="60"
+        valueofonestlosintlos="1.23456789"
+      />
+    </div>
+    <!--v-if-->
+    <q-dialog-stub
+      modelvalue="true"
+    >
+      
+      <q-card-stub>
+        
+        <q-card-section-stub>
+          
+          <p>
+            pages.staking.stake_tlos_confirm
+          </p>
+          <p>
+    
