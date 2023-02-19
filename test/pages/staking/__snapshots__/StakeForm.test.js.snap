@@ -438,4 +438,28 @@ exports[`StakeForm.vue should render properly when the user has successfully sta
       
     </q-dialog-stub>
   </div>
-  <login-moda
+  <login-modal-stub
+    show="false"
+  />
+  
+</div>
+`;
+
+exports[`StakeForm.vue should render properly when the user has successfully staked TLOS 3`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="c-stake-form row"
+  >
+    <div
+      class="col-xs-12 col-md-6 offset-md-3"
+    >
+      <!--v-if-->
+    </div>
+    <div
+      class="col-12 q-mb-lg"
+    >
+      <base-staking-form-stub
+        bottominpu
