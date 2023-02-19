@@ -421,4 +421,21 @@ exports[`StakeForm.vue should render properly when the user has successfully sta
         >
           
           <!--v-if-->
-         
+          <q-btn-stub
+            color="negative"
+            flat=""
+            label="pages.staking.cancel"
+          />
+          <q-btn-stub
+            color="secondary"
+            label="pages.staking.stake_tlos"
+            text-color="black"
+          />
+          
+        </q-card-actions-stub>
+        
+      </q-card-stub>
+      
+    </q-dialog-stub>
+  </div>
+  <login-moda
