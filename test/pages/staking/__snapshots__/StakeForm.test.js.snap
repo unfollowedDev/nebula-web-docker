@@ -462,4 +462,13 @@ exports[`StakeForm.vue should render properly when the user has successfully sta
       class="col-12 q-mb-lg"
     >
       <base-staking-form-stub
-        bottominpu
+        bottominputamount="1500000000000000000"
+        bottominputisloading="false"
+        bottominputlabel="pages.staking.receive_stlos"
+        ctadisabled="false"
+        ctatext="pages.staking.stake_tlos"
+        header="pages.staking.stake_tlos"
+        subheader="pages.staking.stake_tlos_subheader"
+        topinputamount="1000000000000000000"
+        topinputerrortext=""
+        topinputinfotext="pages.staking
