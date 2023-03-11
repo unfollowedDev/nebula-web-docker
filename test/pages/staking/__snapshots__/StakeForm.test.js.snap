@@ -483,4 +483,24 @@ exports[`StakeForm.vue should render properly when the user has successfully sta
     <div
       class="col-sm-12 col-md-6 offset-md-3"
     >
-      pages.sta
+      pages.staking.stake_tlos_success 
+      <transaction-field-stub
+        transaction-hash="0x123"
+      >
+        
+        
+      </transaction-field-stub>
+    </div>
+    <q-dialog-stub
+      modelvalue="true"
+    >
+      
+      <q-card-stub>
+        
+        <q-card-section-stub>
+          
+          <p>
+            pages.staking.stake_tlos_confirm
+          </p>
+          <p>
+            pages.staking.stake_tlos_confirm_2a 
