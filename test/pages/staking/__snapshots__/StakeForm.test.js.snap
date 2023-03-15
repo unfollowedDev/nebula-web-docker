@@ -503,4 +503,19 @@ exports[`StakeForm.vue should render properly when the user has successfully sta
             pages.staking.stake_tlos_confirm
           </p>
           <p>
-            pages.staking.stake_tlos_confirm_2a 
+            pages.staking.stake_tlos_confirm_2a 1 pages.staking.minutes, pages.staking.stake_tlos_confirm_2b
+          </p>
+          <p>
+            pages.staking.stake_tlos_confirm_3
+          </p>
+          
+        </q-card-section-stub>
+        <q-card-actions-stub
+          align="right"
+          class="q-pb-md q-px-md"
+        >
+          
+          <!--v-if-->
+          <q-btn-stub
+            color="negative"
+            f
