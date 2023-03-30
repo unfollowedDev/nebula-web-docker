@@ -559,4 +559,14 @@ exports[`StakeForm.vue user input should be correctly handled for the bottom inp
       <base-staking-form-stub
         bottominputamount="1000000000000000000"
         bottominputisloading="false"
-        bottominputlabel="pages.stakin
+        bottominputlabel="pages.staking.receive_stlos"
+        ctadisabled="false"
+        ctatext="pages.staking.stake_tlos"
+        header="pages.staking.stake_tlos"
+        subheader="pages.staking.stake_tlos_subheader"
+        topinputamount="1500000000000000000"
+        topinputerrortext=""
+        topinputinfotext="pages.staking.available"
+        topinputisloading="false"
+        topinputlabel="pages.staking.stake_tlos"
+ 
