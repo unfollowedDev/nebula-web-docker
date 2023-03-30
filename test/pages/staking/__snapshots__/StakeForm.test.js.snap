@@ -569,4 +569,20 @@ exports[`StakeForm.vue user input should be correctly handled for the bottom inp
         topinputinfotext="pages.staking.available"
         topinputisloading="false"
         topinputlabel="pages.staking.stake_tlos"
- 
+        topinputmaxvalue="149000000000000000000"
+        topinputtooltip="pages.staking.click_to_input_full_wallet_balance"
+        unstakeperiodseconds="60"
+        valueofonestlosintlos="1.23456789"
+      />
+    </div>
+    <!--v-if-->
+    <q-dialog-stub
+      modelvalue="false"
+    >
+      
+      <q-card-stub>
+        
+        <q-card-section-stub>
+          
+          <p>
+         
