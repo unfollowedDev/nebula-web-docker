@@ -696,4 +696,28 @@ exports[`StakeForm.vue user input should be correctly handled for the bottom inp
             label="pages.staking.stake_tlos"
             text-color="black"
           />
+          
+        </q-card-actions-stub>
+        
+      </q-card-stub>
+      
+    </q-dialog-stub>
+  </div>
+  <login-modal-stub
+    show="false"
+  />
+  
+</div>
+`;
+
+exports[`StakeForm.vue user input should be correctly handled for the top input 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="c-stake-form row"
+  >
+    <div
+      class="col-xs-12 col-md-6 offset-md-3"
    
