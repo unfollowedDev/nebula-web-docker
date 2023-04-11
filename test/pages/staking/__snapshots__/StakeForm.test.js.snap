@@ -720,4 +720,17 @@ exports[`StakeForm.vue user input should be correctly handled for the top input 
   >
     <div
       class="col-xs-12 col-md-6 offset-md-3"
-   
+    >
+      <!--v-if-->
+    </div>
+    <div
+      class="col-12 q-mb-lg"
+    >
+      <base-staking-form-stub
+        bottominputamount="1500000000000000000"
+        bottominputisloading="false"
+        bottominputlabel="pages.staking.receive_stlos"
+        ctadisabled="false"
+        ctatext="pages.staking.stake_tlos"
+        header="pages.staking.stake_tlos"
+        subheader="pages.staking.stake_tlos_subh
