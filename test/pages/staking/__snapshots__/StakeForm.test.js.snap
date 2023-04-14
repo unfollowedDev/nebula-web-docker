@@ -741,4 +741,21 @@ exports[`StakeForm.vue user input should be correctly handled for the top input 
         topinputlabel="pages.staking.stake_tlos"
         topinputmaxvalue="149000000000000000000"
         topinputtooltip="pages.staking.click_to_input_full_wallet_balance"
-        unstake
+        unstakeperiodseconds="60"
+        valueofonestlosintlos="1.23456789"
+      />
+    </div>
+    <!--v-if-->
+    <q-dialog-stub
+      modelvalue="false"
+    >
+      
+      <q-card-stub>
+        
+        <q-card-section-stub>
+          
+          <p>
+            pages.staking.stake_tlos_confirm
+          </p>
+          <p>
+            pages.staking.stake_tlos_confirm_2a 1 pages.staking.
