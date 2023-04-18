@@ -877,3 +877,5 @@ exports[`StakeForm.vue user input should be correctly handled for the top input 
     show="false"
   />
   
+</div>
+`;
