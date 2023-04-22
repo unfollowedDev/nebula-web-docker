@@ -39,4 +39,12 @@ export const stubWithSlot = (componentName, namedSlots = [], options = {}) => {
         '',
     );
     return {
-        ...options
+        ...options,
+        template: `
+            <component is="${componentName}-stub">
+                <slot />
+                ${namedSlotsString}
+            </component>
+        `,
+    };
+};
