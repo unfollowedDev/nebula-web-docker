@@ -28,4 +28,15 @@ export const flushTimersAndPromises = async () => {
  * recognized tag, while preserving the search-ability of the stub component using wrapper.findComponent
  *
  * @param {String}    componentName - name of the component in kebab-case
- * @param {String[]}  namedSlots    - the names of named the slots
+ * @param {String[]}  namedSlots    - the names of named the slots to be added
+ * @param {Object}    options       - options to be added to the component
+ *
+ * @returns stub component with slot(s)
+ */
+export const stubWithSlot = (componentName, namedSlots = [], options = {}) => {
+    const namedSlotsString = namedSlots.reduce(
+        (slotNames, slotName) => slotNames.concat(`<slot name=${slotName} />\n`),
+        '',
+    );
+    return {
+        ...options
