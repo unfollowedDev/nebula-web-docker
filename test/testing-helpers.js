@@ -19,4 +19,13 @@ export const flushTimersAndPromises = async () => {
  *     global: {
  *         stubs: {
  *             'q-banner': stubWithSlot('q-banner', ['action']),
- *             'q-card': stubWithSlot('q
+ *             'q-card': stubWithSlot('q-card')
+ *         },
+ *     },
+ * });
+ *
+ * Note the <component is="component-name"> - this is to avoid a warning from jest that <component-name> is not a
+ * recognized tag, while preserving the search-ability of the stub component using wrapper.findComponent
+ *
+ * @param {String}    componentName - name of the component in kebab-case
+ * @param {String[]}  namedSlots    - the names of named the slots
